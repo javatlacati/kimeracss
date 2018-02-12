@@ -1,0 +1,11 @@
+# ignoramos todas las carpetas que no sean codigo ni codigo compilado
+css/*.scss
+img/
+font/
+html/
+kimera/
+js/jquery.js
+kimera-js.html
+*.config
+*.txt
+*.png
