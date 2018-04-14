@@ -2,7 +2,10 @@
   "name": "kimeracss-website",
   "version": "0.0.1",
   "dependencies": {
-    "pug": "^2.0.3"
+    "@types/jquery": "^3.3.1",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "typescript": "^2.8.1"
   },
   "scripts": {
     "pugtohtml": "pug --output-style compressed -o ./ pug/index.pug"
