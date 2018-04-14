@@ -1,0 +1,6 @@
+digraph mygraph {
+  node [shape=box];
+"//ts:kimerajs"
+"//ts:kimerajs" -> "//ts:kimera.ts"
+"//ts:kimera.ts"
+}

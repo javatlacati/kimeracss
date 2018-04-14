@@ -1,0 +1,47 @@
+@import '../base/_partials';
+// social componente social de cometarios
+#{$name-social-module} {
+    width: 100%;
+    &,
+    #{$name-social-media},
+    #{$name-social-content},
+    #{$name-social-content} #{$name-social-header},
+    #{$name-social-content} #{$name-social-footer} {
+        display: flex;
+    }
+    &,
+    #{$name-social-media},
+    #{$name-social-content} {
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+    & {
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
+        &:not(first-child) {
+            border-top: 1px solid $light;
+        }
+    }
+    #{$name-social-media} {
+        max-width: 20%;
+        margin-right: .5rem;
+    }
+    #{$name-social-content} {
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 0 .5em;
+        section,
+        #{$name-social-header},
+        #{$name-social-footer} {
+            width: 100%;
+        }
+        #{$name-social-header},
+        #{$name-social-footer} {
+            align-items: center;
+            align-content: center;
+        }
+        #{$name-social-header} {
+            justify-content: space-between;
+        }
+    }
+}

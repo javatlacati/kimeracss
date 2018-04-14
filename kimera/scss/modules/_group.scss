@@ -1,0 +1,43 @@
+@import '../base/_partials',
+'../base/_placeholders';
+$border-group: 1px solid rgba($dark, .1) !default;
+#{$name-group-module} {
+    overflow-x: auto;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: stretch;
+    width: 100%;
+    &.#{$class-inline} {
+        display: inline-flex;
+        width: auto;
+    }
+    #{$name-group-item} {
+        @extend %item;
+        min-height: 2.5rem;
+        justify-content: center;
+        flex: 1;
+    }
+    &.#{$class-boxed} #{$name-group-item} {
+        flex-direction: column;
+        icon {
+            margin: 0 !important;
+        }
+    }
+}
+
+#{$name-listgroup-module} {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    #{$name-listgroup-item} {
+        @extend %item;
+        flex-grow: 1;
+        justify-content: space-between;
+        border: 0;
+        &:not(:last-child) {
+            border-bottom: $border-group;
+        }
+    }
+}

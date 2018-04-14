@@ -1,0 +1,168 @@
+.#{$class-small} {
+    &,
+    & * {
+        font-size: $text-small;
+    }
+}
+
+.#{$class-medium} {
+    &,
+    & * {
+        font-size: $text-medium;
+    }
+}
+
+.#{$class-large} {
+    &,
+    & * {
+        font-size: $text-large;
+    }
+}
+
+//texto etiquetas personalizadas
+.#{$class-tiny} {
+    &,
+    & * {
+        font-size: $text-x-small;
+    }
+}
+
+.#{$class-jumbo} {
+    &,
+    & * {
+        font-size: $text-x-large;
+    }
+}
+
+.#{$class-text-upper} {
+    text-transform: $text-upper;
+}
+
+.#{$class-text-lower} {
+    text-transform: $text-lower;
+}
+
+.#{$class-text-underline} {
+    text-decoration: underline;
+}
+
+.#{$class-text-bolder} {
+    font-weight: $text-bold;
+}
+
+// color text
+.#{$class-text-white} {
+    color: $cloud;
+}
+
+.#{$class-text-primary} {
+    color: $primary;
+}
+
+.#{$class-text-info} {
+    color: $info;
+}
+
+.#{$class-text-success} {
+    color: $success;
+}
+
+.#{$class-text-warning} {
+    color: darken($warning, 10);
+}
+
+.#{$class-text-danger} {
+    color: $danger;
+}
+
+.is-dark,
+.is-primary,
+.is-black,
+.is-info,
+.is-success,
+.is-danger {
+    color: $cloud;
+}
+
+.is-light,
+.is-warning,
+.is-cloud {
+    color: $dark;
+}
+
+.#{$class-text-right} {
+    &,
+    & * {
+        text-align: right;
+    }
+}
+
+.#{$class-text-justify} {
+    &,
+    & * {
+        text-align: justify;
+    }
+}
+
+.#{$class-text-center} {
+    &,
+    & * {
+        text-align: center;
+    }
+}
+
+.#{$class-full-center} {
+    text-align: left;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+//estilos de etiquetas h1,h2,h3,h4,h5,h6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    margin: 0;
+    -webkit-font-smoothing: $smooting-text;
+    text-rendering: $render-text;
+    color: inherit;
+    a {
+        color: inherit;
+    }
+    *.is-subtitle {
+        opacity: .6;
+        font-weight: normal;
+        margin: 1rem 0 1.5em 0;
+    }
+}
+
+h1 {
+    font-size: $h1-size;
+}
+
+h2 {
+    font-size: $h2-size;
+}
+
+h3 {
+    font-size: $h3-size;
+}
+
+h4 {
+    font-size: $h4-size;
+}
+
+h5 {
+    font-size: $h5-size;
+}
+
+h6 {
+    font-size: $h6-size;
+}
