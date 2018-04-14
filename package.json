@@ -8,6 +8,7 @@
     "typescript": "^2.8.1"
   },
   "scripts": {
-    "pugtohtml": "pug --output-style compressed -o ./ pug/index.pug"
+    "pugtohtml": "pug --output-style compressed -o ./ pug/index.pug",
+    "copygenerated":"cp ./bazel-out/k8-fastbuild/bin/css/docs.css ./css && cp ./bazel-out/k8-fastbuild/bin/js/main.js ./js && cp ./bazel-out/k8-fastbuild/bin/kimera/scss/kimera.css ./css && cp ./bazel-out/k8-fastbuild/bin/kimera/ts/kimera.js ./js"
   }
 }
