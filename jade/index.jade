@@ -1,30 +1,45 @@
-- var urlimage = 'http://kimera.comli.com/img/';
+- var urlimage = 'https://xoolar-quantum.000webhostapp.com/img/';
+- var version = "0.4.5";
 doctype
 html
 	head
 		include main/_headers.jade
 	body
-		layout.is-dashboard
+		layout.is-dashboard.is-small-sidebar
 			sidebar#menu-principal
 				include main/_menu.jade
-			main
-				group.is-boxed#bottom-nav.is-hidden-desktop
-					item#mostrar-side-menu
-						icon.is-medium
-							i.fa.fa-bars
-						tiny Menú
-					item
-						a(href="https://github.com/JorgeAntrax/kimera")
+			main.overflow-y
+				group.is-boxed#bottom-nav.is-hidden-desktop.padding-1
+					group-item#mostrar-side-menu
+						a(href="#")
+							icon.is-medium
+								i.fa.fa-bars
+					group-item
+						a(href="https://github.com/JorgeAntrax/kimera/fork" target="_blank").is-medium
+							icon.is-text-dark
+								i.fa.fa-code-fork
+					group-item
+						a(href="https://github.com/JorgeAntrax/kimera/issues" target="_blank").is-medium
+							icon.is-text-dark
+								i.fa.fa-exclamation-circle
+					group-item
+						a(href="https://github.com/JorgeAntrax/kimera" target="_blank")
 							icon.is-medium
 								i.fa.fa-github
-						tiny Github
-					item
-						a(href="#footer").is-medium
+					group-item
+						a(href="https://twitter.com/@kimeracssframew" target="_blank").is-medium
 							icon
-								i.fa.fa-angle-down
-						tiny Ir abajo
+								i.fa.fa-twitter
+					group-item
+						a(href="https://facebook.com/kimeraCSS" target="_blank").is-medium
+							icon.is-text-info
+								i.fa.fa-facebook
+					group-item
+						a(href="#home").is-medium
+							icon
+								i.fa.fa-arrow-up
 				#home
-				.menu_content#layout-home.visible
+				.menu_content#layout-home
 					include intro/_home.jade
 				.menu_content#layout-intro
 					include intro/_all.jade
@@ -38,7 +53,6 @@ html
 					include modules/_all.jade
 				#footer
 					include main/_footer.jade
-		script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+		script(src="https://platform.twitter.com/widgets.js" charset="utf-8")
 		script(src="js/kimera.min.js")
 		script(src="js/main.js")
-		script(src="https://platform.twitter.com/widgets.js" charset="utf-8")

@@ -10,7 +10,7 @@ row.bloque
 	column.tablet-is-half
 		p
 			span Basic
-			span(tooltip="Este es un tooltip").is-up tooltip.
+			span(tooltip="Este es un tooltip").is-up-tooltip tooltip.
 	column.tablet-is-half
 		snippet
 			pre
@@ -22,7 +22,7 @@ row.bloque
 				at tooltip=
 				vat "Este es un tooltip"
 				at class=
-				vat "is-up"
+				vat "is-up-tooltip"
 				tg &gt
 				span Tooltip
 				tg &lt/span&gt
@@ -36,7 +36,7 @@ row.bloque
 	column.tablet-is-half
 		p
 			span Basic
-			span(tooltip="Este es un tooltip redondeado").is-up.is-rounded tooltip.
+			span(tooltip="Este es un tooltip redondeado").is-up-tooltip.is-rounded tooltip.
 	column.tablet-is-half
 		snippet
 			pre
@@ -48,7 +48,7 @@ row.bloque
 				at tooltip=
 				vat "Este es un tooltip redondeado"
 				at class=
-				vat "is-up is-rounded"
+				vat "is-up-tooltip is-rounded"
 				tg &gt
 				span Tooltip.
 				tg &lt/span&gt
@@ -66,15 +66,15 @@ ul.default-browser
 	li: code .is-danger
 row.bloque
 	column.tablet-is-half
-		p(tooltip="Tooltip primary").is-right.is-primary Tooltip primary
+		p(tooltip="Tooltip primary").is-right-tooltip.is-primary Tooltip primary
 		br
-		p(tooltip="Tooltip info").is-right.is-info Tooltip info
+		p(tooltip="Tooltip info").is-right-tooltip.is-info Tooltip info
 		br
-		p(tooltip="Tooltip success").is-right.is-success Tooltip success
+		p(tooltip="Tooltip success").is-right-tooltip.is-success Tooltip success
 		br
-		p(tooltip="Tooltip warning").is-right.is-warning Tooltip warning
+		p(tooltip="Tooltip warning").is-right-tooltip.is-warning Tooltip warning
 		br
-		p(tooltip="Tooltip danger").is-right.is-danger Tooltip danger
+		p(tooltip="Tooltip danger").is-right-tooltip.is-danger Tooltip danger
 	column.tablet-is-half
 		snippet
 			pre
@@ -84,7 +84,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip "
 				at class=
-				vat "is-right is-primary"
+				vat "is-right-tooltip is-primary"
 				tg &gt
 				span tooltip primary
 				tg &lt/span&gt
@@ -97,7 +97,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip info"
 				at class=
-				vat "is-right is-info"
+				vat "is-right-tooltip is-info"
 				tg &gt
 				span tooltip info
 				tg &lt/span&gt
@@ -110,7 +110,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip success"
 				at class=
-				vat "is-right is-success"
+				vat "is-right-tooltip is-success"
 				tg &gt
 				span tooltip success
 				tg &lt/span&gt
@@ -123,7 +123,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip warning"
 				at class=
-				vat "is-right is-warning"
+				vat "is-right-tooltip is-warning"
 				tg &gt
 				span tooltip warning
 				tg &lt/span&gt
@@ -136,7 +136,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip danger"
 				at class=
-				vat "is-right is-danger"
+				vat "is-right-tooltip is-danger"
 				tg &gt
 				span tooltip danger
 				tg &lt/span&gt
@@ -146,20 +146,20 @@ row.bloque
 h4.subtitle Alineacion
 p La alineación de este componente permite 4 posibles valores mediante las clases:
 ul.default-browser
-	li: code .is-up
-	li: code .is-down
-	li: code .is-left
-	li: code .is-right
+	li: code .is-up-tooltip
+	li: code .is-down-tooltip
+	li: code .is-left-tooltip
+	li: code .is-right-tooltip
 row.bloque
 	column.tablet-is-half
 		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip bottom").is-up tooltip alineado
+			span(tooltip="Tooltip bottom").is-up-tooltip tooltip alineado
 		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip bottom").is-bottom tooltip alineado
+			span(tooltip="Tooltip bottom").is-down-tooltip tooltip alineado
 		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip left").is-left tooltip alineado
+			span(tooltip="Tooltip left").is-left-tooltip tooltip alineado
 		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip right").is-right tooltip alineado
+			span(tooltip="Tooltip right").is-right-tooltip tooltip alineado
 	column.tablet-is-half
 		snippet
 			pre
@@ -171,7 +171,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip top"
 				at class=
-				vat "is-up"
+				vat "is-up-tooltip"
 				tg &gt
 				span tooltip alineado
 				tg &lt/span&gt
@@ -186,7 +186,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip bottom"
 				at class=
-				vat "is-bottom"
+				vat "is-down-tooltip"
 				tg &gt
 				span tooltip alineado
 				tg &lt/span&gt
@@ -201,7 +201,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip left"
 				at class=
-				vat "is-left"
+				vat "is-left-tooltip"
 				tg &gt
 				span tooltip alineado
 				tg &lt/span&gt
@@ -216,7 +216,7 @@ row.bloque
 				at tooltip=
 				vat "Tooltip right"
 				at class=
-				vat "is-right"
+				vat "is-right-tooltip"
 				tg &gt
 				span tooltip alineado
 				tg &lt/span&gt

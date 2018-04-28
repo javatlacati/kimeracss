@@ -13,7 +13,7 @@ p.bloque El sistema de cuadricula que implementa
 	span columnas con un ancho minimo del
 	code 5%
 	span .
-row.is-mobile.bloque#demo-doce
+row-mobile.bloque#demo-doce
 	column.demo.color-danger: span 1
 	column.demo.color-danger: span 2
 	column.demo.color-danger: span 3
@@ -221,16 +221,13 @@ responsive.is-table.bloque
 p.bloque Combinando las clases anteriormente mencionadas, podemos crear una estructura como la siguiente:
 message.is-info
 	content Te recomendamos redimensionar la ventana de tu navegador para visualizar los cambios. 
-row.bloque.is-mobile
+row-mobile.bloque
 	column.demo.touch-2.tablet-is-half.desktop-5.color-primary: code .touch-2 .tablet-is-half .desktop-5
 	column.demo.touch-8.tablet-6.desktop-is-half.color-info: code .touch-8 .tablet-6 .desktop-is-half
 	column.demo.touch-is-half.tablet-4.desktop-5.color-danger: code .touch-is-half .tablet-4 .desktop-5
 snippet.bloque
 	pre
-		tg &ltrow
-		at class=
-		vat "is-mobile"
-		tg &gt
+		tg &ltrow-mobile&gt
 		br
 		tg     &ltcolumn
 		at class=
@@ -253,16 +250,16 @@ snippet.bloque
 		span .touch-is-half .tablet-4 .desktop-5
 		tg &lt/column&gt
 		br
-		tg &lt/row&gt
+		tg &lt/row-mobile&gt
 h4.subtitle Grid multilinea
-p.bloque Añadiendo la clase
-	code .is-multiline
+p.bloque Añadiendo el prefijo
+	code -multiple
 	span al contenedor principal
 	code row
 	span , generará un salto de linéa si ya no hay espacio disponible en la fila.
 row.bloque
 	column
-		row.is-multiline
+		row-multiple
 			column.tablet-5.desktop-12
 				.demo.color-primary: code .tablet-5 .desktop-12
 			column.tablet-8
@@ -277,10 +274,7 @@ row.bloque
 				.demo.color-danger: code column .is-block
 snippet.bloque
 	pre
-		tg &ltrow
-		at class=
-		vat "is-multiline"
-		tg &gt
+		tg &ltrow-multiple&gt
 		br
 		tg     &ltcolumn
 		at class=
@@ -324,27 +318,24 @@ snippet.bloque
 		span @content
 		tg &lt/column&gt
 		br
-		tg &lt/row&gt
+		tg &lt/row-multiple&gt
 h4.subtitle Grid mobile
-p.bloque Añadiendo la clase
-	code .is-mobile
+p.bloque Añadiendo el prefijo
+	code -mobile
 	span al contenedor principal
 	code row
 	span , evitará el salto de linéa del elemento
 	code column
 	span .
 row.bloque
-	row.is-mobile
+	row-mobile
 		column.mobile-is-half.touch-is-half: .demo.color-primary Column 1
 		column: .demo.color-info Col 2
 		column: .demo.color-success Col 3
 		column: .demo.color-warning Col 4
 snippet.bloque
 	pre
-		tg &ltrow
-		at class=
-		vat "is-mobile"
-		tg &gt
+		tg &ltrow-mobile&gt
 		br
 		tg     &ltcolumn
 		at class=
@@ -374,25 +365,22 @@ snippet.bloque
 		span Col 4
 		tg &lt/column&gt
 		br
-		tg &lt/row&gt
+		tg &lt/row-mobile&gt
 h4.subtitle Grid invertida
-p.bloque Añadiendo la clase
-	code .is-inverted
+p.bloque Añadiendo el prefijo
+	code -invert
 	span al contenedor principal
 	code row
 	span .
 row.bloque
-	row.is-inverted
+	row-invert
 		column: .demo.color-primary Column 1
 		column: .demo.color-info Column 2
 		column: .demo.color-success Column 3
 		column: .demo.color-warning Column 4
 snippet.bloque
 	pre
-		tg &ltrow
-		at class=
-		vat "is-inverted"
-		tg &gt
+		tg &ltrow-invert&gt
 		br
 		tg     &ltcolumn
 		at class=
@@ -422,18 +410,18 @@ snippet.bloque
 		span Column 4
 		tg &lt/column&gt
 		br
-		tg &lt/row&gt
+		tg &lt/row-invert&gt
 h4.subtitle Anidaciones
 row.bloque
 	row
 		column.tablet-is-half
 			column: .demo.color-info column 1
-			row.is-mobile
+			row-mobile
 				column: .demo.color-info Nested 1
 				column: .demo.color-info Nested 2
 		column.tablet-is-half
 			column: .demo.color-danger column 2
-			row.is-mobile
+			row-mobile
 				column: .demo.color-danger Nested 3
 				column: .demo.color-danger Nested 4
 snippet.bloque
@@ -450,10 +438,7 @@ snippet.bloque
 		span column 1
 		tg &lt/column&gt
 		cm        // Primera anidación
-		tg         &ltrow
-		at class=
-		vat "is-mobile"
-		tg &gt
+		tg        &ltrow-mobile&gt
 		br
 		tg             &ltcolumn
 		at class=
@@ -469,7 +454,7 @@ snippet.bloque
 		span Nested 2
 		tg &lt/column&gt
 		br
-		tg         &lt/row&gt
+		tg         &lt/row-mobile&gt
 		br
 		tg     &lt/column&gt
 		cm    //columnas de color rojo
@@ -482,10 +467,7 @@ snippet.bloque
 		span column 1
 		tg &lt/column&gt
 		cm        // Primera anidación
-		tg         &ltrow
-		at class=
-		vat "is-mobile"
-		tg &gt
+		tg        &ltrow-mobile&gt
 		br
 		tg             &ltcolumn
 		at class=
@@ -501,7 +483,7 @@ snippet.bloque
 		span Nested 2
 		tg &lt/column&gt
 		br
-		tg         &lt/row&gt
+		tg         &lt/row-mobile&gt
 		br
 		tg     &lt/column&gt
 		br

@@ -1,5 +1,5 @@
 center.color-info.padding-1.is-small Excelente, la versión
-	b.is-text.medium 0.4.3
+	b.is-text.medium #{version}
 	span esta lista.
 	a(modal="#cambios" href="#").is-text-cloud.is-text-underline Ver cambios.
 include features.jade
@@ -16,61 +16,51 @@ center.is-full-center#intro-header
 			center
 				snippet.monokai.not-label
 					pre.is-text-bolder
-						warning npm  
+						span.is-text-warning npm  
 						at install  
-						danger kimera
-		a(href="https://github.com/JorgeAntrax/kimera/archive/master.zip" target="_blank").is-medium.button.is-success.margin-v-1 Descargar v0.4.3
-		buttons.is-center
-			a(href="https://twitter.com/@kimeracssframew").is-medium
-				icon
-					i.fa.fa-twitter
-			a(href="https://github.com/JorgeAntrax/kimera/fork" target="_blank").is-medium
-				icon.is-text-dark
-					i.fa.fa-code-fork
-			a(href="https://facebook.com/kimeraCSS").is-medium
-				icon.is-text-info
-					i.fa.fa-facebook
+						span.is-text-danger kimera
+		a(href="https://github.com/JorgeAntrax/kimera/archive/master.zip" target="_blank").is-medium.button.is-success.margin-v-1 Descargar v#{version}
 mega.color-info
 	row#features
-		column.touch-is-half.tablet-6
+		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
 				i.fa.fa-desktop
 				i.fa.fa-laptop
 				i.fa.fa-mobile
 			upper.is-text-medium.is-text-bolder.padding-v-1 mobile first
-			span
+			small
 				b Adaptable
 				span a diferentes dispositivos y basado en la metodología mobile first.
-		column.touch-is-half.tablet-6
+		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
 				i.fa.fa-css3
 			upper.is-text-medium.is-text-bolder.padding-v-1 flexbox & grid
-			span Con todas las ventajas de flexbox y Grid CSS3, crea plantillas muy potentes.
-		column.touch-is-half.tablet-6
+			small Con todas las ventajas de flexbox y Grid CSS3, crea plantillas muy potentes.
+		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
 				i.fa.fa-codepen
-			upper.is-text-medium.is-text-bolder.padding-v-1 Integración jquery
-			span Kimera hace uso del framework
-				b JQuery
+			upper.is-text-medium.is-text-bolder.padding-v-1 Vanilla JS
+			small Kimera no utiliza ningún framework
+				b JS
 				span para añadir la interacción necesaría.
-		column.touch-is-half.tablet-6
+		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
 				i.fa.fa-cubes
 			upper.is-text-medium.is-text-bolder.padding-v-1 sistema modular
-			span Importa solo lo necesario mediante nuestro increible sistema de importación.
-		column.touch-is-half.tablet-6
+			small Importa solo lo necesario mediante nuestro increible sistema de importación.
+		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
 				img(src=urlimage+"mit.png", alt="Open source MIT" style="width: 3rem; height: 3rem;")
 			upper.is-text-medium.is-text-bolder.padding-v-1 open source
-			span Kimera es un proyecto gratuito,
+			small Kimera es un proyecto gratuito,
 				b Open source 
 				span que trabaja bajo la licencia
 				b MIT.
-		column.touch-is-half.tablet-6
+		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
 				i.fa.fa-simplybuilt
 			upper.is-text-medium.is-text-bolder.padding-v-1 Código limpio
-			span Basado en
+			small Basado en
 				b  etiquetas
 				span  personalizadas que facilitan su integración.
 include ../../html/intro/portafolio.html
@@ -189,7 +179,7 @@ mega.color-primary-darken-2
 		center.padding-1
 			h3.subtitle Ventanas modal increibles.
 			button(modal="#homedemo1").is-danger.bloque Demo
-		modal#homedemo1
+		modal#homedemo1.is-zoom-in
 			background(modal="#homedemo1")
 			content(style="max-width: 700px; width: 100%;").is-paddingless
 				row
@@ -283,16 +273,16 @@ row.bloque.padding-h-1
 						textarea(placeholder="Descripción" rows="1").is-rounded.is-info
 					section
 						group.test-hover
-							item
+							group-item
 								icon.op-03.is-small
 									i.fa.fa-thumbs-o-up
-							item
+							group-item
 								icon.op-03.is-small
 									i.fa.fa-camera
-							item
+							group-item
 								icon.op-03.is-small
 									i.fa.fa-link
-							item
+							group-item
 								icon.op-03.is-small
 									i.fa.fa-plus-square-o
 				button.is-info.is-small

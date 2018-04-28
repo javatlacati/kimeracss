@@ -3,8 +3,8 @@ tags.is-group
 	tag.is-info Path
 	tag _range.scss
 tags.is-group
-	tag.is-success Actualización
-	tag.is-warning.is-text-bolder JQuery 1.7
+	tag.is-info 0.4.4
+	tag.is-text-bolder Vanilla JS
 p Elemento de tipo
 	b control slider
 	span .
@@ -14,7 +14,7 @@ p.bloque Hemos actualizado este componente y
 	span su sintaxis, mediante un pequeño
 	code script
 	span de
-	b jquery
+	b javascript
 	span .
 h4.subtitle Proceso de implementación
 p.bloque La manera de construir este tipo de
@@ -34,7 +34,7 @@ ol.default-browser
 		code for
 		span .
 p.bloque Apartir de la versión
-	code.color-success 0.4.0
+	code.color-success 0.4.4
 	span solamente tienes que añadir nuestro tag personalizado
 	code range
 	span .
@@ -42,13 +42,13 @@ h4.subtitle Que ha cambiado
 p.bloque Solamente necesitas una linea de código
 	code html5
 	span ,
-	b jquery
+	b javascript
 	span hace el resto.
 row.bloque
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-warning 0.3.8
+			tag.is-warning 0.4.3
 		.margin-v-1
 			range(value="25")#range-old
 		snippet
@@ -61,7 +61,7 @@ row.bloque
 				at id=
 				vat "range-old"
 				at value=
-				vat "25%"
+				vat "25"
 				tg /&gt
 				br
 				tg   &ltlabel
@@ -73,7 +73,7 @@ row.bloque
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-success 0.4.0
+			tag.is-success 0.4.4
 		.margin-v-1
 			range(value="25")#range-new
 		snippet
@@ -82,12 +82,12 @@ row.bloque
 				at id=
 				vat "range-new"
 				at value=
-				vat "25%"
+				vat "25"
 				tg &gt&ltrange&gt
-h4.subtitle Implementación sin Jquery
+h4.subtitle Implementación sin JS
 p.bloque si decides no utilizar
-	b jquery
-	span con kimera, puedes hacer la implementación de la siguiente manera y obtendrás el mismo resultado.
+	b javascript
+	span , puedes hacer la implementación de la siguiente manera y obtendrás el mismo resultado.
 snippet
 	pre
 		tg &ltrange&gt
@@ -98,7 +98,7 @@ snippet
 		at id=
 		vat "range-old"
 		at value=
-		vat "25%"
+		vat "25"
 		tg /&gt
 		br
 		tg   &ltlabel
@@ -112,14 +112,14 @@ row.bloque
 		message.is-primary.is-small
 			header Importante
 			content
-				b JQuery
+				b Javascript
 				span se encarga de generar dinamicamente el elemento
 				code input
 				span y
 				code label
 				span enlazados por su id, si tomas la desición de implementar otro
 				b framework JS
-				span utiliza el método de la versión inferior a 0.3.8.
+				span utiliza el método de la versión inferior a 0.4.3.
 	column.tablet-is-half
 		message.is-info.is-small
 			header Importante
@@ -203,7 +203,7 @@ row.bloque
 				at class=
 				vat "is-primary"
 				at value=
-				vat "50%"
+				vat "50"
 				at id=
 				vat "range2"
 				tg &gt&lt/range&gt
@@ -212,7 +212,7 @@ row.bloque
 				at class=
 				vat "is-info"
 				at value=
-				vat "50%"
+				vat "50"
 				at id=
 				vat "range3"
 				tg &gt&lt/range&gt
@@ -221,7 +221,7 @@ row.bloque
 				at class=
 				vat "is-success"
 				at value=
-				vat "50%"
+				vat "50"
 				at id=
 				vat "range4"
 				tg &gt&lt/range&gt
@@ -230,7 +230,7 @@ row.bloque
 				at class=
 				vat "is-warnng"
 				at value=
-				vat "50%"
+				vat "50"
 				at id=
 				vat "range5"
 				tg &gt&lt/range&gt
@@ -239,72 +239,7 @@ row.bloque
 				at class=
 				vat "is-danger"
 				at value=
-				vat "50%"
+				vat "50"
 				at id=
 				vat "range6"
 				tg &gt&lt/range&gt
-h4.subtitle Implementación JS
-p.bloque Este pequeño
-	b script
-	span es el utilizdo para los ejemplos de esta documentación
-snippet.bloque(value="jquery")
-	pre
-		tg $(
-		vat 'range'
-		tg )
-		span .
-		at on
-		tg (
-		vat 'mousemove mousedown'
-		span ,
-		vat 'input'
-		at function
-		tg (){
-		br
-		at     var
-		span  value_range
-		span =
-		tg $(
-		vat this
-		tg )
-		span .
-		at attr
-		tg (
-		vat 'value'
-		tg )
-		span ;
-		br
-		at     var
-		span  label
-		span =
-		tg $(
-		vat this
-		tg )
-		span .
-		at siblings
-		tg (
-		vat 'label'
-		tg )
-		span ;
-		br
-		span     label
-		span .
-		at css
-		tg (
-		vat 'left'
-		span ,
-		tg (
-		vat value_range - 4
-		tg )
-		span +
-		vat '%'
-		tg )
-		span .
-		at text
-		tg (
-		vat value_range
-		tg )
-		span ;
-		br
-		tg })
-		span ;

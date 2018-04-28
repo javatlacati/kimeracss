@@ -4,8 +4,6 @@ img/
 font/
 html/
 kimera/
-js/jquery.js
-kimera-js.html
 *.config
 *.txt
 *.png

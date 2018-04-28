@@ -38,9 +38,9 @@ ul.default-browser
 h4.subtitle Plantilla estandar
 row.bloque
 	column
-		layout.bloque
+		layout
 			header.color-primary Header
-			navbar.color-warning Navbar
+			navbar.color-warning.is-center Navbar
 			sidebar.color-dark-lighten-4 Side menu
 			main.color-info-lighten-4 Content
 			footer.color-danger Footer
@@ -85,12 +85,64 @@ row.bloque
 				tg &lt/footer&gt
 				br
 				tg &lt/layout&gt
-h4.subtitle Personalizando el layout
-p.bloque Cualquier contenedor dentro de las etiquetas
+h4.subtitle Plantilla de bloque
+p Añadiendo la clase
+	code .is-block
+	span al contenedor
 	code layout
-	span puede ser omitido, logrando así, una versátilidad para la creación de diferentes
-	b plantillas
-	span .
+	span se puede conseguir una distribución estilo bloque.
+row.bloque
+	column
+		layout.is-block
+			header.color-primary Header
+			navbar.color-warning.is-center Navbar
+			sidebar.color-dark-lighten-4 Side menu
+			main.color-info-lighten-4 Content
+			footer.color-danger Footer
+		snippet
+			pre
+				cm // Layout basico
+				tg &ltlayout
+				at class=
+				vat "is-block"
+				tg &gt
+				br
+				tg     &ltheader
+				at class=
+				vat "color-primary"
+				tg &gt
+				span @content
+				tg &lt/header&gt
+				br
+				tg     &ltnavbar
+				at class=
+				vat "color-warning"
+				tg &gt
+				span @content
+				tg &lt/navbar&gt
+				br
+				tg     &ltsidebar
+				at class=
+				vat "color-dark-lighten-4"
+				tg &gt
+				span @content
+				tg &lt/sidebar&gt
+				br
+				tg     &ltmain
+				at class=
+				vat "color-info-lighten-4"
+				tg &gt
+				span @content
+				tg &lt/main&gt
+				br
+				tg     &ltfooter
+				at class=
+				vat "color-danger"
+				tg &gt
+				span @content
+				tg &lt/footer&gt
+				br
+				tg &lt/layout&gt
 h5.subtitle Plantilla estilo dashboard
 p Añadiendo clase 
 	code .is-dashboard
@@ -341,6 +393,35 @@ snippet.bloque
 		span /*los porcentajes en rojo corresponden al ancho de los sidebar*/
 		br
 		at }
+row.bloque
+	column
+		row.is-mobile.demo-layout-size
+			column.mobile-1.touch-1.color-dark-lighten-4
+				b Small
+			column.mobile-19.touch-19.color-info-lighten-4
+				b content
+snippet.bloque
+	pre
+		tg &ltlayout
+		at class=
+		vat "is-dashboard is-tiny-sidebar"
+		tg &gt
+		br
+		tg     &ltsidebar
+		at  class=
+		vat "color-dark-lighten-4"
+		tg &gt
+		span Small
+		tg &lt/sidebar&gt
+		br
+		tg     &ltmain
+		at  class=
+		vat "color-info-lighten-4"
+		tg &gt
+		span @content
+		tg &lt/main&gt
+		br
+		tg &lt/layout&gt
 row.bloque
 	column
 		row.is-mobile.demo-layout-size

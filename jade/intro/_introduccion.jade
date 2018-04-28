@@ -1,3 +1,4 @@
+- var version = "0.4.5";
 h1.title Introducción
 p.bloque
 	b Kimera
@@ -124,8 +125,6 @@ p.bloque Hemos implementado un
 	b sistema módular
 	span bastante sencillo que te permitirá importar a tu proyecto solamente lo necesario para trabajar.
 p.bloque para implementar este novedoso sistema necesitas crear el enlace a
-	code jquery.js
-	span y
 	code kimera.min.js
 	span antes de la etiqueta de cierre del elemento
 	code body
@@ -135,12 +134,7 @@ snippet
 	pre
 		tg &ltscript
 		at src=
-		vat "https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		tg &gt&lt/script&gt
-		br
-		tg &ltscript
-		at src=
-		vat "https://cdn.jsdelivr.net/npm/kimera@0.4.3/js/kimera.min.js"
+		vat 'https://cdn.jsdelivr.net/npm/kimera@#{version}/js/kimera.min.js'
 		tg &gt&lt/script&gt
 p.bloque Una vez hecho esto solamente tienes que llamar en la etiqueta body, al atributo personalizado
 	code km-include
@@ -334,7 +328,7 @@ row.bloque
 				at rel=
 				vat "stylesheet"
 				at href=
-				vat "https://cdn.jsdelivr.net/gh/JorgeAntrax/kimera@0.4.3/css/kimera.min.css"
+				vat "https://cdn.jsdelivr.net/gh/JorgeAntrax/kimera@#{version}/css/kimera.min.css"
 				tg &gt
 	column.tablet-is-half
 		p.subtitle Enlace
@@ -348,7 +342,7 @@ row.bloque
 				at rel=
 				vat "stylesheet"
 				at href=
-				vat "https://cdn.jsdelivr.net/npm/kimera@0.4.3/css/kimera.min.css"
+				vat "https://cdn.jsdelivr.net/npm/kimera@#{version}/css/kimera.min.css"
 				tg &gt
 h4.subtitle Plantilla básica
 p.bloque
@@ -421,7 +415,7 @@ snippet(value="template")
 		at inactive class=
 		vat "is-success is-rounded is-large"
 		tg &gt
-		span Ultima versión 0.4.3
+		span Ultima versión #{version}
 		tg &lt/button&gt
 		br
 		tg       &lt/center&gt
@@ -430,12 +424,7 @@ snippet(value="template")
 		br
 		tg     &ltscript
 		at src=
-		vat "https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		tg &gt&lt/script&gt
-		br
-		tg     &ltscript
-		at src=
-		vat "https://cdn.jsdelivr.net/npm/kimera@0.4.3/js/kimera.min.js"
+		vat "https://cdn.jsdelivr.net/npm/kimera@#{version}/js/kimera.min.js"
 		tg &gt&lt/script&gt
 		br
 		tg   &ltbody&gt

@@ -1,37 +1,37 @@
 #menu-close
-menu#m1.color-primary
+menu#m1.color-primary.is-small.is-text-upper
 	content
 		row.padding-v-2.is-center
-			img(src=urlimage+'logo-white.png' alt="kimera" style="width: 30%; height: auto")
-		menu-item.is-active
-			a(href="#layout-home")
+			img(src=urlimage+'logo-white.png' alt="kimera" style="width: 40%; height: auto")
+		menu-item(data-link="layout-home").is-active
+			a
 				icon
 					i.fa.fa-home
 				span Inicio
-		menu-item
-			a(href="#layout-intro")
+		menu-item(data-link="layout-intro")
+			a
 				icon
 					i.fa.fa-heart
 				span Introducción
 		divider.is-white
-		menu-item.is-label documentación
-		menu-item
-			a(href="#layout-grid")
+		menu-item.is-title documentación
+		menu-item(data-link="layout-grid")
+			a
 				icon
 					i.fa.fa-th-large
-				span Sistema de rejilla
-		menu-item
-			a(href="#layout-components")
+				span Rejilla
+		menu-item(data-link="layout-components")
+			a
 				icon
 					i.fa.fa-cubes
 				span Componentes
-		menu-item
-			a(href="#layout-forms")
+		menu-item(data-link="layout-forms")
+			a
 				icon
 					i.fa.fa-mouse-pointer
 				span Formularios
-		menu-item
-			a(href="#layout-modules")
+		menu-item(data-link="layout-modules")
+			a
 				icon
 					i.fa.fa-pie-chart
 				span Modulos

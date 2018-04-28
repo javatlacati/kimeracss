@@ -3,8 +3,8 @@ tags.is-group
 	tag.is-info Path
 	tag _progress.scss
 tags.is-group
-	tag.is-success Actualización
-	tag.is-warning.is-text-bolder JQuery 1.7
+	tag.is-info 0.4.4
+	tag.is-text-bolder Vanilla JS
 p Elemento que permite indicar al usuario el progreso de alguna tarea.
 divider
 p.bloque Hemos actualizado este componente y
@@ -12,13 +12,13 @@ p.bloque Hemos actualizado este componente y
 	span su sintaxis, mediante un pequeño
 	code script
 	span de
-	b jquery
+	b javascript
 	span .
 h4.subtitle Proceso de implementación
 p.bloque La manera de construir este tipo de
 	b componente
 	span en versiones inferiores a 
-	code.color-warning 0.3.8
+	code.color-warning 0.4.3
 	span simplemente se añadian los siguientes
 	b elementos personalizados
 	span .
@@ -32,9 +32,9 @@ ol.default-browser
 		code value
 		span el cúal definía el progreso completado de una tarea.
 p.bloque Apartir de la versión
-	code.color-success 0.4.0
+	code.color-success 0.4.4
 	span y con la implementación de
-	b jquery
+	b javascript
 	span , solamente tienes que añadir nuestro tag personalizado
 	code process
 	span .
@@ -42,13 +42,13 @@ h4.subtitle Que ha cambiado
 p.bloque Solamente necesitas una linea de código
 	code html5
 	span ,
-	b jquery
+	b javascript
 	span hace el resto.
 row.bloque
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-warning 0.3.8
+			tag.is-warning 0.4.3
 		.margin-v-1
 			process(value="10%")
 		snippet
@@ -64,7 +64,7 @@ row.bloque
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-success 0.4.0
+			tag.is-success 0.4.4
 		.margin-v-1
 			process(value="10%")
 		snippet
@@ -73,10 +73,10 @@ row.bloque
 				at value=
 				vat "10%"
 				tg &gt&lt/process&gt
-h4.subtitle Implementación sin Jquery
+h4.subtitle Implementación sin JS
 p.bloque si decides no utilizar
-	b jquery
-	span con kimera, puedes hacer la implementación de la siguiente manera y obtendrás el mismo resultado.
+	b javascript
+	span , puedes hacer la implementación de la siguiente manera y obtendrás el mismo resultado.
 snippet
 	pre
 		tg &ltprocess&gt
@@ -92,7 +92,7 @@ row.bloque
 		message.is-primary.is-small
 			header Importante
 			content
-				b JQuery
+				b Javascript
 				span se encarga de generar dinamicamente el elemento
 				code complete
 				span .
@@ -173,13 +173,13 @@ p Añadiendo una de las siguientes clases al elemento
 	code process
 	span.
 ul.default-browser
-	li: code .is-slim
+	li: code .is-tiny
 	li: code .is-small
 	li: code .is-medium
 	li: code .is-large
 row.bloque
 	column.tablet-is-half
-		process.is-slim.is-primary(value="20%")
+		process.is-tiny.is-primary(value="20%")
 		process.is-small.is-info(value="40%")
 		process.is-success(value="60%")
 		process.is-medium.is-warning(value="80%")
@@ -189,7 +189,7 @@ row.bloque
 			pre
 				tg &ltprocess
 				at class=
-				vat "is-slim is-primary"
+				vat "is-tiny is-primary"
 				at value=
 				vat "20%"
 				tg &gt&lt/process&gt
@@ -233,7 +233,7 @@ ul.default-browser
 h5.subtitle Label static
 row.bloque
 	column.tablet-is-half
-		process(label="static" value="20%").is-slim.is-primary
+		process(label="static" value="20%").is-tiny.is-primary
 		process(label="static" value="40%").is-small.is-info
 		process(label="static" value="60%").is-success
 		process(label="static" value="80%").is-medium.is-warning
@@ -243,7 +243,7 @@ row.bloque
 			pre
 				tg &ltprocess
 				at class=
-				vat "is-slim is-primary"
+				vat "is-tiny is-primary"
 				at label=
 				vat "static"
 				at value=
@@ -288,7 +288,7 @@ row.bloque
 h5.subtitle Label floating
 row.bloque
 	column.tablet-is-half
-		process(label="floating" value="20%").is-slim.is-primary
+		process(label="floating" value="20%").is-tiny.is-primary
 		process(label="floating" value="40%").is-small.is-info
 		process(label="floating" value="60%").is-success
 		process(label="floating" value="80%").is-medium.is-warning
@@ -298,7 +298,7 @@ row.bloque
 			pre
 				tg &ltprocess
 				at class=
-				vat "is-slim is-primary"
+				vat "is-tiny is-primary"
 				at label=
 				vat "floating"
 				at value=
@@ -348,7 +348,7 @@ p.bloque Añadiendo al elemento
 	span .
 row.bloque
 	column.tablet-is-half
-		process.is-slim.is-infinite.is-primary
+		process.is-tiny.is-infinite.is-primary
 		process.is-small.is-infinite.is-info
 		process.is-infinite.is-success
 		process.is-medium.is-infinite.is-warning
@@ -358,7 +358,7 @@ row.bloque
 			pre
 				tg &ltprocess
 				at class=
-				vat "is-slim is-infinite is-primary"
+				vat "is-tiny is-infinite is-primary"
 				tg &gt&lt/process&gt
 				br
 				tg &ltprocess

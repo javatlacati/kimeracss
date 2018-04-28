@@ -12,7 +12,7 @@ p Kimera tiene un total de 45 archivos
 	span .
 snippet(value="txt").bloque
 	pre
-		info |----- kimera-master
+		.is-text-info |----- kimera-master
 		br
 		span |--------- main.scss
 		br
@@ -66,23 +66,23 @@ snippet(value="scss").bloque
 	pre
 		cm // Archivos de importación obligatorios
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/base/<info>_all.scss</info>"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/base/<span class="is-text-info">_all.scss</span>"
 		at ;
 		br
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/utilities/<info>_all.scss</info>"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/utilities/<span class="is-text-info">_all.scss</span>"
 		at ;
 		cm // Archivos modulares
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/layout/<info>archivo.scss</info>"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/layout/<span class="is-text-info">archivo.scss</span>"
 		at ;
 		br
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/components/<info>archivo.scss</info>"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/components/<span class="is-text-info">archivo.scss</span>"
 		at ;
 		br
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/modules/<info>archivo.scss</info>"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/modules/<span class="is-text-info">archivo.scss</span>"
 		at ;
 h4.subtitle Ejemplo
 p Para importar el sistema de rejilla se hace de la siguiente manera.
@@ -90,7 +90,7 @@ snippet.bloque
 	pre
 		cm // Importando el grid
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/layout/_grid.scss"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/layout/_grid.scss"
 		at ;
 p.bloque Es todo, compilas y pruebas.
 snippet
@@ -131,7 +131,7 @@ snippet(value="scss")
 	pre
 		cm // Archivo de buttons
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/components/_buttons.scss"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/components/_buttons.scss"
 		at ;
 p.bloque Al importar cualquier componente o módulo puedes hacer uso de todas sus
 	b propiedades y características.
@@ -163,15 +163,15 @@ snippet(value="scss")
 	pre
 		cm // Archivo de buttons
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/components/_all.scss"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/components/_all.scss"
 		at ;
 		br
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/modules/_all.scss"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/modules/_all.scss"
 		at ;
 		br
 		at @import 
-		vat "<info>tu-proyecto</info>/kimera-master/scss/layout/_all.scss"
+		vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/layout/_all.scss"
 		at ;
 message.is-info.is-small
 	content

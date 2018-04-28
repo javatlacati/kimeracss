@@ -4,15 +4,15 @@ tags.is-group
 	tag _toggle-button.scss
 	tag.is-success Actualizado
 tags.is-group
-	tag.is-info 0.4.0
-	tag.is-warning.is-text-bolder JQuery 1.7
+	tag.is-info 0.4.4
+	tag.is-text-bolder Vanilla JS
 divider
 p.bloque Hemos actualizado este componente y
 	b simplificado
 	span su sintaxis, mediante un pequeño
 	code script
 	span de
-	b jquery
+	b javascript
 	span .
 h4.subtitle Proceso de implementación
 p.bloque La manera de construir este tipo de
@@ -32,7 +32,7 @@ ol.default-browser
 		code for
 		span .
 p.bloque Apartir de la versión
-	code.color-success 0.4.0
+	code.color-success 0.4.4
 	span solamente tienes que añadir nuestro tag personalizado
 	code toggle
 	span .
@@ -40,13 +40,13 @@ h4.subtitle Que ha cambiado
 p.bloque Solamente necesitas una linea de código
 	code html5
 	span ,
-	b jquery
+	b javascript
 	span hace el resto.
 row.bloque
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-warning 0.3.8
+			tag.is-warning 0.4.3
 		.margin-v-1
 			toggle#toggle-old
 		snippet
@@ -69,7 +69,7 @@ row.bloque
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-success 0.4.0
+			tag.is-success 0.4.4
 		.margin-v-1
 			toggle#toggle-new
 		snippet
@@ -80,7 +80,7 @@ row.bloque
 				tg &gt&lttoggle&gt
 h4.subtitle Implementación sin Jquery
 p.bloque si decides no utilizar
-	b jquery
+	b javascript
 	span con kimera, puedes hacer la implementación de la siguiente manera y obtendrás el mismo resultado.
 snippet
 	pre
@@ -104,14 +104,14 @@ row.bloque
 		message.is-primary.is-small
 			header Importante
 			content
-				b JQuery
+				b Javascript
 				span se encarga de generar dinamicamente el elemento
 				code input
 				span y
 				code label
 				span enlazados por su id, si tomas la desición de implementar otro
 				b framework JS
-				span utiliza el método de la Versión sin jquery.
+				span utiliza el método de la Versión sin javascript.
 	column.tablet-is-half
 		message.is-info.is-small
 			header Importante
@@ -296,12 +296,9 @@ row.bloque
 				cm // Toggle group
 				tg &lttoggles&gt
 				br
-				tg   &lttoggle&gt&lt/toggle&gt
-				br
-				tg   &lttoggle&gt&lt/toggle&gt
-				br
-				tg   &lttoggle&gt&lt/toggle&gt
-				br
+				-for(var i = 0; i<3; i++)
+					tg   &lttoggle&gt&lt/toggle&gt
+					br
 				tg &lt/toggles&gt
 h4.subtitle Estado
 	small: code [disabled]
@@ -328,10 +325,9 @@ row.bloque
 				at disabled
 				tg &gt
 				br
-				tg   &lttoggle&gt&lt/toggle&gt
-				br
-				tg   &lttoggle&gt&lt/toggle&gt
-				br
+				-for(var i = 0; i<3; i++)
+					tg   &lttoggle&gt&lt/toggle&gt
+					br
 				tg &lt/toggles&gt
 row.bloque
 	column.tablet-is-half

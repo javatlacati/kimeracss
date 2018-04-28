@@ -52,52 +52,21 @@ message.is-small.is-info
 h4.subtitle Separadores
 row.bloque
 	column.tablet-is-half
-		p.title Añadiendo la clase
-			code .is-dotted
-		breadcrumb.is-dotted
+		breadcrumb#demo-breadcrumb-toggle-divider
 			item: a(href="#") Home
 			item: a(href="#") Library
 			item: a(href="#") Data
 			item.is-active: a(href="#") Kimera
-		p.title Añadiendo la clase
-			code .is-arrowed
-		breadcrumb.is-arrowed
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
+		buttons.margin-t-1#demo-breadcrumb-divider
+			button.is-light.is-small default
+			button.is-light.is-small is-dotted
+			button.is-light.is-small is-arrowed
 	column.tablet-is-half
 		snippet
 			pre
 				tg &ltbreadcrumb
 				at class=
-				vat "is-dotted"
-				tg &gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-				br
-				tg &ltbreadcrumb
-				at class=
-				vat "is-arrowed"
+				vat "<span id="demo-breadcrumb-doc">is-dotted</span>"
 				tg &gt
 				br
 				tg   &ltitem&gt
@@ -125,16 +94,20 @@ row.bloque
 	column
 		p Alineación al centro con la clase
 			code .is-center
-		breadcrumb.padding-v-2.is-center
+		breadcrumb.padding-v-2#breadcrumb-Align-demo
 			item: a(href="#") Home
 			item: a(href="#") Library
 			item: a(href="#") Data
 			item.is-active: a(href="#") Kimera
+		buttons#bread-align-buttons.margin-b-1
+			button.is-small.is-light default
+			button.is-small.is-light is-center
+			button.is-small.is-light is-right
 		snippet
 			pre
 				tg &ltbreadcrumb
 				at class=
-				vat "is-center"
+				vat "<span id='demo-align-bread'></span>"
 				tg &gt
 				br
 				tg   &ltitem&gt
@@ -157,152 +130,29 @@ row.bloque
 				tg &lt/item&gt
 				br
 				tg &lt/breadcrumb&gt
-p.title Alineación a la derecha con la clase
-	code .is-right
 message.is-success.is-small
 	header Tips:
 	content
 		p Al añadir la clase
 			code is-right
 			span automaticamente se invierte el separador asignado.
-row.bloque
-	column
-		breadcrumb.is-right
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
-		breadcrumb.padding-v-2.is-right.is-arrowed
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
-		snippet
-			pre
-				tg &ltbreadcrumb
-				at class=
-				vat "is-right"
-				tg &gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-				br
-				tg &ltbreadcrumb
-				at class=
-				vat "is-right is-arrowed"
-				tg &gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
 h4.subtitle Tamaños
 row.bloque
 	column
-		breadcrumb.is-small
+		breadcrumb#size-bread
 			item: a(href="#") Home
 			item: a(href="#") Library
 			item: a(href="#") Data
 			item.is-active: a(href="#") Kimera
-		breadcrumb.padding-v-1
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
-		breadcrumb.is-large
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
-		br
+		buttons#toggle-size-bread.margin-v-1
+			button.is-small.is-light default
+			button.is-small.is-light is-small
+			button.is-small.is-light is-large
 		snippet
 			pre
 				tg &ltbreadcrumb
 				at class=
-				vat "is-small"
-				tg &gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-				br
-				tg &ltbreadcrumb&gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-				br
-				tg &ltbreadcrumb
-				at class=
-				vat "is-large"
+				vat "<span id="demo-size-bread"></span>"
 				tg &gt
 				br
 				tg   &ltitem&gt

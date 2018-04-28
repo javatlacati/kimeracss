@@ -2,17 +2,16 @@ h1.title Radio
 tags.is-group
 	tag.is-info Path
 	tag _check-radio.scss
-	tag.is-success Actualizado
 tags.is-group
-	tag.is-info 0.4.0
-	tag.is-warning.is-text-bolder JQuery 1.7
+	tag.is-info 0.4.4
+	tag.is-text-bolder Vanilla JS
 divider
 p.bloque Hemos actualizado este componente y
 	b simplificado
 	span su sintaxis, mediante un pequeño
 	code script
 	span de
-	b jquery
+	b js
 	span .
 h4.subtitle Proceso de implementación
 p.bloque La manera de construir este tipo de
@@ -32,7 +31,7 @@ ol.default-browser
 		code for
 		span .
 p.bloque Apartir de la versión
-	code.color-success 0.4.0
+	code.color-success 0.4.4
 	span solamente tienes que añadir nuestro tag personalizado
 	code radio
 	span .
@@ -40,15 +39,15 @@ h4.subtitle Que ha cambiado
 p.bloque Solamente necesitas una linea de código
 	code html5
 	span ,
-	b jquery
+	b javascript
 	span hace el resto.
 row.bloque
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-warning 0.3.8
+			tag.is-warning 0.4.3
 		.margin-v-1
-			radio(text="Versión sin jquery")#radio-old
+			radio(text="Versión sin js")#radio-old
 		snippet
 			pre
 				tg &ltradio&gt
@@ -64,28 +63,28 @@ row.bloque
 				at for=
 				vat "radio-old"
 				tg &gt
-				span Versión sin jquery
+				span Versión sin js
 				tg &lt/label&gt
 				br
 				tg &ltradio&gt
 	column.tablet-is-half
 		tags.is-group
 			tag Kimera
-			tag.is-success 0.4.0
+			tag.is-success 0.4.4
 		.margin-v-1
-			radio(text="Versión con jquery")#radio-new
+			radio(text="Versión con js")#radio-new
 		snippet
 			pre
 				tg &ltradio
 				at id=
 				vat "radio-new"
 				at text=
-				vat "Versión con jquery"
+				vat "Versión con js"
 				tg &gt&ltradio&gt
-h4.subtitle Implementación sin Jquery
+h4.subtitle Implementación sin JS
 p.bloque si decides no utilizar
-	b jquery
-	span con kimera, puedes hacer la implementación de la siguiente manera y obtendrás el mismo resultado.
+	b javascript
+	span ,puedes hacer la implementación de la siguiente manera y obtendrás el mismo resultado.
 snippet
 	pre
 		tg &ltradio&gt
@@ -101,7 +100,7 @@ snippet
 		at for=
 		vat "radio-old"
 		tg &gt
-		span Versión sin jquery
+		span Versión sin js
 		tg &lt/label&gt
 		br
 		tg &ltradio&gt
@@ -110,14 +109,14 @@ row.bloque
 		message.is-primary.is-small
 			header Importante
 			content
-				b JQuery
+				b Javascript
 				span se encarga de generar dinamicamente el elemento
 				code input
 				span y
 				code label
 				span enlazados por su id, si tomas la desición de implementar otro
 				b framework JS
-				span utiliza el método de la versión inferior a 0.3.8.
+				span utiliza el método de la versión inferior a 0.4.3
 	column.tablet-is-half
 		message.is-info.is-small
 			header Importante
@@ -139,6 +138,7 @@ ol.default-browser
 	li: code form
 	li: code required
 	li: code checked
+	li: code value
 	li
 		code text
 		small (atributo personalizado).
@@ -237,6 +237,36 @@ message.is-primary.is-small
 	content Como pudiste observar en los ejemplos anteriores, se ha introducido la etiqueta
 		code &ltcode&gt
 		span dentro del atributo text, por lo que puedes pasar texto con formato simple.
+h4.subtitle Tamaño de radio
+p.bloque Hemos añadido 2 tamaños para este componente, utilizando las siguientes clases.
+ul.default-browser
+	li: code .is-small
+	li: code .is-tiny
+row.bloque
+	column.tablet-is-half
+		p
+			radio(text="radio small")#c12.is-small
+		radio(text="radio tiny")#c13.is-tiny
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltradio
+				at class=
+				vat "is-small"
+				at id=
+				vat "c12"
+				at text=
+				vat "radio small"
+				tg &gt&lt/radio&gt
+				br
+				tg &ltradio
+				at class=
+				vat "is-tiny"
+				at id=
+				vat "c13"
+				at text=
+				vat "radio tiny"
+				tg &gt&lt/radio&gt
 h4.subtitle Estado checked
 p.bloque añadiendo el atributo
 	code checked

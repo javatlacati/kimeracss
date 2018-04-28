@@ -3,9 +3,6 @@ p Pequeño módulo para la creación de acordeones.
 tags.is-group
 	tag.is-info Path
 	tag _acordeon.scss
-tags.is-group
-	tag.is-success Actualizado
-	tag.is-warning JQuery 1.7
 divider
 h4.subtitle Estructura
 p.bloque Este módulo solamente te proporciona una
@@ -167,13 +164,11 @@ h4.subtitle Acordeon multiple
 p.bloque Para crear un
 	b acordeon multiple
 	span necesitas añadir el atributo personalizado
-	code is-multiple
-	span pasando como valor
-	code true
+	code multiple
 	span .
 row.bloque
 	column.tablet-is-half
-		acordeon(is-multiple="true").desktop-15.is-material
+		acordeon(multiple).desktop-15.is-material
 			acordeon-item Acordeon multiple
 				icon +
 			content
@@ -199,8 +194,7 @@ row.bloque
 		snippet
 			pre
 				tg &ltacordeon
-				at is-multiple=
-				vat "true"
+				at multiple
 				at class=
 				vat "is-material"
 				tg &gt
@@ -210,8 +204,8 @@ h4.subtitle Anidación
 p.bloque La anidación de este módulo es completamente soportada.
 row.bloque
 	column.tablet-is-half
-		acordeon(is-multiple="true").desktop-15.is-material
-			acordeon-item Acordeon multiple
+		acordeon.desktop-15.is-material
+			acordeon-item Acordeon
 				icon +
 			content
 				p.padding-1 Con un estilo

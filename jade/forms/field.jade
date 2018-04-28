@@ -2,8 +2,6 @@ h1.title Fields
 tags.is-group
 	tag.is-info Path
 	tag _forms.scss
-	tag.is-danger estilos visuales
-tag.is-success Actualización
 divider
 p.bloque El elemento
 	code field
@@ -155,8 +153,8 @@ row.bloque
 				br
 				tg &lt/field&gt
 h4.subitle Field addons
-p.bloque Añadiendo el atributo personalizado
-	code addons
+p.bloque Añadiendo la clase
+	code .is-addons
 	span al elemento
 	code field
 	span eliminara los margenes y bordes redondeados de sus elementos
@@ -164,7 +162,7 @@ p.bloque Añadiendo el atributo personalizado
 	span .
 row.bloque
 	column.tablet-is-half
-		field(addons)
+		field.is-addons
 			control
 				listbox.is-info
 					select(name="demo-field")
@@ -179,7 +177,8 @@ row.bloque
 		snippet
 			pre
 				tg &ltfield
-				at addons
+				at class=
+				vat "is-addons"
 				tg &gt
 				br
 				tg   &ltcontrol&gt
@@ -256,7 +255,7 @@ p.bloque Añadiendo la clase
 	span .
 row.bloque
 	column.tablet-is-half
-		field(addons).is-rounded
+		field.is-addons.is-rounded
 			control.is-expand
 				input(type="text" placeholder="Usuario").input
 			control
@@ -265,7 +264,8 @@ row.bloque
 		snippet
 			pre
 				tg &ltfield
-				at addons
+				at class=
+				vat "is-addons"
 				at class=
 				vat "is-rounded"
 				tg &gt

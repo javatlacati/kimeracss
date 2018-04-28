@@ -14,7 +14,7 @@ p.bloque
 	span actualmente tiene soporte para los siguientes tipos de controles, añadiendo la clase
 	code .input
 	span , y para elementos de tipo date añadiendo la clase
-	code .date
+	code .input
 	span .
 ul.default-browser
 	li: code text
@@ -805,119 +805,6 @@ row.bloque
 				tg &lt/button&gt
 				br
 				tg &lt/form&gt
-h4.subtitle Control del tiempo.
-p.bloque Controles de formularío que te permitirán manipular datos como el
-	b tiempo y el calendario
-	span .
-h4.subtitle Estructura
-ul.default-browser
-	li
-		code date
-		span Contenedor principal.
-		ul.default-browser
-			li
-				code .date
-				span Elemento de tipo input.
-row.bloque
-	column.tablet-is-half
-		label Input date
-		date
-			input(type="date" value="2018-01-18").date
-		label Datetime
-		date
-			input(type="datetime" value="2018-01-18T14:21:46").date
-		label Datetime local
-		date
-			input(type="datetime-local" value="2018-01-18T14:21").date
-		label Input date month
-		date
-			input(type="month" value="2018-01").date
-		label Input date time
-		date
-			input(type="time" value="14:21").date
-		label Input date week
-		date
-			input(type="week" value="2018-W40").date
-	column.tablet-is-half
-		snippet
-			pre
-				tg &ltdate&gt
-				br
-				tg   &ltinput
-				at type=
-				vat "date"
-				at class=
-				vat "date"
-				at placeholder=
-				vat "Input type date"
-				tg &gt
-				br
-				tg &lt/date&gt
-				br
-				tg &ltdate&gt
-				br
-				tg   &ltinput
-				at type=
-				vat "datetime"
-				at class=
-				vat "date"
-				at placeholder=
-				vat "Input type datetime"
-				tg &gt
-				br
-				tg &lt/date&gt
-				br
-				tg &ltdate&gt
-				br
-				tg   &ltinput
-				at type=
-				vat "datetime-local"
-				at class=
-				vat "date"
-				at placeholder=
-				vat "Input type datetime-local"
-				tg &gt
-				br
-				tg &lt/date&gt
-				br
-				tg &ltdate&gt
-				br
-				tg   &ltinput
-				at type=
-				vat "time"
-				at class=
-				vat "date"
-				at placeholder=
-				vat "Input type time"
-				tg &gt
-				br
-				tg &lt/date&gt
-				br
-				tg &ltdate&gt
-				br
-				tg   &ltinput
-				at type=
-				vat "month"
-				at class=
-				vat "date"
-				at placeholder=
-				vat "Input type month"
-				tg &gt
-				br
-				tg &lt/date&gt
-				br
-				tg &ltdate&gt
-				br
-				tg   &ltinput
-				at type=
-				vat "week"
-				at class=
-				vat "date"
-				at placeholder=
-				vat "Input type week"
-				tg &gt
-				br
-				tg &lt/date&gt
 h4.subtitle Lista de datos
 p.bloque El elemento
 	code datalist

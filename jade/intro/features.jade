@@ -1,4 +1,4 @@
-modal#cambios.is-fluid
+modal#cambios.is-fluid.is-slide-down
 	content
 		close(modal="#cambios" style="z-index: 2000")
 		row
@@ -17,35 +17,71 @@ modal#cambios.is-fluid
 						span Github 6
 				item#version-text.padding-1
 					group.is-inline.op-07
-						a(href="https://facebbok.com/kimeraCSS").is-text-cloud
+						a(href="https://facebook.com/kimeraCSS").is-text-cloud
 							icon.is-medium: i.fa.fa-facebook
 						a(href="https://twitter.com/kimeracssframew").is-text-cloud
 							icon.is-medium: i.fa.fa-twitter
 						a(href="https://github.com/JorgeAntrax/kimera").is-text-cloud.is-hidden-tablet
 							icon.is-medium: i.fa.fa-github
 					span Latest •
-						b  0.4.3
+						b  0.4.5
 			column.tablet-12#cambios-versiones
 				acordeon(is-multiple="true").tablet-14
 					acordeon-item.padding-05
 						span
-							b.is-text-info 0.4.3
+							b.is-text-info 0.4.5
 							small.op-07 Latest
 						icon: i.fa.fa-angle-down
 					content
-						ol.default-browser
-							li Añadimos el fichero
-								code kimera.min.js
-								span .
-							li Optimización del sistema
-								code grid
-								span .
-							li Se resolvierón pequeños bugs de visualización en:
-								ul.default-browser
-									li: code icon burger
-									li: code acordeon
-									li: code group
-									li: code table
+						.padding-v-05.padding-h-1
+							ol.default-browser
+								li Hemos resuelto pequeños bugs en el componente 
+									code icon
+								li Ajustamos la consistencia del componente
+									code button
+									span .
+								li Hemos cambiado el diseño de los elementos
+									code input
+								li Hemos añadido 2 tamaños adicionales para los componentes
+									code checkbox
+									span y
+									code radio
+									span .
+								li Hemos resuelto algunos problemas con el modulo de
+									code layout
+									span .
+					acordeon-item.padding-05
+						span
+							b.is-text-info 0.4.4
+							small.op-07 Beta
+						icon: i.fa.fa-angle-down
+					content
+						.padding-v-05.padding-h-1
+							ol.default-browser
+								li Hemos sustituido la interacción con jquery por
+									b Vanilla JS.
+								li Corrección de bugs menores.
+								li Alguna documentación ha sido actualizada.
+					acordeon-item.padding-05
+						span
+							b.is-text-info 0.4.3
+							small.op-07 Beta
+						icon: i.fa.fa-angle-down
+					content
+						.padding-v-05.padding-h-1
+							ol.default-browser
+								li Añadimos el fichero
+									code kimera.min.js
+									span .
+								li Optimización del sistema
+									code grid
+									span .
+								li Se resolvierón pequeños bugs de visualización en:
+									ul.default-browser
+										li: code icon burger
+										li: code acordeon
+										li: code group
+										li: code table
 					acordeon-item.padding-05
 						span
 							b.is-text-info 0.4.2
@@ -91,8 +127,3 @@ modal#cambios.is-fluid
 					content
 						.padding-v-05.padding-h-1
 							p.op-07 Contenido en proceso...
-				center
-					a(href="https://github.com/JorgeAntrax/kimera/issues").button.is-dark-outline
-						icon
-							i.fa.fa-exclamation
-						span Reportar bugs
