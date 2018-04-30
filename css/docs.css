@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300');
 html,
 body,
 button,
@@ -14,12 +14,13 @@ code,
 samp,
 pre {
     font-family: 'Roboto Mono', monospace;
-} */
+}
 
 
 /*fuente*/
 
-@font-face {
+
+/* @font-face {
     font-family: 'Roboto-Light';
     src: url('../font/Roboto-Light_0.ttf') format('truetype');
 }
@@ -32,7 +33,7 @@ p,
 textarea,
 select {
     font-family: 'Roboto-Light', sans-serif;
-}
+} */
 
 .overflow-y {
     overflow-y: auto;
