@@ -1,0 +1,270 @@
+h1.title Pagination
+tags.is-group
+	tag.is-info Path
+	tag _pagination.scss
+tags.is-group
+	tag.is-success Nuevo
+	tag 0.4.6
+divider
+p.bloque Un módulo de
+	code pagination
+	span muy escalable para organizar mejor tu contenido.
+	span .
+h4.subtitle Estructura
+p.bloque Partiendo de una sintaxis
+	strong sencilla
+	span con solamente 2 estilos por defecto.
+ul.default-browser
+	li
+		code pagination
+		span Contenedor principal
+	li
+		code .is-material
+		span clase de estilo adicional.
+		ul.default-browser
+			li
+				code page-item
+				span Elemento individual de paginación.
+			li
+				code .page-prev
+				span Clase para indicar el anterior elemento de paginación.
+			li
+				code .page-next
+				span Clase para indicar el siguiente elemento de paginación.
+			li
+				code .is-active
+				span Clase para indicar el elemento de paginación activo.
+			li
+				code [disabled]
+				span Soporte para elementos inactivos.
+row.bloque
+	column.tablet-is-half
+		pagination
+			page-item.page-prev prev
+			page-item 1
+			page-item 2
+			page-item.is-active 3
+			page-item 4
+			page-item.page-next next
+	column.tablet-is-half
+		snippet(value="html5")
+			pre
+				cm &lt!-- Contenedor principal --&gt
+				tg &ltpagination&gt
+				cm   &lt!-- elemento individual con la clase page-prev --&gt
+				tg   &ltpage-item
+				at class=
+				vat "page-prev"
+				tg &gt
+				span prev
+				tg &lt/page-item&gt
+				cm   &lt!-- elemento individual --&gt
+				tg   &ltpage-item&gt
+				span 1
+				tg &lt/page-item&gt
+				br
+				tg   &ltpage-item&gt
+				span 2
+				tg &lt/page-item&gt
+				cm   &lt!-- elemento individual activo --&gt
+				tg   &ltpage-item
+				at class=
+				vat "is-active"
+				tg &gt
+				span 3
+				tg &lt/page-item&gt
+				br
+				tg   &ltpage-item&gt
+				span 4
+				tg &lt/page-item&gt
+				cm   &lt!-- elemento individual con la clase page-next --&gt
+				tg   &ltpage-item
+				at class=
+				vat "page-next"
+				tg &gt
+				span next
+				tg &lt/page-item&gt
+				br
+				tg &lt/pagination&gt
+h4.subtitle Estilo material
+p.bloque Añadiendo la clase
+	code .is-material
+	span al contenedor principal
+	code pagination
+	span .
+row.bloque
+	column.tablet-is-half
+		pagination.is-material
+			page-item.page-prev prev
+			page-item(disabled) 1
+			page-item 2
+			page-item.is-active 3
+			page-item 4
+			page-item.page-next next
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltpagination
+				at class=
+				vat "is-material"
+				tg &gt
+				cm   @content
+				tg &lt/pagination&gt
+h4.subtitle Elementos activos
+p.bloque Añadiendo la clase
+	code .is-active
+	span a un elemento
+	code page-item
+row.bloque
+	column.tablet-is-half
+		pagination
+			page-item.page-prev prev
+			page-item 1
+			page-item 2
+			page-item.is-active 3
+			page-item 4
+			page-item.page-next next
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltpage-item
+				at class=
+				vat "is-active"
+				tg &gt
+				span 3
+				tg &lt/page-item&gt
+h4.subtitle Elementos inactivos
+p.bloque Añadiendo el atrivuto
+	code disabled
+	span a un elemento
+	code page-item
+row.bloque
+	column.tablet-is-half
+		pagination
+			page-item.page-prev prev
+			page-item 1
+			page-item 2
+			page-item(disabled) 3
+			page-item 4
+			page-item.page-next next
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltpage-item
+				at disabled
+				tg &gt
+				span 3
+				tg &lt/page-item&gt
+h4.subtitle Añadiendo iconos
+p.bloque puedes añadir cualquier cosa dentro de los elementos
+	code page-item
+	span por lo regular es una numeración e iconos en los botones de
+	strong anterior
+	span y
+	strong siguiente
+	span .
+row.bloque
+	column.tablet-is-half
+		pagination
+			page-item.page-prev
+				icon: i.fa.fa-angle-left
+			page-item 1
+			page-item 2
+			page-item 3
+			page-item 4
+			page-item.page-next
+				icon: i.fa.fa-angle-right
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltpage-item
+				at class=
+				vat "page-prev"
+				tg &gt
+				br
+				tg   &lticon&gt&lti
+				at class=
+				vat "fa fa-angle-left"
+				tg &gt&lt/i&gt&lt/icon&gt
+				br
+				tg &lt/page-item&gt
+				br
+				tg &ltpage-item
+				at class=
+				vat "page-next"
+				tg &gt
+				br
+				tg   &lticon&gt&lti
+				at class=
+				vat "fa fa-angle-right"
+				tg &gt&lt/i&gt&lt/icon&gt
+				br
+				tg &lt/page-item&gt
+message.is-success.margin-v-2
+	content
+		p Añadiendo a clases modificadoras de tamaño
+		ul.default-browser
+			li: code .is-small
+			li: code .is-medium
+			li: code .is-large
+		p Al contenedor
+			code pagination
+			span y al elemento
+			code icon
+			span puedes controlar el tamaño de los componentes.
+h4.subtitle Alineación
+p.bloque Añadiendo una de las siguientes clases al contenedor
+	code pagination
+	span .
+ul.default-browser
+	li: code .is-center
+	li: code .is-right
+.margin-v-1
+	pagination
+		page-item.page-prev
+			icon: i.fa.fa-angle-left
+		page-item 1
+		page-item 2
+		page-item 3
+		page-item 4
+		page-item.page-next
+			icon: i.fa.fa-angle-right
+.margin-v-1
+	pagination.is-center
+		page-item.page-prev
+			icon: i.fa.fa-angle-left
+		page-item 1
+		page-item 2
+		page-item 3
+		page-item 4
+		page-item.page-next
+			icon: i.fa.fa-angle-right
+.margin-v-1
+	pagination.is-right
+		page-item.page-prev
+			icon: i.fa.fa-angle-left
+		page-item 1
+		page-item 2
+		page-item 3
+		page-item 4
+		page-item.page-next
+			icon: i.fa.fa-angle-right
+snippet.margin-b-2
+	pre
+		tg &ltpagination&gt
+		span •••
+		tg &lt/pagination&gt
+		cm &lt!-- Right pagination --&gt
+		tg &ltpagination
+		at class=
+		vat "is-right"
+		tg &gt
+		span •••
+		tg &lt/pagination&gt
+		cm &lt!-- Center pagination --&gt
+		tg &ltpagination
+		at class=
+		vat "is-center"
+		tg &gt
+		span •••
+		tg &lt/pagination&gt
