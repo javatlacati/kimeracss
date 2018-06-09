@@ -1,6 +1,6 @@
 document.querySelector('main').onscroll = function() {
     var scroll = this.scrollTop || document.body.scrollTop;
-    if (scroll > 1500) {
+    if (scroll > 100) {
         document.querySelector('#bottom-nav').classList.add('show');
     } else {
         document.querySelector('#bottom-nav').classList.remove('show');
