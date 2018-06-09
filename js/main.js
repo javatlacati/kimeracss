@@ -163,3 +163,9 @@ if (webhost != undefined) {
         webhost[i].remove();
     }
 }
+
+var demoSelect = new Listbox({
+    el: '#demoSelect1',
+    hasTwoIcons: false,
+    iconToggleClass: 'fa fa-angle-down'
+});
