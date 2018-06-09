@@ -169,3 +169,26 @@ var demoSelect = new Listbox({
     hasTwoIcons: false,
     iconToggleClass: 'fa fa-angle-down'
 });
+
+var demo0 = new Listbox({
+    el: '#demo0',
+    hasTwoIcons: false,
+    iconToggleClass: 'fa fa-angle-down'
+});
+var demo1 = new Listbox({
+    el: '#demo1',
+    hasTwoIcons: false,
+    iconToggleClass: 'fa fa-angle-down'
+});
+
+var demo2 = new Listbox({
+    el: '#demo2',
+    hasTwoIcons: false,
+    iconToggleClass: 'fa fa-angle-down'
+});
+
+var demo3 = new Listbox({
+    el: '#demo4',
+    hasTwoIcons: false,
+    iconToggleClass: 'fa fa-angle-down'
+});
