@@ -188,7 +188,20 @@ var demo2 = new Listbox({
 });
 
 var demo3 = new Listbox({
+    el: '#demo3',
+    hasTwoIcons: false,
+    iconToggleClass: 'fa fa-angle-down'
+});
+
+var demo4 = new Listbox({
     el: '#demo4',
     hasTwoIcons: false,
     iconToggleClass: 'fa fa-angle-down'
+});
+
+var demoIcons = new Listbox({
+    el: '#demoIcons',
+    hasTwoIcons: true,
+    iconToggleClass: 'fa fa-angle-down',
+    IconLabelClass: 'fa fa-user-circle'
 });
