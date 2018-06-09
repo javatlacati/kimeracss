@@ -1,0 +1,28 @@
+{
+  "name": "framework",
+  "version": "0.4.8",
+  "description": "A documentation for kimera CSS framework",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeAntrax/kimeracss.git"
+  },
+  "keywords": [
+    "docs",
+    "web",
+    "demos"
+  ],
+  "author": "Leonardo Quintana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JorgeAntrax/kimeracss/issues"
+  },
+  "homepage": "https://github.com/JorgeAntrax/kimeracss#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^4.0.1"
+  }
+}

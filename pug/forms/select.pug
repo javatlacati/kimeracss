@@ -1,0 +1,406 @@
+h1.title Listbox
+tags(is-group)
+	tag.is-info Path
+	tag _listbox.scss
+tag.is-info Nuevo!
+divider
+p Un componente
+	code listbox
+	span  completamente personalizable.
+h4.subtitle Estilo Basíco
+row.bloque
+	column.tablet-is-half
+		listbox#demoSelect1
+			list
+				list-item(text="Option 1" value="Option 1") Option 1
+				list-item(text="Option 2" value="Option 2") Option 2
+				list-item(text="Option 3" value="Option 3") Option 3
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltlistbox
+				at id=
+				vat "demo"
+				tg &gt
+				br
+				tg   &ltlist&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Option 1"
+				tg &gt
+				span ...
+				tg &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Option 2"
+				tg &gt
+				span ...
+				tg &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Option 3"
+				tg &gt
+				span ...
+				tg &lt/list-item&gt
+				br
+				tg   &lt/list&gt
+				br
+				tg &lt/listbox&gt
+h4.subtitle Implementación JS
+p Para implementar correctamente este componente, debes de añadir unas cuantas lineas de código
+	code javascript
+	span lo que te permitirá configurar los iconos, entre otras cosas.
+snippet(value="Vanilla js").bloque
+	pre
+		cm &lt!-- Creamos un objeto de configuración --&gt
+		br
+		tg var
+		span obj =
+		at {
+		br
+		vat   el:
+		span(tooltip="Id del contenedor principal listbox").is-right-tooltip.is-primary '$id',
+		br
+		vat   hasTwoIcons:
+		span(tooltip="Añade espacio para un icono a la izquierda").is-right-tooltip.is-info true || false,
+		br
+		vat   rounded:
+		span(tooltip="Aplica estilos redondeados al componente").is-right-tooltip true || false,
+		br
+		vat   iconToggleClass:
+		span(tooltip="Conjunto de clases para icono toggle personalizado").is-right-tooltip 'fa fa-angle-down',
+		br
+		vat   iconLabelClass:
+		span(tooltip="Conjunto de clases para icono label personalizado").is-right-tooltip 'fa fa-user-circle',
+		br
+		at }
+		span ;
+		br
+		br
+		cm &lt!-- Creamos una instancía de la clase Listbox la cual recibe como parámetro un objeto --&gt
+		br
+		tg var
+		span demo =
+		at new
+		vat  Listbox
+		tg (
+		span obj
+		tg )
+		span ;
+h4.subtitle Colores
+p Al elemento
+	code listbox
+	span se le añade una de las siguientes clases de color:
+ul.default-browser
+	li: code is-dark
+	li: code is-info
+	li: code is-success
+	li: code is-warning
+	li: code is-danger
+row.bloque
+	column.tablet-is-half
+		listbox#demo0.is-dark.margin-b-1
+			list
+				list-item(value="Dark" text="Dark") Dark list-item
+				list-item(value="list-item 0" text="list-items 0") list-items box
+		listbox#demo1.is-info.margin-b-1
+			list
+				list-item(value="Info" text="Info") Info list-item
+				list-item(value="list-item 1" text="list-items 1") list-items box
+		listbox#demo2.is-success.margin-b-1
+			list
+				list-item(value="Success" text="Success") Success list-item
+				list-item(value="list-item 2" text="list-items 2") list-items box
+		listbox#demo3.is-warning.margin-b-1
+			list
+				list-item(value="Warning" text="Warning") Warning list-item
+				list-item(value="list-item 3" text="list-items 3") list-items box
+		listbox#demo4.is-danger
+			list
+				list-item(value="Danger" text="Danger") Danger list-item
+				list-item(value="list-item 4" text="list-items 4") list-items box
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltlistbox
+				at class=
+				vat "is-dark"
+				at id=
+				vat "demo"
+				tg &gt
+				span •••
+				tg &lt/listbox&gt
+				br
+				tg &ltlistbox
+				at class=
+				vat "is-info"
+				at id=
+				vat "demo"
+				tg &gt
+				span •••
+				tg &lt/listbox&gt
+				br
+				tg &ltlistbox
+				at class=
+				vat "is-success"
+				at id=
+				vat "demo"
+				tg &gt
+				span •••
+				tg &lt/listbox&gt
+				br
+				tg &ltlistbox
+				at class=
+				vat "is-warning"
+				at id=
+				vat "demo"
+				tg &gt
+				span •••
+				tg &lt/listbox&gt
+				br
+				tg &ltlistbox
+				at class=
+				vat "is-danger"
+				at id=
+				vat "demo"
+				tg &gt
+				span •••
+				tg &lt/listbox&gt
+h4.subtitle Añadiendo iconos.
+p La manera de añadir iconos a este componente es mediante el uso de las propiedades
+	code iconToggleClass
+	span y
+	code iconLabelClass
+	span que se definen mediante
+	strong javacript
+	span .
+row.bloque
+	column.tablet-is-half
+		listbox#demoIcons
+			list
+				list-item(text="List item 1" value="opcion1") List item 1
+				list-item(text="List item 2" value="opcion2") List item 2
+	column.tablet-is-half
+		snippet(value="Vanilla js")
+			pre
+				cm &lt!-- Marcado HTML5  --&gt
+				br
+				tg &ltlistbox
+				at id=
+				vat "demoIcons"
+				tg &gt
+				span •••
+				tg &lt/listbox&gt
+				br
+				cm &lt!-- Configuración de iconos en js. --&gt
+				br
+				tg var
+				span obj =
+				at {
+				br
+				vat   el:
+				span '#demoIcons',
+				br
+				vat   hasTwoIcons:
+				span true,
+				br
+				vat   iconToggleClass:
+				span(tooltip="Conjunto de clases para icono toggle personalizado").is-up-tooltip 'fa fa-angle-down',
+				br
+				vat   iconLabelClass:
+				span(tooltip="Conjunto de clases para icono label personalizado").is-up-tooltip 'fa fa-user-circle',
+				br
+				at }
+				span ;
+				br
+				tg var
+				span demo =
+				at new
+				vat  Listbox
+				tg (
+				span obj
+				tg )
+				span ;
+h4.subtitle Listbox avanzado
+p De manera predeterminada los elementos
+	code list-item
+	span son contenedores 
+	strong flexibles  
+	span y personalizables, puedes incluir lo que tu quieras dentro de estos elementos.
+row.bloque
+	column.tablet-is-half
+		listbox#demoA.is-dark
+			list
+				list-item(value="Facebook", text="Facebook")
+					span Facebook
+					icon.is-text-info
+						i.fa.fa-facebook
+				list-item(value="Twitter", text="Twitter")
+					span Twitter
+					icon.is-text-primary
+						i.fa.fa-twitter
+				list-item(value="Instagram", text="Instagram")
+					span Instagram
+					icon.is-text-danger
+						i.fa.fa-instagram
+				list-item(value="Snapchat", text="Snapchat")
+					span Snapchat
+					icon.is-text-warning
+						i.fa.fa-snapchat
+				list-item(value="Youtube", text="Youtube")
+					span Youtube
+					icon.is-text-danger
+						i.fa.fa-youtube
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltlistbox
+				at id=
+				vat "demoA"
+				tg &gt
+				br
+				tg   &ltlist&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Facebook"
+				tg &gt
+				br
+				tg       &ltspan&gt
+				span Facebook
+				tg &lt/span&gt
+				br
+				tg       &lticon&gt
+				span •••
+				tg &lt/icon&gt
+				br
+				tg     &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Twitter"
+				tg &gt
+				br
+				tg       &ltspan&gt
+				span Twitter
+				tg &lt/span&gt
+				br
+				tg       &lticon&gt
+				span •••
+				tg &lt/icon&gt
+				br
+				tg     &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Instagram"
+				tg &gt
+				br
+				tg       &ltspan&gt
+				span Instagram
+				tg &lt/span&gt
+				br
+				tg       &lticon&gt
+				span •••
+				tg &lt/icon&gt
+				br
+				tg     &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Snapchat"
+				tg &gt
+				br
+				tg       &ltspan&gt
+				span Snapchat
+				tg &lt/span&gt
+				br
+				tg       &lticon&gt
+				span •••
+				tg &lt/icon&gt
+				br
+				tg     &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Youtube"
+				tg &gt
+				br
+				tg       &ltspan&gt
+				span Youtube
+				tg &lt/span&gt
+				br
+				tg       &lticon&gt
+				span •••
+				tg &lt/icon&gt
+				br
+				tg     &lt/list-item&gt
+				br
+				tg   &lt/list&gt
+				br
+				tg &lt/listbox&gt
+h4.subtitle Atributos text y value
+p El atributo
+	code value
+	span te ayudará a definir cual es el valor de un elemento
+	code list-item
+	span , atributo mediante el cual se obtiene el valor desde un lenguaje de programación de lado del servidor como lo es 
+	strong PHP 
+	span .
+p.margin-t-2 El atributo
+	code text
+	span te ayudará a definir el texto que se va a
+	strong  mostrar 
+	span cuando das click en un elemento
+	code list-item
+	span .
+row.bloque
+	column.tablet-is-half
+		listbox#demoAtributes
+			list
+				list-item(text="Texto a mostrar 1" value="Option 1") Option 1
+				list-item(text="Texto a mostrar 2" value="Option 2") Option 2
+				list-item(text="Texto a mostrar 3" value="Option 3") Option 3
+	column.tablet-is-half
+		snippet
+			pre
+				tg &ltlistbox
+				at id=
+				vat "demoAtributes"
+				tg &gt
+				br
+				tg   &ltlist&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Option 1"
+				at text=
+				vat "Texto a mostrar 1"
+				tg &gt
+				span Option 1
+				tg &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Option 2"
+				at text=
+				vat "Texto a mostrar 2"
+				tg &gt
+				span Option 2
+				tg &lt/list-item&gt
+				br
+				tg     &ltlist-item
+				at value=
+				vat "Option 3"
+				at text=
+				vat "Texto a mostrar 3"
+				tg &gt
+				span Option 3
+				tg &lt/list-item&gt
+				br
+				tg   &lt/list&gt
+				br
+				tg &lt/listbox&gt

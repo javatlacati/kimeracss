@@ -2,7 +2,7 @@ center.color-info.padding-1.is-small Excelente, la versión
 	b.is-text.medium #{version}
 	span esta lista.
 	a(modal="#cambios" href="#").is-text-cloud.is-text-underline Ver cambios.
-include features.jade
+include features
 center.is-full-center#intro-header
 	center.padding-1
 		img(src=urlimage+'logo-azul-light.png' alt="kimera")#mega_logo
@@ -20,58 +20,57 @@ center.is-full-center#intro-header
 						at install  
 						span.is-text-danger kimera
 		a(href="https://github.com/JorgeAntrax/kimera/archive/master.zip" target="_blank").is-medium.button.is-success.margin-v-1 Descargar v#{version}
-mega.color-info
+mega.is-full-center
 	row#features
 		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
-				i.fa.fa-desktop
-				i.fa.fa-laptop
-				i.fa.fa-mobile
+				i.fa.fa-mobile.is-text-primary
+				i.fa.fa-laptop.is-text-success
+				i.fa.fa-desktop.is-text-warning
 			upper.is-text-medium.is-text-bolder.padding-v-1 mobile first
 			small
 				b Adaptable
 				span a diferentes dispositivos y basado en la metodología mobile first.
 		column.touch-is-half.tablet-6.margin-v-1
-			icon.is-jumbo
+			icon.is-jumbo.is-text-info
 				i.fa.fa-css3
 			upper.is-text-medium.is-text-bolder.padding-v-1 flexbox & grid
 			small Con todas las ventajas de flexbox y Grid CSS3, crea plantillas muy potentes.
 		column.touch-is-half.tablet-6.margin-v-1
-			icon.is-jumbo
+			icon.is-jumbo.is-text-success
 				i.fa.fa-codepen
 			upper.is-text-medium.is-text-bolder.padding-v-1 Vanilla JS
 			small Kimera no utiliza ningún framework
 				b JS
-				span para añadir la interacción necesaría.
+				span de terceros.
 		column.touch-is-half.tablet-6.margin-v-1
-			icon.is-jumbo
+			icon.is-jumbo.is-text-warning
 				i.fa.fa-cubes
 			upper.is-text-medium.is-text-bolder.padding-v-1 sistema modular
 			small Importa solo lo necesario mediante nuestro increible sistema de importación.
 		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
-				img(src=urlimage+"mit.png", alt="Open source MIT" style="width: 3rem; height: 3rem;")
+				i.fa.fa-angellist
 			upper.is-text-medium.is-text-bolder.padding-v-1 open source
 			small Kimera es un proyecto gratuito,
 				b Open source 
 				span que trabaja bajo la licencia
 				b MIT.
 		column.touch-is-half.tablet-6.margin-v-1
-			icon.is-jumbo
+			icon.is-jumbo.is-text-danger
 				i.fa.fa-simplybuilt
 			upper.is-text-medium.is-text-bolder.padding-v-1 Código limpio
 			small Basado en
 				b  etiquetas
 				span  personalizadas que facilitan su integración.
-include ../../html/intro/portafolio.html
-.is-full-center.color-success-lighten-4(style="display:flex; flex-direction: column;").is-separated
+.is-full-center.color-light(style="display:flex; flex-direction: column;").is-separated
 	center
 		p.is-text-center Top screen
 		icon.is-medium
 			i.fa.fa-angle-up
 	center.padding-1
 		hgroup
-			h2 Centrado vertical absoluto
+			h2.is-text-info Centrado vertical absoluto
 			p.is-subtitle.is-text-center Tu contenido siempre centrado en pantalla completa.
 			snippet.monokai
 				pre
@@ -174,68 +173,27 @@ row.bloque.padding-h-1
 		process(label="static" value="60%").is-success
 		process(label="static" value="80%").is-medium.is-warning
 		process(label="static" value="100%").is-large.is-danger
-mega.color-primary-darken-2
-	column.tablet-is-half
-		center.padding-1
-			h3.subtitle Ventanas modal increibles.
-			button(modal="#homedemo1").is-danger.bloque Demo
-		modal#homedemo1.is-zoom-in
-			background(modal="#homedemo1")
-			content(style="max-width: 700px; width: 100%;").is-paddingless
-				row
-					column.tablet-5.shadow--x
-						group.is-inline.mac
-							icon(modal="#homedemo1").is-small.is-text-danger
-								i.fa.fa-circle
-							icon.is-small.is-text-warning
-								i.fa.fa-circle
-							icon.is-small.is-text-success
-								i.fa.fa-circle
-						menu
-							item.is-tiny.is-label FAVORITES
-							item.is-small Air drop
-							item.is-small Cloud drive
-							item.is-small Applications
-							item.is-small Files
-							item.is-small Video
-							item.is-tiny.is-label DEVICES
-							item.is-small USB drive
-							item.is-small Hard drive
-					column.tablet-15.padding-2
-						p.is-small User
-						item.is-separated
-							hgroup
-								h4.op-03 Kimera
-							group.is-inline
-								icon
-									i.fa.fa-search
-								icon
-									i.fa.fa-th
-								icon
-									i.fa.fa-star-o
-								icon
-									i.fa.fa-trash-o
-						row.is-distributed-tablet.padding-v-2
-							column.tablet-6
-								blockquote.is-primary
-									small Applications
-								#img-mac
-									img(src="http://hdwarena.com/wp-content/uploads/2017/05/Cute-Wallpapers.jpg", alt="Pictures").is-bg
-									white Pictures
-							column.tablet-6
-								blockquote.is-success
-									small Design
-								blockquote.is-danger
-									small Documents
-								blockquote.is-dark.transparent
-									img(src="http://chulavista.mx/wp-content/uploads/2014/07/head3.jpg", alt="music").is-bg.is-blur-2
-									white Music
-							column.tablet-6
-								blockquote.is-warning
-									small Downloads
 row.bloque.is-distributed-desktop
-	right.tablet-is-half
-		h3.is-text-center.subtitle Barras de navegación muy versatiles.
+	.padding-2.tablet-is-half
+		h3.subtitle Pagination.
+	column.tablet-is-half
+		pagination
+			page-item.page.prev
+				icon
+					i.fa.fa-angle-left
+			page-item 1
+			page-item 2
+			page-item 3
+			page-item.is-active 4
+			page-item ...
+			page-item 9
+			page-item 10
+			page-item.page.next
+				icon
+					i.fa.fa-angle-right
+row.bloque.is-distributed-desktop
+	.padding-2.tablet-is-half
+		h3.subtitle Barras de navegación muy versatiles.
 	column.tablet-is-half
 		mobile.tablet-8
 			navbar.color-black

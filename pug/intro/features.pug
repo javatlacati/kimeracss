@@ -14,7 +14,7 @@ modal#cambios.is-fluid.is-slide-down
 					a(href="https://github.com/JorgeAntrax/kimera/stargazers").button.is-rounded.is-info-invert
 						icon
 							i.fa.fa-star
-						span Github 6
+						span Github 10
 				item#version-text.padding-1
 					group.is-inline.op-07
 						a(href="https://facebook.com/kimeraCSS").is-text-cloud
@@ -24,13 +24,27 @@ modal#cambios.is-fluid.is-slide-down
 						a(href="https://github.com/JorgeAntrax/kimera").is-text-cloud.is-hidden-tablet
 							icon.is-medium: i.fa.fa-github
 					span Latest •
-						b  0.4.6
+						b  0.4.7
 			column.tablet-12#cambios-versiones
 				acordeon(is-multiple="true").tablet-14
 					acordeon-item.padding-05
 						span
-							b.is-text-info 0.4.6
+							b.is-text-info 0.4.7
 							small.op-07 Latest
+						icon: i.fa.fa-angle-down
+					content
+						.padding-v-05.padding-h-1
+							ol.default-browser
+								li Hemos rediseñado el componente: 
+									code select
+									span ahora llamado
+									code listbox
+									span .
+								li Hemos corregido algunos bugs menores.
+					acordeon-item.padding-05
+						span
+							b.is-text-info 0.4.6
+							small.op-07 beta
 						icon: i.fa.fa-angle-down
 					content
 						.padding-v-05.padding-h-1

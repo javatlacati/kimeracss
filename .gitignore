@@ -4,6 +4,7 @@ img/
 font/
 html/
 kimera/
+node_modules/
 *.config
 *.txt
 *.png

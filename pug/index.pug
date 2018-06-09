@@ -1,14 +1,14 @@
 - var urlimage = 'https://xoolar-quantum.000webhostapp.com/img/';
 //- var urlimage = 'img/';
-- var version = "0.4.6";
+- var version = "0.4.7";
 doctype
 html
 	head
-		include main/_headers.jade
+		include main/_headers
 	body
-		layout.is-dashboard
+		layout.is-dashboard.is-small-sidebar
 			sidebar#menu-principal
-				include main/_menu.jade
+				include main/_menu
 			main.overflow-y
 				group.is-boxed#bottom-nav.is-hidden-desktop.padding-h-2.padding-v-3
 					group-item#mostrar-side-menu
@@ -33,19 +33,19 @@ html
 								i.fa.fa-arrow-up
 				#home
 				.menu_content#layout-home
-					include intro/_home.jade
+					include intro/_home
 				.menu_content#layout-intro
-					include intro/_all.jade
+					include intro/_all
 				.menu_content#layout-grid
-					include grid/_all.jade
+					include grid/_all
 				.menu_content#layout-components
-					include components/_all.jade
+					include components/_all
 				.menu_content#layout-forms
-					include forms/_all.jade
+					include forms/_all
 				.menu_content#layout-modules
-					include modules/_all.jade
+					include modules/_all
 				#footer
-					include main/_footer.jade
+					include main/_footer
 		script(src="https://platform.twitter.com/widgets.js" charset="utf-8")
-		script(src="js/kimera.min.js")
+		script(src="js/kimera.js")
 		script(src="js/main.js")
