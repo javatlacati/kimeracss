@@ -164,11 +164,11 @@ row.bloque
 	column.tablet-is-half
 		field.is-addons
 			control
-				listbox.is-info
-					select(name="demo-field")
-						option(value="+52") +52
-						option(value="+88") +88
-						option(value="+22") +22
+				listbox#demoField.is-info
+					list
+						list-item(text="+52" value="+52") +52
+						list-item(text="+88" value="+88") +88
+						list-item(text="+22" value="+22") +22
 			control.is-expand
 				input(type="tel" placeholder="Telefono").input
 			control

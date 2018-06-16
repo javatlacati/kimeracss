@@ -43,6 +43,10 @@ color {
     margin-right: 0.25rem;
 }
 
+#demoField {
+    max-width: 100px;
+}
+
 #suscribe {
     background-color: #b071f8;
     color: #fff;

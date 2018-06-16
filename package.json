@@ -23,6 +23,8 @@
   "homepage": "https://github.com/JorgeAntrax/kimeracss#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-pug": "^4.0.1"
+    "gulp-pug": "^4.0.1",
+    "gulp-server": "^0.1.0",
+    "gulp-webserver": "^0.9.1"
   }
 }

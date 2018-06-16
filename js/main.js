@@ -219,3 +219,77 @@ var demoAtributes = new Listbox({
     iconToggleClass: 'fa fa-angle-down'
 });
 
+var cal2 = new Calendar({
+    el: '#calendar2', // the Id container with class calendar-picker
+    languaje: 'es',
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'left' // icon toggle position
+});
+
+var cald1 = new Calendar({
+    el: '#CalendarDemo1', // the Id container with class calendar-picker
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'left', // icon toggle position
+    style: 'dark'
+});
+
+var cald2 = new Calendar({
+    el: '#CalendarDemo2', // the Id container with class calendar-picker
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'left', // icon toggle position
+    style: 'info'
+});
+var cald3 = new Calendar({
+    el: '#CalendarDemo3', // the Id container with class calendar-picker
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'left', // icon toggle position
+    style: 'success'
+});
+var cald4 = new Calendar({
+    el: '#CalendarDemo4', // the Id container with class calendar-picker
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'left', // icon toggle position
+    style: 'warning'
+});
+var cald5 = new Calendar({
+    el: '#CalendarDemo5', // the Id container with class calendar-picker
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'left', // icon toggle position
+    style: 'danger'
+});
+
+var cald6 = new Calendar({
+    el: '#CalendarDemo6', // the Id container with class calendar-picker
+    classIconPrev: 'fa fa-caret-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-caret-down', // the classess for the icon next control
+    classIconInput: 'fa fa-angellist', // classes for de icon toggle calendar
+    iconPosition: 'left' // icon toggle position
+});
+
+var cald7 = new Calendar({
+    el: '#CalendarDemo7', // the Id container with class calendar-picker
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'right' // icon toggle position
+});
+
+
+
+var demoF = new Listbox({
+    el: '#demoField',
+    hasTwoIcons: false,
+    iconToggleClass: 'fa fa-angle-down'
+});

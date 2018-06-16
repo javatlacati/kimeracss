@@ -1,3 +1,4 @@
+include ../main/_variables
 modal#cambios.is-fluid.is-slide-down
 	content
 		close(modal="#cambios" style="z-index: 2000")
@@ -24,13 +25,25 @@ modal#cambios.is-fluid.is-slide-down
 						a(href="https://github.com/JorgeAntrax/kimera").is-text-cloud.is-hidden-tablet
 							icon.is-medium: i.fa.fa-github
 					span Latest •
-						b  0.4.7
+						b  #{version}
 			column.tablet-12#cambios-versiones
 				acordeon(is-multiple="true").tablet-14
 					acordeon-item.padding-05
 						span
+							b.is-text-info #{version}
+							small.op-07 latest
+						icon: i.fa.fa-angle-down
+					content
+						.padding-v-05.padding-h-1
+							ol.default-browser
+								li Hemos añadido el componente: 
+									code calendar
+									span .
+								li Hemos corregido algunos bugs menores.
+					acordeon-item.padding-05
+						span
 							b.is-text-info 0.4.7
-							small.op-07 Latest
+							small.op-07 beta
 						icon: i.fa.fa-angle-down
 					content
 						.padding-v-05.padding-h-1

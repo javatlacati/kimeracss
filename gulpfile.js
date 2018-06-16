@@ -1,5 +1,18 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
+const serv = require('gulp-webserver');
+
+// the server task
+
+gulp.task('server', () => {
+    gulp.src('./')
+        .pipe(serv({
+            livereload: true,
+            directoryListing: true,
+            open: true,
+            port: 8080
+        }));
+});
 
 // default task
 

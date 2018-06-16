@@ -1,4 +1,5 @@
 tabs
+	tab(data-id="#page-calendar") Calendar
 	tab(data-id="#page-field") Fields
 	tab(data-id="#page-input") Input
 	tab(data-id="#page-textarea") Textarea
@@ -7,6 +8,8 @@ tabs
 	tab(data-id="#page-color") Color
 	tab(data-id="#page-select") Listbox
 tabs-content.app
+	tab-content#page-calendar
+		include calendar
 	tab-content#page-field
 		include field
 	tab-content#page-input
