@@ -6,17 +6,19 @@ row.color-light.is-center.padding-2.margin-t-2
 		b JsDelivr.
 mega#suscribe
 	content
-		center
-			h2.is-text-upper kimera newsletter
-			span Te informaremos cuando la<b>V1</b>este lista!
-		row.is-center.margin-t-2
-			field.tablet-12#suscrip
-				control.is-icon-left.is-expand
-					input(type="text" placeholder="Aqui tu email...").input
-					icon
-						i.fa.fa-envelope
-				control
-					button.is-primary-inverse SUSCRIBIRSE
+		.wrapper
+			row.is-center-v-tablet
+				column
+					h2.is-text-upper kimera newsletter
+					span Te informaremos cuando la<b>V1</b>este lista!
+				row
+					field#suscrip
+						control.is-icon-left.is-expand
+							input(type="text" placeholder="Aqui tu email...").input
+							icon
+								i.fa.fa-envelope
+						control
+							button.is-primary-inverse SUSCRIBIRSE
 footer.padding-2.is-light.is-small
 	row.is-distributed-tablet.margin-b-2
 		column.tablet-6.padding-1

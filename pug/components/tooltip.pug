@@ -1,225 +1,229 @@
-h1.title Tooltip
-tags.is-group
-	tag.is-info Path
-	tag _tooltip.scss
-	tag.is-success Colores
-divider
-p Un pequeño componente personalizable y flexible.
-h4.subtitle Estructura
-row.bloque
-	column.tablet-is-half
-		p
-			span Basic
-			span(tooltip="Este es un tooltip").is-up-tooltip tooltip.
-	column.tablet-is-half
-		snippet
-			pre
-				tg &ltp&gt
-				br
-				span     Basic
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Este es un tooltip"
-				at class=
-				vat "is-up-tooltip"
-				tg &gt
-				span Tooltip
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-h4.subtitle Tooltip redondeado
-p.bloque Añadiendo la clase
-	code .is-rounded
-	span .
-row.bloque
-	column.tablet-is-half
-		p
-			span Basic
-			span(tooltip="Este es un tooltip redondeado").is-up-tooltip.is-rounded tooltip.
-	column.tablet-is-half
-		snippet
-			pre
-				tg &ltp&gt
-				br
-				span     Basic
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Este es un tooltip redondeado"
-				at class=
-				vat "is-up-tooltip is-rounded"
-				tg &gt
-				span Tooltip.
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-h4.subtitle Colores
-p Añadiendo una de las siguientes clases de color al elemento
-	code tooltip
-	span .
-ul.default-browser
-	li: code .is-primary
-	li: code .is-info
-	li: code .is-success
-	li: code .is-warning
-	li: code .is-danger
-row.bloque
-	column.tablet-is-half
-		p(tooltip="Tooltip primary").is-right-tooltip.is-primary Tooltip primary
-		br
-		p(tooltip="Tooltip info").is-right-tooltip.is-info Tooltip info
-		br
-		p(tooltip="Tooltip success").is-right-tooltip.is-success Tooltip success
-		br
-		p(tooltip="Tooltip warning").is-right-tooltip.is-warning Tooltip warning
-		br
-		p(tooltip="Tooltip danger").is-right-tooltip.is-danger Tooltip danger
-	column.tablet-is-half
-		snippet
-			pre
-				tg &ltp&gt
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip "
-				at class=
-				vat "is-right-tooltip is-primary"
-				tg &gt
-				span tooltip primary
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-				tg &ltp&gt
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip info"
-				at class=
-				vat "is-right-tooltip is-info"
-				tg &gt
-				span tooltip info
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-				tg &ltp&gt
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip success"
-				at class=
-				vat "is-right-tooltip is-success"
-				tg &gt
-				span tooltip success
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-				tg &ltp&gt
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip warning"
-				at class=
-				vat "is-right-tooltip is-warning"
-				tg &gt
-				span tooltip warning
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-				tg &ltp&gt
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip danger"
-				at class=
-				vat "is-right-tooltip is-danger"
-				tg &gt
-				span tooltip danger
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-h4.subtitle Alineacion
-p La alineación de este componente permite 4 posibles valores mediante las clases:
-ul.default-browser
-	li: code .is-up-tooltip
-	li: code .is-down-tooltip
-	li: code .is-left-tooltip
-	li: code .is-right-tooltip
-row.bloque
-	column.tablet-is-half
-		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip bottom").is-up-tooltip tooltip alineado
-		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip bottom").is-down-tooltip tooltip alineado
-		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip left").is-left-tooltip tooltip alineado
-		p.is-text-center.padding-05 Texto con 
-			span(tooltip="Tooltip right").is-right-tooltip tooltip alineado
-	column.tablet-is-half
-		snippet
-			pre
-				tg &ltp&gt
-				br
-				span     Texto con
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip top"
-				at class=
-				vat "is-up-tooltip"
-				tg &gt
-				span tooltip alineado
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-				tg &ltp&gt
-				br
-				span     Texto con
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip bottom"
-				at class=
-				vat "is-down-tooltip"
-				tg &gt
-				span tooltip alineado
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-				tg &ltp&gt
-				br
-				span     Texto con
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip left"
-				at class=
-				vat "is-left-tooltip"
-				tg &gt
-				span tooltip alineado
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
-				tg &ltp&gt
-				br
-				span     Texto con
-				br
-				tg     &ltspan
-				at tooltip=
-				vat "Tooltip right"
-				at class=
-				vat "is-right-tooltip"
-				tg &gt
-				span tooltip alineado
-				tg &lt/span&gt
-				br
-				tg &lt/p&gt
-				br
+.wrapper
+	h1.title Tooltip
+	p.bloque-text Un pequeño componente personalizable y flexible.
+	h4.subtitle Estructura
+	row.bloque
+		column.tablet-is-half
+			p
+				span Basic
+				span(tooltip="Este es un tooltip").is-up-tooltip tooltip.
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltp&gt
+					br
+					span     Basic
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Este es un tooltip"
+					at class=
+					vat "is-up-tooltip"
+					tg &gt
+					span Tooltip
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+	h4.subtitle Tooltip redondeado
+	p.bloque-text Añadiendo la clase
+		code .is-rounded
+		span .
+	row.bloque
+		column.tablet-is-half
+			p
+				span Basic
+				span(tooltip="Este es un tooltip redondeado").is-up-tooltip.is-rounded tooltip.
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltp&gt
+					br
+					span     Basic
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Este es un tooltip redondeado"
+					at class=
+					vat "is-up-tooltip is-rounded"
+					tg &gt
+					span Tooltip.
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+	h4.subtitle Colores
+	p.bloque-text Añadiendo una de las siguientes clases de color al elemento
+		code tooltip
+		span .
+	ul
+		li: code .is-primary
+		li: code .is-info
+		li: code .is-success
+		li: code .is-warning
+		li: code .is-danger
+	row.bloque
+		column.tablet-is-half
+			p(tooltip="Tooltip primary").is-right-tooltip.is-primary Tooltip primary
+			br
+			p(tooltip="Tooltip info").is-right-tooltip.is-info Tooltip info
+			br
+			p(tooltip="Tooltip success").is-right-tooltip.is-success Tooltip success
+			br
+			p(tooltip="Tooltip warning").is-right-tooltip.is-warning Tooltip warning
+			br
+			p(tooltip="Tooltip danger").is-right-tooltip.is-danger Tooltip danger
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltp&gt
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip "
+					at class=
+					vat "is-right-tooltip is-primary"
+					tg &gt
+					span tooltip primary
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+					tg &ltp&gt
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip info"
+					at class=
+					vat "is-right-tooltip is-info"
+					tg &gt
+					span tooltip info
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+					tg &ltp&gt
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip success"
+					at class=
+					vat "is-right-tooltip is-success"
+					tg &gt
+					span tooltip success
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+					tg &ltp&gt
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip warning"
+					at class=
+					vat "is-right-tooltip is-warning"
+					tg &gt
+					span tooltip warning
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+					tg &ltp&gt
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip danger"
+					at class=
+					vat "is-right-tooltip is-danger"
+					tg &gt
+					span tooltip danger
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+	h4.subtitle Alineacion
+	p.bloque-text La alineación de este componente permite 4 posibles valores mediante las clases:
+	ul
+		li: code .is-up-tooltip
+		li: code .is-down-tooltip
+		li: code .is-left-tooltip
+		li: code .is-right-tooltip
+	row.bloque
+		column.tablet-is-half
+			p.is-text-center.padding-05 Texto con 
+				span(tooltip="Tooltip bottom").is-up-tooltip tooltip alineado
+			p.is-text-center.padding-05 Texto con 
+				span(tooltip="Tooltip bottom").is-down-tooltip tooltip alineado
+			p.is-text-center.padding-05 Texto con 
+				span(tooltip="Tooltip left").is-left-tooltip tooltip alineado
+			p.is-text-center.padding-05 Texto con 
+				span(tooltip="Tooltip right").is-right-tooltip tooltip alineado
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltp&gt
+					br
+					span     Texto con
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip top"
+					at class=
+					vat "is-up-tooltip"
+					tg &gt
+					span tooltip alineado
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+					tg &ltp&gt
+					br
+					span     Texto con
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip bottom"
+					at class=
+					vat "is-down-tooltip"
+					tg &gt
+					span tooltip alineado
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+					tg &ltp&gt
+					br
+					span     Texto con
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip left"
+					at class=
+					vat "is-left-tooltip"
+					tg &gt
+					span tooltip alineado
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+					br
+					tg &ltp&gt
+					br
+					span     Texto con
+					br
+					tg     &ltspan
+					at tooltip=
+					vat "Tooltip right"
+					at class=
+					vat "is-right-tooltip"
+					tg &gt
+					span tooltip alineado
+					tg &lt/span&gt
+					br
+					tg &lt/p&gt
+	row.bloque.is-separated
+		button(data-link="layout-toggle").is-primary-invert
+			icon
+				i.fa.fa-arrow-left
+			span   Toggle
+		button(data-link="layout-calendar").is-primary-invert
+			span Calendar  
+			icon
+				i.fa.fa-arrow-right

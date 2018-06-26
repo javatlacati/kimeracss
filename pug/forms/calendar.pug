@@ -1,224 +1,244 @@
-h1.title Calendar
-tags.is-group
-	tag.is-info Path
-	tag _calendar.scss
-tags.is-group
-	tag.is-info 0.5.0
-	tag Vanilla JS
-divider
-p Este componente 
-	strong reemplaza 
-	span completamente a los controles nativos de tipo
-	code date
-	span .
-h4.subtitle Implementación
-p solamente añadiendo una etiqueta
-	code &ltcalendar&gt
-	span en tu codigo html e 
-	strong inicializarlo 
-	span mediante javacript, lo que te permitirá configurar los siguientes parametros:
-ul.default-browser
-	li
-		code el
-		span Id principal del componente
+.wrapper
+	h1.title Calendar
+	p.bloque-text Este componente 
+		strong reemplaza 
+		span completamente a los controles nativos de tipo
+		code date
+		span .
+	h4.subtitle Implementación
+	p.bloque-text solamente añadiendo una etiqueta
 		code &ltcalendar&gt
-		span .
-	li
-		code language
-		span Define el lenguaje del componente.
-	li
-		code inputName
-		span Atributo name asignado a su elemento de tipo
-		code input
-		span .
-	li
-		code inputId
-		span Id asignado a su elemento de tipo
-		code input
-		span .
-	li
-		code classIconPrev
-		span Conjunto de clases para configurar el icono que permite cambiar al mes o año anterior.
-	li
-		code classIconNext
-		span Conjunto de clases para configurar el icono que permite cambiar al mes o año siguiente.
-	li
-		code classIconInput
-		span Conjunto de clases que definen el icono a mostrar en el elemento
-		code toggle
-		span .
-	li
-		code iconPosition
-		span Define la posicion del icono toggle
-row.bloque
-	column.tablet-is-half
-		calendar(tooltip="Haz click en el icono")#calendar2.is-right-tooltip
-	column.tablet-is-half
-		snippet.margin-b-1
-			pre
-				tg &ltcalendar
-				at id=
-				vat(tooltip="Id del componente").is-right-tooltip "calendar2"
-				tg &gt&lt/calendar&gt
-		snippet(value="vanilla js")
-			pre
-				tg let
-				span demo
-				at:span =
-				tg new 
-				vat Calendar(
-				span {
-				br
-				tg   el
-				span :
-				vat(tooltip="Id del componente calendar").is-right-tooltip.is-primary '$id'
-				span ,
-				br
-				tg   language
-				span :
-				vat(tooltip="Asigna el idioma del componente").is-right-tooltip 'es || us'
-				span ,
-				br
-				tg   classIconPrev
-				span :
-				vat(tooltip="Conjunto de clases para asiganr el icono de anterior").is-right-tooltip 'fa fa-angle-up'
-				span ,
-				br
-				tg   classIconNext
-				span :
-				vat(tooltip="Conjunto de clases para asignar el icono de siguiente").is-right-tooltip 'fa fa-angle-down'
-				span ,
-				br
-				tg   classIconInput
-				span :
-				vat(tooltip="Conjunto de clases para asignar el icono toggle").is-right-tooltip 'fa fa-calendar'
-				span ,
-				br
-				tg   iconPosition
-				span :
-				vat(tooltip="Indica la posición del icon toggle").is-right-tooltip 'left  || right'
-				br
-				span }
-				vat )
-				span ;
-h4.subtitle Colores
-p Con 5 estilos diferentes aplicables utilizando la propiedad
-	code style.
-row.bloque
-	column.tablet-is-half
-		calendar#CalendarDemo1
-		calendar#CalendarDemo2
-		calendar#CalendarDemo3
-		calendar#CalendarDemo4
-		calendar#CalendarDemo5
-	column.tablet-is-half
-		snippet(value="vanilla js")
-			pre
-				tg let
-				span demo
-				at:span =
-				tg new 
-				vat Calendar(
-				span {
-				br
-				tg   el
-				span :
-				vat 'id del componente'
-				span ,
-				br
-				tg   style
-				span :
-				vat 'dark || info || success || warning || danger'
-				br
-				span }
-				vat )
-				span ;
-message.is-info.is-small
-	content De manera predeterminada este componente toma la
-		strong fecha actual 
-		span como valor por defecto.
-h4.subtitle Cambiando iconos
-p Mediante la definicíon de las siguientes propiedades en 
-	strong javascript
-	span puedes modificar los iconos del componente a tu gusto.
-ul.default-browser
-	li: code classIconPrev
-	li: code classIconNext
-	li: code classIconInput
-row.bloque
-	column.tablet-is-half
-		calendar#CalendarDemo6
-	column.tablet-is-half
-		snippet.margin-b-1
-			pre
-				tg &ltcalendar
-				at id=
-				vat "CalendarDemo6"
-				tg &gt&lt/calendar&gt
-		snippet(value="vanilla js")
-			pre
-				tg let
-				span demo
-				at:span =
-				tg new 
-				vat Calendar(
-				span {
-				br
-				tg   el
-				span :
-				vat '#calendardemo6'
-				span ,
-				br
-				tg   classIconPrev
-				span :
-				vat 'fa fa-caret-up'
-				span ,
-				br
-				tg   classIconNext
-				span :
-				vat 'fa fa-caret-down'
-				span ,
-				br
-				tg   classIconInput
-				span :
-				vat 'fa fa-angellist'
-				br
-				span }
-				vat )
-				span ;
-h4.subtitle Posicion de icono toggle
-p Mediante la definicíon de la siguiente propiedad en 
-	strong javascript
-	span puedes modificar la posición del icono toggle a tu gusto.
-ul.default-browser
-	li: code iconPosition
-row.bloque
-	column.tablet-is-half
-		calendar#CalendarDemo7
-	column.tablet-is-half
-		snippet.margin-b-1
-			pre
-				tg &ltcalendar
-				at id=
-				vat "CalendarDemo7"
-				tg &gt&lt/calendar&gt
-		snippet(value="vanilla js")
-			pre
-				tg let
-				span demo
-				at:span =
-				tg new 
-				vat Calendar(
-				span {
-				br
-				tg   el
-				span :
-				vat '#Calendardemo7'
-				span ,
-				br
-				tg   iconPosition
-				span :
-				vat 'right'
-				br
-				vat )
-				span ;
+		span en tu codigo html e 
+		strong inicializarlo 
+		span mediante javacript, lo que te permitirá configurar los siguientes parametros:
+	ul
+		li
+			code el
+			span Id principal del componente
+			code &ltcalendar&gt
+			span .
+		li
+			code language
+			span Define el lenguaje del componente.
+		li
+			code name
+			span Atributo name asignado a su elemento de tipo
+			code input
+			span .
+		li
+			code id
+			span Id asignado a su elemento de tipo
+			code input
+			span .
+		li
+			code classIconPrev
+			span Conjunto de clases para configurar el icono que permite cambiar al mes o año anterior.
+		li
+			code classIconNext
+			span Conjunto de clases para configurar el icono que permite cambiar al mes o año siguiente.
+		li
+			code classIconInput
+			span Conjunto de clases que definen el icono a mostrar en el elemento
+			code toggle
+			span .
+		li
+			code iconPosition
+			span Define la posicion del icono toggle
+	row.bloque
+		column.tablet-is-half
+			calendar(tooltip="Haz click en el icono")#calendar2.is-right-tooltip
+		column.tablet-is-half
+			snippet.margin-b-1
+				pre
+					tg &ltcalendar
+					at id=
+					vat(tooltip="Id del componente").is-right-tooltip "calendar2"
+					tg &gt&lt/calendar&gt
+			snippet(value="vanilla js")
+				pre
+					tg let
+					span demo
+					at:span =
+					tg new 
+					vat Calendar(
+					span {
+					br
+					tg   el
+					span :
+					vat(tooltip="Id del componente calendar").is-right-tooltip.is-primary '$id'
+					span ,
+					br
+					tg   language
+					span :
+					vat(tooltip="Asigna el idioma del componente").is-right-tooltip 'es || us'
+					span ,
+					br
+					tg   name
+					span :
+					vat(tooltip="Asigna el atributo name al elemento input").is-right-tooltip 'nameInput'
+					span ,
+					br
+					tg   id
+					span :
+					vat(tooltip="Asigna el atributo id al elemento input").is-right-tooltip 'idInput'
+					span ,
+					br
+					tg   classIconPrev
+					span :
+					vat(tooltip="Conjunto de clases para asiganr el icono de anterior").is-right-tooltip 'fa fa-angle-up'
+					span ,
+					br
+					tg   classIconNext
+					span :
+					vat(tooltip="Conjunto de clases para asignar el icono de siguiente").is-right-tooltip 'fa fa-angle-down'
+					span ,
+					br
+					tg   classIconInput
+					span :
+					vat(tooltip="Conjunto de clases para asignar el icono toggle").is-right-tooltip 'fa fa-calendar'
+					span ,
+					br
+					tg   iconPosition
+					span :
+					vat(tooltip="Indica la posición del icon toggle").is-right-tooltip 'left  || right'
+					br
+					span }
+					vat )
+					span ;
+	message.margin-1.is-primary.is-small
+		header Nota:
+		content Los parametros
+			code id
+			span y
+			code name
+			span te permitirán obtener el valor del elemento input cuando lo necesites por ejemplo en php.
+	h4.subtitle Colores
+	p.bloque-text Con 5 estilos diferentes aplicables utilizando la propiedad
+		code style.
+	row.bloque
+		column.tablet-is-half
+			calendar#CalendarDemo1
+			calendar#CalendarDemo2
+			calendar#CalendarDemo3
+			calendar#CalendarDemo4
+			calendar#CalendarDemo5
+		column.tablet-is-half
+			snippet(value="vanilla js")
+				pre
+					tg let
+					span demo
+					at:span =
+					tg new 
+					vat Calendar(
+					span {
+					br
+					tg   el
+					span :
+					vat 'id del componente'
+					span ,
+					br
+					tg   style
+					span :
+					vat 'dark || info || success || warning || danger'
+					br
+					span }
+					vat )
+					span ;
+	message.is-info.is-small
+		content De manera predeterminada este componente toma la
+			strong fecha actual 
+			span como valor por defecto.
+	h4.subtitle Cambiando iconos
+	p.bloque-text Mediante la definicíon de las siguientes propiedades en 
+		strong javascript
+		span puedes modificar los iconos del componente a tu gusto.
+	ul
+		li: code classIconPrev
+		li: code classIconNext
+		li: code classIconInput
+	row.bloque
+		column.tablet-is-half
+			calendar#CalendarDemo6
+		column.tablet-is-half
+			snippet.margin-b-1
+				pre
+					tg &ltcalendar
+					at id=
+					vat "CalendarDemo6"
+					tg &gt&lt/calendar&gt
+			snippet(value="vanilla js")
+				pre
+					tg let
+					span demo
+					at:span =
+					tg new 
+					vat Calendar(
+					span {
+					br
+					tg   el
+					span :
+					vat '#calendardemo6'
+					span ,
+					br
+					tg   classIconPrev
+					span :
+					vat 'fa fa-caret-up'
+					span ,
+					br
+					tg   classIconNext
+					span :
+					vat 'fa fa-caret-down'
+					span ,
+					br
+					tg   classIconInput
+					span :
+					vat 'fa fa-angellist'
+					br
+					span }
+					vat )
+					span ;
+	h4.subtitle Posicion de icono toggle
+	p.bloque-text Mediante la definicíon de la siguiente propiedad en 
+		strong javascript
+		span puedes modificar la posición del icono toggle a tu gusto.
+	ul
+		li: code iconPosition
+	row.bloque
+		column.tablet-is-half
+			calendar#CalendarDemo7
+		column.tablet-is-half
+			snippet.margin-b-1
+				pre
+					tg &ltcalendar
+					at id=
+					vat "CalendarDemo7"
+					tg &gt&lt/calendar&gt
+			snippet(value="vanilla js")
+				pre
+					tg let
+					span demo
+					at:span =
+					tg new 
+					vat Calendar(
+					span {
+					br
+					tg   el
+					span :
+					vat '#Calendardemo7'
+					span ,
+					br
+					tg   iconPosition
+					span :
+					vat 'right'
+					br
+					vat )
+					span ;
+	row.bloque.is-separated
+		button(data-link="layout-tooltip").is-primary-invert
+			icon
+				i.fa.fa-arrow-left
+			span   Tooltip
+		button(data-link="layout-checkbox").is-primary-invert
+			span Checkbox  
+			icon
+				i.fa.fa-arrow-right

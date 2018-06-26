@@ -1,37 +1,263 @@
-#menu-close
-menu#m1.color-primary
+menu#m1
 	content
-		row.padding-v-2.is-center
-			img(src=urlimage+'logo-white.png' alt="kimera" style="width: 40%; height: auto")
-		menu-item(data-link="layout-home").is-active
-			a
-				icon
-					i.fa.fa-home
-				span Inicio
-		menu-item(data-link="layout-intro")
-			a
-				icon
-					i.fa.fa-heart
-				span Introducción
-		divider.is-white
-		menu-item.is-title documentación
-		menu-item(data-link="layout-grid")
-			a
-				icon
-					i.fa.fa-th-large
-				span Rejilla
-		menu-item(data-link="layout-components")
-			a
-				icon
-					i.fa.fa-cubes
-				span Componentes
-		menu-item(data-link="layout-forms")
-			a
-				icon
-					i.fa.fa-mouse-pointer
-				span Formularios
-		menu-item(data-link="layout-modules")
-			a
-				icon
-					i.fa.fa-pie-chart
-				span Modulos
+		header.is-flex.is-center-v.is-separated.padding-l-1
+			responsive.is-square-48
+				img(src=urlimage+'logo-circular-white.png' alt="Logo")
+			button.close-menu-btn.is-primary-invert.is-rounded.is-large
+				icon.is-jumbo
+					i.fa.fa-angle-left
+		section
+			menu-item(data-link="layout-home").is-active
+				a
+					icon
+						i.fa.fa-home
+					span Home
+			menu-item(modal="#cambios").is-separated.ignore
+				a
+					icon
+						i.fa.fa-flag
+					span See changes
+				tag.is-success.is-rounded #{version}
+			menu-item(data-link="layout-intro")
+				a
+					icon
+						i.fa.fa-star
+					span Getting started
+			menu-item.is-title Introduction
+			menu-item(data-link="layout-colors")
+				a
+					icon
+						i.fa.fa-cube
+					span Colors
+			menu-item(data-link="layout-fonts")
+				a
+					icon
+						i.fa.fa-cube
+					span Typography
+			menu-item(data-link="layout-contenido")
+				a
+					icon
+						i.fa.fa-cube
+					span Content
+			menu-item(data-link="layout-modular")
+				a
+					icon
+						i.fa.fa-cube
+					span Modular system
+			menu-item(data-link="layout-functions")
+				a
+					icon
+						i.fa.fa-cube
+					span Functions
+			menu-item(data-link="layout-anim")
+				a
+					icon
+						i.fa.fa-cube
+					span Animations
+			menu-item(data-link="layout-mixin")
+				a
+					icon
+						i.fa.fa-cube
+					span Mixins
+			menu-item.is-title Grid system
+			menu-item(data-link="layout-grid")
+				a
+					icon
+						i.fa.fa-cube
+					span Columns
+			menu-item(data-link="layout-responsive")
+				a
+					icon
+						i.fa.fa-cube
+					span Responsive
+			menu-item(data-link="layout-layout")
+				a
+					icon
+						i.fa.fa-cube
+					span Layout
+			menu-item(data-link="layout-align")
+				a
+					icon
+						i.fa.fa-cube
+					span Distribution
+			menu-item.is-title Components
+			menu-item(data-link="layout-block")
+				a
+					icon
+						i.fa.fa-cube
+					span Blockquotes
+			menu-item(data-link="layout-box")
+				a
+					icon
+						i.fa.fa-cube
+					span Box
+			menu-item(data-link="layout-buttons")
+				a
+					icon
+						i.fa.fa-cube
+					span Buttons
+			menu-item(data-link="layout-chip")
+				a
+					icon
+						i.fa.fa-cube
+					span Chips
+			menu-item(data-link="layout-dropdown")
+				a
+					icon
+						i.fa.fa-cube
+					span Dropdowns
+			menu-item(data-link="layout-icons")
+				a
+					icon
+						i.fa.fa-cube
+					span Icons
+			menu-item(data-link="layout-preload")
+				a
+					icon
+						i.fa.fa-cube
+					span Preload
+			menu-item(data-link="layout-progress")
+				a
+					icon
+						i.fa.fa-cube
+					span Progress
+			menu-item(data-link="layout-range")
+				a
+					icon
+						i.fa.fa-cube
+					span Range
+			menu-item(data-link="layout-tags")
+				a
+					icon
+						i.fa.fa-cube
+					span Tags
+			menu-item(data-link="layout-toggle")
+				a
+					icon
+						i.fa.fa-cube
+					span Toggle button
+			menu-item(data-link="layout-tooltip")
+				a
+					icon
+						i.fa.fa-cube
+					span Tooltip
+			menu-item.is-title formularios
+			menu-item(data-link="layout-calendar").is-separated
+				a
+					icon
+						i.fa.fa-cube
+					span Calendar
+				tag.is-primary.is-rounded new
+			menu-item(data-link="layout-checkbox")
+				a
+					icon
+						i.fa.fa-cube
+					span Checkbox
+			menu-item(data-link="layout-color")
+				a
+					icon
+						i.fa.fa-cube
+					span Color
+			menu-item(data-link="layout-field")
+				a
+					icon
+						i.fa.fa-cube
+					span Field
+			menu-item(data-link="layout-input")
+				a
+					icon
+						i.fa.fa-cube
+					span Input
+			menu-item(data-link="layout-select").is-separated
+				a
+					icon
+						i.fa.fa-cube
+					span Listbox
+				tag.is-primary.is-rounded new
+			menu-item(data-link="layout-radio")
+				a
+					icon
+						i.fa.fa-cube
+					span Radio
+			menu-item(data-link="layout-textarea")
+				a
+					icon
+						i.fa.fa-cube
+					span Textarea
+			menu-item.is-title módulos
+			menu-item(data-link="layout-acordeon")
+				a
+					icon
+						i.fa.fa-cube
+					span Acordeon
+			menu-item(data-link="layout-bread")
+				a
+					icon
+						i.fa.fa-cube
+					span Breadcrumb
+			menu-item(data-link="layout-card")
+				a
+					icon
+						i.fa.fa-cube
+					span Card
+			menu-item(data-link="layout-group")
+				a
+					icon
+						i.fa.fa-cube
+					span Group
+			menu-item(data-link="layout-media")
+				a
+					icon
+						i.fa.fa-cube
+					span Media
+			menu-item(data-link="layout-mega")
+				a
+					icon
+						i.fa.fa-cube
+					span Mega title
+			menu-item(data-link="layout-menu")
+				a
+					icon
+						i.fa.fa-cube
+					span Menu
+			menu-item(data-link="layout-message")
+				a
+					icon
+						i.fa.fa-cube
+					span Message
+			menu-item(data-link="layout-modal")
+				a
+					icon
+						i.fa.fa-cube
+					span Modal
+			menu-item(data-link="layout-navbar").is-separated
+				a
+					icon
+						i.fa.fa-cube
+					span Navbar
+				tag.is-success.is-rounded Update
+			menu-item(data-link="layout-notify")
+				a
+					icon
+						i.fa.fa-cube
+					span Notify
+			menu-item(data-link="layout-pagination")
+				a
+					icon
+						i.fa.fa-cube
+					span Pagination
+			menu-item(data-link="layout-social")
+				a
+					icon
+						i.fa.fa-cube
+					span Social
+			menu-item(data-link="layout-table")
+				a
+					icon
+						i.fa.fa-cube
+					span Table
+			menu-item(data-link="layout-tabs")
+				a
+					icon
+						i.fa.fa-cube
+					span Tabs

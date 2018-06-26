@@ -1,0 +1,30 @@
+navbrand
+	logo(src=urlimage+'logo-circular-white.png')
+	nav-item.is-hidden-desktop
+		a(href="#home").button.is-light.is-rounded
+			icon.is-large: i.fa.fa-angle-up
+	burger.is-toggle-navbar: span
+navmenu.is-separated-tablet
+	field#search-component.tablet-is-half
+		control.is-icon-right
+			input(type="text").is-medium.input.is-rounded
+			icon.is-medium
+				i.fa.fa-search
+			listgroup#searchList
+	.is-flex.is-distributed
+		nav-item
+			a(href=twitter).is-large
+				icon
+					i.fa.fa-twitter
+		nav-item
+			a(href=facebook).is-large.is-text-info
+				icon
+					i.fa.fa-facebook
+		nav-item
+			a(href="https://github.com/JorgeAntrax/kimera/issues" target="_blank").is-medium
+				icon.is-text-dark
+					i.fa.fa-exclamation-circle
+		nav-item
+			a(href=github target="_blank").is-large.is-text-dark
+				icon
+					i.fa.fa-github

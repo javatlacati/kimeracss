@@ -1,221 +1,215 @@
-h1.title Slideshow
-tags.is-group
-	tag.is-info Path
-	tag _slideshow.scss
-	tag.is-success Nuevo!
-p Pequeño módulo para la creación de slides de imágenes.
-divider
-p.bloque Este módulo te permitirá crear
-	b complejos slides
-	span de imágenes, basados en una
-	b estructura
-	span muy interesante.
-message.is-small.is-info
-	header Importante
-	content La interacción con
-		b Javascript
-		span no la incluye kimera.
-h4.subtitle Estructura
-ul.default-browser
-	li
-		code slideshow
-		span Contenedor principal.
-		ul.default-browser
-			li
-				code animate
-				span Atributo que define el tipo de animación mediante los valores
-				code fade
-				span y
-				code slide
-			li
-				code interval
-				span Atributo que define el intervalo de tiempo en
-				strong milisegundos
-				span .
-			li
-				code autoplay
-				span Atributo que indica la repoduccion automática.
-			li
-				code sliders
-				span Contenedor de imágenes
-				ul.default-browser
-					li
-						code slider contenedor de la imágen.
-						ul.default-browser
-							li
-								code src
-								span Atributo con la
-								strong url
-								span de la imágen
-							li
-								code alt
-								span Atributo para texto alternatvo(si no es posible cargar la imágen). 
-							li
-								code caption
-								span Atributo que define un pequeño texto a la imágen.
-			li
-				code slide-controls
-				span Contenedor para los controles del
-				code slideshow
-				span .
-				ul.default-browser
-					li
-						code .next-slide
-						span Elemento para cambiar al
-						b siguiente
-						span slide (opcional).
-					li
-						code .previus-slide
-						span Elemento para cambiar al
-						b anterior
-						span slide (opcional).
-snippet.bloque
-	pre
-		cm &lt!-- Definición general del módulo slideshow --&gt
-		cm &lt!-- El atributo interval solamente es aplicable en reproduccion automática, si su valor no es especificado por defecto tiene el valor de 5000 ms--&gt
-		tg &ltslideshow
-		at autoplay interval=
-		vat "3000"
-		at animate=
-		vat "fade || slide"
-		tg &gt
-		cm   &l!-- Contenedor de las imágenes --&gt
-		tg   &ltsliders&gt
-		cm     &lt!-- Elemento genérico que añade la imágen al slide mediante su atributo src--&gt
-		tg     &ltslider
-		at src=
-		vat "ruta de la imagen"
-		at alt=
-		vat "Texto de ayuda de imagen"
-		at caption=
-		vat "Caption de la imagen"
-		tg &gt&lt/slider&gt
-		br
-		tg   &lt/sliders&gt
-		cm   &lt!-- controles --&gt
-		tg   &lticon
-		at class=
-		vat "previus-slide"
-		tg &gt&lt/icon&gt
-		br
-		tg   &lticon
-		at class=
-		vat "next-slide"
-		tg &gt&lt/icon&gt
-		br
-		tg &lt/slideshow&gt
-h4.subtitle Controles
-p.bloque La etiqueta personalizada
-	code slide-controls
-	span es contenedor para los elementos interactivos del
-	code slideshow
-	span .
-tabs.is-text-upper
-	tab(data-id="#slide-rs") demo
-	tab(data-id="#slide-co") snippet
-divider.is-marginless
-tabs-content.padding-1
-	tab-content#slide-rs
-		slideshow(animate="fade")#slide1
-			sliders
-				slider(src="img/f1.jpg")
-				slider(src="img/f2.jpg")
-				slider(src="img/f3.jpg")
-				slider(src="img/f4.jpg")
-			slide-controls
-				icon.previus-slide.is-text-cloud
-					i.fa.fa-angle-left
-				icon.next-slide.is-text-cloud
-					i.fa.fa-angle-right
-	tab-content#slide-co
-		snippet
-			pre
-				tg &ltslideshow 
-				at animate=
-				vat "fade"
-				tg &gt
-				cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
-				tg   &ltsliders&gt
-				cm     &lt!-- Presta atención al atributo src, genera un elemento img dinámico --&gt
-				-for(var i=1; i<5; i++)
-					tg     &ltslider
-					at src=
-					vat "https://pexels.com/..."
-					tg &gt&lt/slider&gt
-					br
-				tg   &lt/sliders&gt
-				cm   &lt!-- Panel de interacción (opcional) --&gt
-				tg   &ltslide-controls&gt
-				br
-				tg     &lticon
-				at class=
-				vat "previus-slide"
-				tg &gt&lt/icon&gt
-				br
-				tg     &lticon
-				at class=
-				vat "next-slide"
-				tg &gt&lt/icon&gt
-				br
-				tg   &lt/slide-controls&gt
-				br
-				tg &lt/slideshow&gt
-message.is-info.is-small.bloque
-	header Nota:
-	content El contenedor
+.wrapper
+	h1.title Slideshow
+	p.bloque-text Pequeño módulo para la creación de slides de imágenes.
+	p.bloque-text Este módulo te permitirá crear
+		b complejos slides
+		span de imágenes, basados en una
+		b estructura
+		span muy interesante.
+	message.margin-1.is-small.is-info
+		header Importante
+		content La interacción con
+			b Javascript
+			span no la incluye kimera.
+	h4.subtitle Estructura
+	ul
+		li
+			code slideshow
+			span Contenedor principal.
+			ul
+				li
+					code animate
+					span Atributo que define el tipo de animación mediante los valores
+					code fade
+					span y
+					code slide
+				li
+					code interval
+					span Atributo que define el intervalo de tiempo en
+					strong milisegundos
+					span .
+				li
+					code autoplay
+					span Atributo que indica la repoduccion automática.
+				li
+					code sliders
+					span Contenedor de imágenes
+					ul
+						li
+							code slider contenedor de la imágen.
+							ul
+								li
+									code src
+									span Atributo con la
+									strong url
+									span de la imágen
+								li
+									code alt
+									span Atributo para texto alternatvo(si no es posible cargar la imágen). 
+								li
+									code caption
+									span Atributo que define un pequeño texto a la imágen.
+				li
+					code slide-controls
+					span Contenedor para los controles del
+					code slideshow
+					span .
+					ul
+						li
+							code .next-slide
+							span Elemento para cambiar al
+							b siguiente
+							span slide (opcional).
+						li
+							code .previus-slide
+							span Elemento para cambiar al
+							b anterior
+							span slide (opcional).
+	snippet.margin-v-1
+		pre
+			cm &lt!-- Definición general del módulo slideshow --&gt
+			cm &lt!-- El atributo interval solamente es aplicable en reproduccion automática, si su valor no es especificado por defecto tiene el valor de 5000 ms--&gt
+			tg &ltslideshow
+			at autoplay interval=
+			vat "3000"
+			at animate=
+			vat "fade || slide"
+			tg &gt
+			cm   &l!-- Contenedor de las imágenes --&gt
+			tg   &ltsliders&gt
+			cm     &lt!-- Elemento genérico que añade la imágen al slide mediante su atributo src--&gt
+			tg     &ltslider
+			at src=
+			vat "ruta de la imagen"
+			at alt=
+			vat "Texto de ayuda de imagen"
+			at caption=
+			vat "Caption de la imagen"
+			tg &gt&lt/slider&gt
+			br
+			tg   &lt/sliders&gt
+			cm   &lt!-- controles --&gt
+			tg   &lticon
+			at class=
+			vat "previus-slide"
+			tg &gt&lt/icon&gt
+			br
+			tg   &lticon
+			at class=
+			vat "next-slide"
+			tg &gt&lt/icon&gt
+			br
+			tg &lt/slideshow&gt
+	h4.subtitle Controles
+	p.bloque-text La etiqueta personalizada
 		code slide-controls
-		span puede ser omitido si no se desea agregar controles al
+		span es contenedor para los elementos interactivos del
 		code slideshow
 		span .
-h4.subtitle Autoplay e interval
-p.bloque El atributo
-	code autoplay
-	span indica la reproducción
-	strong automática
-	span en un intervalo de tiempo definido en
-	code ms
-	span mediante el atributo
-	code interval
-	span .
-tabs.is-text-upper
-	tab(data-id="#slide-rs") demo
-	tab(data-id="#slide-co") snippet
-divider.is-marginless
-tabs-content.padding-1
-	tab-content#slide-rs
-		slideshow(animate="fade" autoplay interval="3000")
-			sliders
-				slider(src="img/f1.jpg")
-				slider(src="img/f2.jpg")
-				slider(src="img/f3.jpg")
-				slider(src="img/f4.jpg")
-	tab-content#slide-co
-		snippet
-			pre
-				cm &lt!-- definicion de atributos autoplay e interval --&gt
-				tg &ltslideshow 
-				at autoplay interval=
-				vat "3000"
-				at animate=
-				vat "fade"
-				tg &gt
-				tg   &ltsliders&gt
-				br
-				-for(var i=1; i<5; i++)
-					tg     &ltslider
-					at src=
-					vat "https://pexels.com/..."
-					tg &gt&lt/slider&gt
+	tabs.is-text-upper
+		tab(data-id="#slide-rs") demo
+		tab(data-id="#slide-co") snippet
+	tabs-content.padding-1
+		tab-content#slide-rs
+			slideshow(animate="fade")#slide1
+				sliders
+					slider(src="img/f1.jpg")
+					slider(src="img/f2.jpg")
+					slider(src="img/f3.jpg")
+					slider(src="img/f4.jpg")
+				slide-controls
+					icon.previus-slide.is-text-cloud
+						i.fa.fa-angle-left
+					icon.next-slide.is-text-cloud
+						i.fa.fa-angle-right
+		tab-content#slide-co
+			snippet
+				pre
+					tg &ltslideshow 
+					at animate=
+					vat "fade"
+					tg &gt
+					cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
+					tg   &ltsliders&gt
+					cm     &lt!-- Presta atención al atributo src, genera un elemento img dinámico --&gt
+					-for(var i=1; i<5; i++)
+						tg     &ltslider
+						at src=
+						vat "https://pexels.com/..."
+						tg &gt&lt/slider&gt
+						br
+					tg   &lt/sliders&gt
+					cm   &lt!-- Panel de interacción (opcional) --&gt
+					tg   &ltslide-controls&gt
 					br
-				tg   &lt/sliders&gt
-				br
-				tg &lt/slideshow&gt
-		message.is-success.is-small
-			header Importante
-			content Si el atributo
-				code interval
-				span no es definido, el valor por defecto que se asigna a la función
-				code setInterval()
-				span es de
-				strong 5000ms
-				span .
+					tg     &lticon
+					at class=
+					vat "previus-slide"
+					tg &gt&lt/icon&gt
+					br
+					tg     &lticon
+					at class=
+					vat "next-slide"
+					tg &gt&lt/icon&gt
+					br
+					tg   &lt/slide-controls&gt
+					br
+					tg &lt/slideshow&gt
+	message.margin-1.is-info.is-small.bloque
+		header Nota:
+		content El contenedor
+			code slide-controls
+			span puede ser omitido si no se desea agregar controles al
+			code slideshow
+			span .
+	h4.subtitle Autoplay e interval
+	p.bloque-text El atributo
+		code autoplay
+		span indica la reproducción
+		strong automática
+		span en un intervalo de tiempo definido en
+		code ms
+		span mediante el atributo
+		code interval
+		span .
+	tabs.is-text-upper
+		tab(data-id="#slide-rs") demo
+		tab(data-id="#slide-co") snippet
+	tabs-content.padding-1
+		tab-content#slide-rs
+			slideshow(animate="fade" autoplay interval="3000")
+				sliders
+					slider(src="img/f1.jpg")
+					slider(src="img/f2.jpg")
+					slider(src="img/f3.jpg")
+					slider(src="img/f4.jpg")
+		tab-content#slide-co
+			snippet
+				pre
+					cm &lt!-- definicion de atributos autoplay e interval --&gt
+					tg &ltslideshow 
+					at autoplay interval=
+					vat "3000"
+					at animate=
+					vat "fade"
+					tg &gt
+					tg   &ltsliders&gt
+					br
+					-for(var i=1; i<5; i++)
+						tg     &ltslider
+						at src=
+						vat "https://pexels.com/..."
+						tg &gt&lt/slider&gt
+						br
+					tg   &lt/sliders&gt
+					br
+					tg &lt/slideshow&gt
+			message.margin-1.is-success.is-small
+				header Importante
+				content Si el atributo
+					code interval
+					span no es definido, el valor por defecto que se asigna a la función
+					code setInterval()
+					span es de
+					strong 5000ms
+					span .

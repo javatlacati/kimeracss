@@ -4,46 +4,115 @@ html
 	head
 		include main/_headers
 	body
-		layout.is-dashboard.is-small-sidebar
+		layout#app-main.is-block
+			button.close-menu-btn.floating.is-primary.is-rounded.is-large
+				icon.is-large: i.fa.fa-angle-right
+			#home
+			navbar#nav-main
+				include main/_navbar
 			sidebar#menu-principal
 				include main/_menu
 			main.overflow-y
-				group.is-boxed#bottom-nav.is-hidden-desktop.padding-h-2.padding-v-3
-					group-item#mostrar-side-menu
-						a(href="#")
-							icon.is-medium
-								i.fa.fa-bars
-					group-item
-						a(href="https://github.com/JorgeAntrax/kimera/fork" target="_blank").is-medium
-							icon.is-text-dark
-								i.fa.fa-code-fork
-					group-item
-						a(href="https://github.com/JorgeAntrax/kimera/issues" target="_blank").is-medium
-							icon.is-text-dark
-								i.fa.fa-exclamation-circle
-					group-item
-						a(href="https://github.com/JorgeAntrax/kimera" target="_blank")
-							icon.is-medium
-								i.fa.fa-github
-					group-item
-						a(href="#home").is-medium
-							icon
-								i.fa.fa-arrow-up
-				#home
 				.menu_content#layout-home
 					include intro/_home
 				.menu_content#layout-intro
-					include intro/_all
+					include intro/_introduccion
+				.menu_content#layout-colors
+					include intro/_colors
+				.menu_content#layout-fonts
+					include intro/_typography
+				.menu_content#layout-contenido
+					include intro/_contenido
+				.menu_content#layout-modular
+					include intro/_modular
+				.menu_content#layout-functions
+					include intro/_functions
+				.menu_content#layout-anim
+					include intro/_anim
+				.menu_content#layout-mixin
+					include intro/_mixins
+				.menu_content#layout-responsive
+					include grid/responsive
 				.menu_content#layout-grid
-					include grid/_all
-				.menu_content#layout-components
-					include components/_all
-				.menu_content#layout-forms
-					include forms/_all
-				.menu_content#layout-modules
-					include modules/_all
+					include grid/grid
+				.menu_content#layout-align
+					include grid/align
+				.menu_content#layout-layout
+					include grid/layout
+				.menu_content#layout-block
+					include components/blockquote
+				.menu_content#layout-box
+					include components/box
+				.menu_content#layout-buttons
+					include components/buttons
+				.menu_content#layout-chip
+					include components/chip
+				.menu_content#layout-dropdown
+					include components/dropdown
+				.menu_content#layout-icons
+					include components/icons
+				.menu_content#layout-tags
+					include components/tags
+				.menu_content#layout-tooltip
+					include components/tooltip
+				.menu_content#layout-toggle
+					include components/toggle
+				.menu_content#layout-range
+					include components/range
+				.menu_content#layout-preload
+					include components/preload
+				.menu_content#layout-progress
+					include components/progress
+				.menu_content#layout-calendar
+					include forms/calendar
+				.menu_content#layout-field
+					include forms/field
+				.menu_content#layout-input
+					include forms/input
+				.menu_content#layout-textarea
+					include forms/textarea
+				.menu_content#layout-checkbox
+					include forms/checkbox
+				.menu_content#layout-radio
+					include forms/radio
+				.menu_content#layout-color
+					include forms/color
+				.menu_content#layout-select
+					include forms/select
+				.menu_content#layout-acordeon
+					include modules/acordeon
+				.menu_content#layout-bread
+					include modules/breadcrumb
+				.menu_content#layout-card
+					include modules/card
+				.menu_content#layout-group
+					include modules/group
+				.menu_content#layout-media
+					include modules/media
+				.menu_content#layout-mega
+					include modules/mega
+				.menu_content#layout-menu
+					include modules/menus
+				.menu_content#layout-message
+					include modules/message
+				.menu_content#layout-modal
+					include modules/modal
+				.menu_content#layout-navbar
+					include modules/navbar
+				.menu_content#layout-notify
+					include modules/notify
+				.menu_content#layout-pagination
+					include modules/pagination
+				//.menu_content#layout-slide
+					//include modules/slideshow
+				.menu_content#layout-social
+					include modules/social
+				.menu_content#layout-table
+					include modules/table
+				.menu_content#layout-tabs
+					include modules/tabs
 				#footer
 					include main/_footer
-		script(src="https://platform.twitter.com/widgets.js" charset="utf-8")
-		script(src="kimera/js/kimera.js")
+		//script(src="https://platform.twitter.com/widgets.js" charset="utf-8")
+		script(src=kimeraJS)
 		script(src="js/main.js")

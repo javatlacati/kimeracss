@@ -1,108 +1,114 @@
-h1.title Funciones con SASS
-tags.is-group
-	tag.is-info Path
-	tag _functions.scss
-divider
-p.bloque Las funciones en
-	b SASS
-	span nos permiten darle más funcionalidad a nuestro
-	b CSS.
-p Por el momento
-	b kimera
-	span solo incluye 2 funciones:
-ul.default-browser
-	li: code grid(){...}
-	li: code rem(){...}
-p.bloque Como cualquier función en
-	b SASS
-	span simplemente llamas a la función como un valor.
-code.is-text-info propiedad css: <span class="is-text-success">funciónSass()</span>;
-h4.subtitle Función Grid
-p.bloue Permite controlar el número de columnas que necesites construir.
-code grid(<span class="is-text-info">$columns</span>,<span class="is-text-info">$total-columns</span>);
-ul.default-browser
-	li
-		code
-			span $columns 
-		span (numero de columnas que abarca un elemento).
-	li
-		code
-			span $total-columns 
-		span (total de columnas en el grid).
-	li
-		code
-			span Si $total-columns 
-		span no se especifíca por defecto su valor es 20
-snippet.bloque
-	pre
-		at .caja 
-		vat {
-		br
-		span    <span class="is-text-info">display:</span> flex
-			span.is-text-info ;
-		br
-		cm     /* Esta línea le dice a la clase .caja que tendrá un ancho del 50% */
-		span    <span class="is-text-info">flex-basis:</span> grid(6, 12)
-			span.is-text-info ;
-		br
-		vat  }
-		br
-		at .caja 
-		vat {
-		br
-		span    <span class="is-text-info">display:</span> flex
-			span.is-text-info ;
-		br
-		cm     /* Esta línea le dice a la clase .caja que tendrá un ancho del 30% */
-		span    <span class="is-text-info">flex-basis:</span> grid(6)
-			span.is-text-info ;
-		br
-		vat  }
-h4.subtitle Función Rem
-p.bloque Permite convertir la unidad de
-	b pixeles
-	span en la unidad relativa
-	b rem
-	span .
-p Por defecto la función se basa en un tamaño de fuente de
-	b 16 px.
-code rem(<span class="is-text-info">$size</span>,<span class="is-text-info">$unity</span>);
-ul.default-browser
-	li
-		code $size 
-		span (medida a convertir en pixeles).
-	li
-		code $unity 
-		span (tamaño de fuente).
-	li
-		span Si
-		code $unity 
-		span no se especifica por defecto su valor es determinado por la variable 
-		code $text-default 
-		span del archivo 
-		code _variables.scss
-snippet.bloque
-	pre
-		at .caja 
-		vat {
-		br
-		span    <span class="is-text-info">display:</span> flex
-			span.is-text-info ;
-		br
-		cm     /* Esta línea le dice a la clase .caja que tendrá un ancho de 300px en formato rem en base a 20px */
-		span    <span class="is-text-info">flex-basis:</span> rem(300px, 20px)
-			span.is-text-info ;
-		br
-		vat  }
-		br
-		at .caja 
-		vat {
-		br
-		span    <span class="is-text-info">display:</span> flex
-			span.is-text-info ;
-		br
-		cm     /* Esta línea le dice a la clase .caja que tendrá un ancho de 300px en formato rem */
-		span    <span class="is-text-info">flex-basis:</span> rem(300px)
-			span.is-text-info ;
-		br
-		vat  }
+.wrapper
+	h1.title Funciones
+	p.bloque-text Las funciones en
+		b SASS
+		span nos permiten darle más funcionalidad a nuestro
+		b CSS.
+	p.bloque-text Por el momento
+		b kimera
+		span solo incluye 2 funciones:
+	ul
+		li: code grid(){...}
+		li: code rem(){...}
+	p.bloque-text Como cualquier función en
+		b SASS
+		span simplemente llamas a la función como un valor.
+	code.is-text-info propiedad css: <span class="is-text-success">funciónSass()</span>;
+	h4.subtitle Función Grid
+	p.bloque-text Permite controlar el número de columnas que necesites construir.
+	code grid(<span class="is-text-info">$columns</span>,<span class="is-text-info">$total-columns</span>);
+	ul
+		li
+			code
+				span $columns 
+			span (numero de columnas que abarca un elemento).
+		li
+			code
+				span $total-columns 
+			span (total de columnas en el grid).
+		li
+			code
+				span Si $total-columns 
+			span no se especifíca por defecto su valor es 20
+	snippet.margin-v-1
+		pre
+			at .caja 
+			vat {
+			br
+			span    <span class="is-text-info">display:</span> flex
+				span.is-text-info ;
+			br
+			cm     /* Esta línea le dice a la clase .caja que tendrá un ancho del 50% */
+			span    <span class="is-text-info">flex-basis:</span> grid(6, 12)
+				span.is-text-info ;
+			br
+			vat  }
+			br
+			at .caja 
+			vat {
+			br
+			span    <span class="is-text-info">display:</span> flex
+				span.is-text-info ;
+			br
+			cm     /* Esta línea le dice a la clase .caja que tendrá un ancho del 30% */
+			span    <span class="is-text-info">flex-basis:</span> grid(6)
+				span.is-text-info ;
+			br
+			vat  }
+	h4.subtitle Función Rem
+	p.bloque-text Permite convertir la unidad de
+		b pixeles
+		span en la unidad relativa
+		b rem
+		span .
+	p.bloque-text Por defecto la función se basa en un tamaño de fuente de
+		b 16 px.
+	code rem(<span class="is-text-info">$size</span>,<span class="is-text-info">$unity</span>);
+	ul
+		li
+			code $size 
+			span (medida a convertir en pixeles).
+		li
+			code $unity 
+			span (tamaño de fuente).
+		li
+			span Si
+			code $unity 
+			span no se especifica por defecto su valor es determinado por la variable 
+			code $text-default 
+			span del archivo 
+			code _variables.scss
+	snippet.margin-v-1
+		pre
+			at .caja 
+			vat {
+			br
+			span    <span class="is-text-info">display:</span> flex
+				span.is-text-info ;
+			br
+			cm     /* Esta línea le dice a la clase .caja que tendrá un ancho de 300px en formato rem en base a 20px */
+			span    <span class="is-text-info">flex-basis:</span> rem(300px, 20px)
+				span.is-text-info ;
+			br
+			vat  }
+			br
+			at .caja 
+			vat {
+			br
+			span    <span class="is-text-info">display:</span> flex
+				span.is-text-info ;
+			br
+			cm     /* Esta línea le dice a la clase .caja que tendrá un ancho de 300px en formato rem */
+			span    <span class="is-text-info">flex-basis:</span> rem(300px)
+				span.is-text-info ;
+			br
+			vat  }
+	row.bloque.is-separated
+		button(data-link="layout-modular").is-primary-invert
+			icon
+				i.fa.fa-arrow-left
+			span   Modular
+		button(data-link="layout-anim").is-primary-invert
+			span Animations  
+			icon
+				i.fa.fa-arrow-right

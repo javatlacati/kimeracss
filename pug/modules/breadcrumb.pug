@@ -1,250 +1,256 @@
-h1.title Breadcrumbs
-tags.is-group
-	tag.is-info Path
-	tag _breadcrumb.scss
-p Módulo que indíca la ubicación de la pagína actual dentro de una
-	b jerarquía de navegación
-	span .
-divider
-h4.subtitle Estructura
-p Los separadores son añadidos automaticamente mediante los
-	b pseudo-elementos
-	code ::after & ::before
-row.bloque
-	column.tablet-is-half
-		breadcrumb
-			item: a(href="#" rel="nofollow") Home
-			item: a(href="#" rel="nofollow") Library
-			item: a(href="#" rel="nofollow") Data
-			item.is-active: a(href="#") Kimera
-	column.tablet-is-half
-		snippet
-			pre
-				tg &ltbreadcrumb&gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-message.is-small.is-info
-	header Importante
-	content Puedes añadir la clase
-		code .is-active
-		span a un elemento
-		code item
-		span para indicar que es el item seleccionado.
-h4.subtitle Separadores
-row.bloque
-	column.tablet-is-half
-		breadcrumb#demo-breadcrumb-toggle-divider
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
-		buttons.margin-t-1#demo-breadcrumb-divider
-			button.is-light.is-small default
-			button.is-light.is-small is-dotted
-			button.is-light.is-small is-arrowed
-	column.tablet-is-half
-		snippet
-			pre
-				tg &ltbreadcrumb
-				at class=
-				vat "<span id="demo-breadcrumb-doc">is-dotted</span>"
-				tg &gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-h4.subtitle Alineación
-row.bloque
-	column
-		p Alineación al centro con la clase
-			code .is-center
-		breadcrumb.padding-v-2#breadcrumb-Align-demo
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
-		buttons#bread-align-buttons.margin-b-1
-			button.is-small.is-light default
-			button.is-small.is-light is-center
-			button.is-small.is-light is-right
-		snippet
-			pre
-				tg &ltbreadcrumb
-				at class=
-				vat "<span id='demo-align-bread'></span>"
-				tg &gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-message.is-success.is-small
-	header Tips:
-	content
-		p Al añadir la clase
-			code is-right
-			span automaticamente se invierte el separador asignado.
-h4.subtitle Tamaños
-row.bloque
-	column
-		breadcrumb#size-bread
-			item: a(href="#") Home
-			item: a(href="#") Library
-			item: a(href="#") Data
-			item.is-active: a(href="#") Kimera
-		buttons#toggle-size-bread.margin-v-1
-			button.is-small.is-light default
-			button.is-small.is-light is-small
-			button.is-small.is-light is-large
-		snippet
-			pre
-				tg &ltbreadcrumb
-				at class=
-				vat "<span id="demo-size-bread"></span>"
-				tg &gt
-				br
-				tg   &ltitem&gt
-				span Home
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Library
-				tg &lt/item&gt
-				br
-				tg   &ltitem&gt
-				span Data
-				tg &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				span Kimera
-				tg &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
-h4.subtitle Añadiendo iconos
-row.bloque
-	column
-		breadcrumb
-			item
-				a(href="#" rel="nofollow")
-					icon
-						i.fa.fa-home
+.wrapper
+	h1.title Breadcrumbs
+	p.bloque-text Módulo que indíca la ubicación de la pagína actual dentro de una
+		b jerarquía de navegación
+		span .
+	h4.subtitle Estructura
+	p.bloque-text Los separadores son añadidos automaticamente mediante los
+		b pseudo-elementos
+		code ::after & ::before
+	row.bloque
+		column.tablet-is-half
+			breadcrumb
+				item: a(href="#" rel="nofollow") Home
+				item: a(href="#" rel="nofollow") Library
+				item: a(href="#" rel="nofollow") Data
+				item.is-active: a(href="#") Kimera
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltbreadcrumb&gt
+					br
+					tg   &ltitem&gt
 					span Home
-			item
-				a(href="#" rel="nofollow")
-					icon
-						i.fa.fa-code-fork
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
 					span Library
-			item
-				a(href="#" rel="nofollow")
-					icon
-						i.fa.fa-tag
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
 					span Data
-			item.is-active
-				a(href="#")
+					tg &lt/item&gt
+					br
+					tg   &ltitem
+					at class=
+					vat "is-active"
+					tg &gt
 					span Kimera
-					icon
-						i.fa.fa-git
-		br
-		snippet
-			pre
-				tg &ltbreadcrumb&gt
-				br
-				tg   &ltitem&gt
-				br
-				tg         &lticon&gt
-				span ...
-				tg &lt/icon&gt
-				br
-				span         Home
-				br
-				tg   &lt/item&gt
-				br
-				tg   &ltitem&gt
-				br
-				tg         &lticon&gt
-				span ...
-				tg &lt/icon&gt
-				br
-				span         Library
-				br
-				tg   &lt/item&gt
-				br
-				tg   &ltitem&gt
-				br
-				tg         &lticon&gt
-				span ...
-				tg &lt/icon&gt
-				br
-				span         Data
-				br
-				tg   &lt/item&gt
-				br
-				tg   &ltitem
-				at class=
-				vat "is-active"
-				tg &gt
-				br
-				span         Kimera
-				br
-				tg         &lticon&gt
-				span ...
-				tg &lt/icon&gt
-				br
-				tg   &lt/item&gt
-				br
-				tg &lt/breadcrumb&gt
+					tg &lt/item&gt
+					br
+					tg &lt/breadcrumb&gt
+	message.margin-1.is-small.is-info
+		header Importante
+		content Puedes añadir la clase
+			code .is-active
+			span a un elemento
+			code item
+			span para indicar que es el item seleccionado.
+	h4.subtitle Separadores
+	row.bloque
+		column.tablet-is-half
+			breadcrumb#demo-breadcrumb-toggle-divider
+				item: a(href="#") Home
+				item: a(href="#") Library
+				item: a(href="#") Data
+				item.is-active: a(href="#") Kimera
+			buttons.margin-t-1#demo-breadcrumb-divider
+				button.is-light.is-small default
+				button.is-light.is-small is-dotted
+				button.is-light.is-small is-arrowed
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltbreadcrumb
+					at class=
+					vat "<span id="demo-breadcrumb-doc">is-dotted</span>"
+					tg &gt
+					br
+					tg   &ltitem&gt
+					span Home
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
+					span Library
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
+					span Data
+					tg &lt/item&gt
+					br
+					tg   &ltitem
+					at class=
+					vat "is-active"
+					tg &gt
+					span Kimera
+					tg &lt/item&gt
+					br
+					tg &lt/breadcrumb&gt
+	h4.subtitle Alineación
+	row.bloque
+		column
+			p.bloque-text Alineación al centro con la clase
+				code .is-center
+			breadcrumb.padding-v-2#breadcrumb-Align-demo
+				item: a(href="#") Home
+				item: a(href="#") Library
+				item: a(href="#") Data
+				item.is-active: a(href="#") Kimera
+			buttons#bread-align-buttons.margin-b-1
+				button.is-small.is-light default
+				button.is-small.is-light is-center
+				button.is-small.is-light is-right
+			snippet
+				pre
+					tg &ltbreadcrumb
+					at class=
+					vat "<span id='demo-align-bread'></span>"
+					tg &gt
+					br
+					tg   &ltitem&gt
+					span Home
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
+					span Library
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
+					span Data
+					tg &lt/item&gt
+					br
+					tg   &ltitem
+					at class=
+					vat "is-active"
+					tg &gt
+					span Kimera
+					tg &lt/item&gt
+					br
+					tg &lt/breadcrumb&gt
+	message.margin-1.is-success.is-small
+		header Tips:
+		content
+			p Al añadir la clase
+				code is-right
+				span automaticamente se invierte el separador asignado.
+	h4.subtitle Tamaños
+	row.bloque
+		column
+			breadcrumb#size-bread
+				item: a(href="#") Home
+				item: a(href="#") Library
+				item: a(href="#") Data
+				item.is-active: a(href="#") Kimera
+			buttons#toggle-size-bread.margin-v-1
+				button.is-small.is-light default
+				button.is-small.is-light is-small
+				button.is-small.is-light is-large
+			snippet
+				pre
+					tg &ltbreadcrumb
+					at class=
+					vat "<span id="demo-size-bread"></span>"
+					tg &gt
+					br
+					tg   &ltitem&gt
+					span Home
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
+					span Library
+					tg &lt/item&gt
+					br
+					tg   &ltitem&gt
+					span Data
+					tg &lt/item&gt
+					br
+					tg   &ltitem
+					at class=
+					vat "is-active"
+					tg &gt
+					span Kimera
+					tg &lt/item&gt
+					br
+					tg &lt/breadcrumb&gt
+	h4.subtitle Añadiendo iconos
+	row.bloque
+		column
+			breadcrumb
+				item
+					a(href="#" rel="nofollow")
+						icon
+							i.fa.fa-home
+						span Home
+				item
+					a(href="#" rel="nofollow")
+						icon
+							i.fa.fa-code-fork
+						span Library
+				item
+					a(href="#" rel="nofollow")
+						icon
+							i.fa.fa-tag
+						span Data
+				item.is-active
+					a(href="#")
+						span Kimera
+						icon
+							i.fa.fa-git
+			br
+			snippet
+				pre
+					tg &ltbreadcrumb&gt
+					br
+					tg   &ltitem&gt
+					br
+					tg         &lticon&gt
+					span ...
+					tg &lt/icon&gt
+					br
+					span         Home
+					br
+					tg   &lt/item&gt
+					br
+					tg   &ltitem&gt
+					br
+					tg         &lticon&gt
+					span ...
+					tg &lt/icon&gt
+					br
+					span         Library
+					br
+					tg   &lt/item&gt
+					br
+					tg   &ltitem&gt
+					br
+					tg         &lticon&gt
+					span ...
+					tg &lt/icon&gt
+					br
+					span         Data
+					br
+					tg   &lt/item&gt
+					br
+					tg   &ltitem
+					at class=
+					vat "is-active"
+					tg &gt
+					br
+					span         Kimera
+					br
+					tg         &lticon&gt
+					span ...
+					tg &lt/icon&gt
+					br
+					tg   &lt/item&gt
+					br
+					tg &lt/breadcrumb&gt
+	row.bloque.is-separated
+		button(data-link="layout-acordeon").is-primary-invert
+			icon
+				i.fa.fa-arrow-left
+			span   Acordeon
+		button(data-link="layout-card").is-primary-invert
+			span Card  
+			icon
+				i.fa.fa-arrow-right
