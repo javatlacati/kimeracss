@@ -2,7 +2,7 @@ include ../main/_variables
 .wrapper
 	h1.title Introducción
 	p.bloque-text
-		b Kimera
+		b Level
 		span cuenta con las siguientes opciones, para que puedas comenzar a trabajar:
 	ol.default-browser
 		li Realizando una instalación mediante
@@ -20,7 +20,7 @@ include ../main/_variables
 			snippet(value="node js")
 				pre
 					at npm install
-					vat  kimera
+					vat  level
 	row.bloque
 		column.tablet-is-half
 			h4.opacity-8 Clonando el repositorío de 
@@ -29,7 +29,7 @@ include ../main/_variables
 			snippet(value="git")
 				pre
 					at git clone
-					vat  https://github.com/JorgeAntrax/kimera.git
+					vat  https://github.com/JorgeAntrax/level.git
 	h4.subtitle Primeros pasos
 	p.bloque-text Si estas utilizando el plugin
 		a(href="https://emmet.io") Emmet
@@ -123,13 +123,13 @@ include ../main/_variables
 							vat "https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
 							tg /&gt
 	h4#sys-mod.subtitle Añade 
-		b kimera 
+		b level 
 		span a tu proyecto.
 	p.bloque-text Hemos implementado un
 		b sistema módular
 		span bastante sencillo que te permitirá importar a tu proyecto solamente lo necesario para trabajar.
 	p.bloque-text para implementar este novedoso sistema necesitas crear el enlace a
-		code kimera.min.js
+		code level.min.js
 		span antes de la etiqueta de cierre del elemento
 		code body
 		span en tu documento
@@ -138,7 +138,7 @@ include ../main/_variables
 		pre
 			tg &ltscript
 			at src=
-			vat 'https://cdn.jsdelivr.net/npm/kimera@#{version}/js/kimera.min.js'
+			vat 'https://cdn.jsdelivr.net/npm/level@#{version}/js/level.min.js'
 			tg &gt&lt/script&gt
 	p.bloque-text Una vez hecho esto solamente tienes que llamar en la etiqueta body, al atributo personalizado
 		code km-include
@@ -155,7 +155,7 @@ include ../main/_variables
 			cm // Ejemplo: incluir toda la librería
 			tg &ltbody
 			at km-include=
-			vat "kimera"
+			vat "level"
 			tg &gt
 			cm   //Contenido del la página web
 			tg &lt/body&gt
@@ -198,8 +198,8 @@ include ../main/_variables
 							th.is-text-info Valor de atributo
 					tbody
 						tr
-							td: code kimera.min.css
-							td: small.is-text-bolder kimera
+							td: code level.min.css
+							td: small.is-text-bolder level
 						tr
 							td: code components/_all.scss
 							td: small.is-text-bolder components
@@ -336,7 +336,7 @@ include ../main/_variables
 			at rel=
 			vat "stylesheet"
 			at href=
-			vat "https://cdn.jsdelivr.net/gh/JorgeAntrax/kimera@#{version}/css/kimera.min.css"
+			vat "https://cdn.jsdelivr.net/gh/JorgeAntrax/level@#{version}/css/level.min.css"
 			tg &gt
 	h4.bloque-text Enlace
 		a(href="https://jsdelivr.com").is-text-info JsDelivr
@@ -349,11 +349,11 @@ include ../main/_variables
 			at rel=
 			vat "stylesheet"
 			at href=
-			vat "https://cdn.jsdelivr.net/npm/kimera@#{version}/css/kimera.min.css"
+			vat "https://cdn.jsdelivr.net/npm/level@#{version}/css/level.min.css"
 			tg &gt
 	h4.subtitle Plantilla básica
 	p.bloque-text
-		b Kimera 
+		b level 
 		span incluye un archivo
 		code index.html
 		span en la carpeta de descarga para que puedas comenzar de forma rápida,
@@ -390,7 +390,7 @@ include ../main/_variables
 			br
 			tg   &ltbody
 			at km-include=
-			vat "kimera"
+			vat "level"
 			tg &gt
 			br
 			tg     &ltmega
@@ -413,7 +413,7 @@ include ../main/_variables
 			at class=
 			vat "is-subtitle"
 			tg &gt
-			span kimera se ha instalado correctamente en tu proyecto
+			span level se ha instalado correctamente en tu proyecto
 			tg &lt/h3&gt
 			br
 			tg         &lt/hgroup&gt
@@ -431,7 +431,7 @@ include ../main/_variables
 			br
 			tg     &ltscript
 			at src=
-			vat "https://cdn.jsdelivr.net/npm/kimera@#{version}/js/kimera.min.js"
+			vat "https://cdn.jsdelivr.net/npm/level@#{version}/js/level.min.js"
 			tg &gt&lt/script&gt
 			br
 			tg   &ltbody&gt

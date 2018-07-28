@@ -1,13 +1,10 @@
 navbrand
 	logo(src=urlimage+'logo-circular-white.png')
-	nav-item.is-hidden-desktop
-		a(href="#home").button.is-light.is-rounded
-			icon.is-large: i.fa.fa-angle-up
-	burger.is-toggle-navbar: span
+	burger.is-toggle-navbar
 navmenu.is-separated-tablet
 	field#search-component.tablet-is-half
 		control.is-icon-right
-			input(type="text").is-medium.input.is-rounded
+			input(type="text" placeholder="Buscar componente").is-medium.input.is-rounded
 			icon.is-medium
 				i.fa.fa-search
 			listgroup#searchList

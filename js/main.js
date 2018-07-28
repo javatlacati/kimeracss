@@ -31,7 +31,7 @@ $stickyBtn.addEventListener('click', function() {
 $searchInput.addEventListener('keyup', function(e) {
     $searchList.innerHTML = '';
     e.stopPropagation();
-    let search = this.value;
+    let search = this.value.toLowerCase();
     for (let i = 0; i < $menuItems.length; i++) {
         let text = $menuItems[i].querySelector('span').outerText;
         let cadena = ~text.toLowerCase().indexOf(search);
@@ -47,7 +47,6 @@ $searchInput.addEventListener('keyup', function(e) {
 
 
 function updateList(attr, text) {
-    console.log($searchList);
     $searchList.innerHTML += `<list-item data-link="${attr}"><span>${text}</span><icon><i class="fa fa-cube"></i></icon></list-item>`;
     let item = $searchList.querySelectorAll('list-item');
     for (let a = 0; a < item.length; a++) {
@@ -81,7 +80,6 @@ if ($navMain) {
 $snippet.forEach(el => {
     el.addEventListener('click', function() {
         el.classList.add('is-expand');
-        console.log(el);
     }, false);
 });
 

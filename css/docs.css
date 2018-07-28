@@ -39,6 +39,11 @@ calendar {
     margin-bottom: 1rem;
 }
 
+#Color-burger span,
+#Color-ellipsis span {
+    background-color: red;
+}
+
 #layout-field field:not(.is-horizontal) control,
 #layout-input field:not(.is-horizontal) control,
 #layout-textarea field:not(.is-horizontal) control,

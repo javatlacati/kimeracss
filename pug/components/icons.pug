@@ -1,6 +1,5 @@
 .wrapper
 	h1.title Iconos
-	h4.subtitle Estructura
 	row.bloque
 		column.tablet-is-half
 			icon
@@ -19,26 +18,66 @@
 	h4.subtitle Iconos personalizados
 	p.bloque-text Puedes crear el típico icono de
 		b hamburguesa
-		span .
+		span  generando la siguiente estructura.
 	row.bloque
 		column.tablet-is-half
 			burger
-				span
 		column.tablet-is-half
 			snippet
 				pre
-					tg &ltburger&gt
-					br
-					tg   &ltspan&gt&lt/span&gt
-					br
-					tg &lt/burger&gt
-			snippet.margin-t-1
+					tg &ltburger&gt&lt/burger&gt
+	p.bloque-text Añadiendo la clase
+		code .is-active
+		span el icono se transforma mediante una pequeña animación.
+	row.bloque
+		column.tablet-is-half
+			burger.is-active
+		column.tablet-is-half
+			snippet
 				pre
-					cm // Como cambiar el color del icono burger
+					tg &ltburger
+					at class=
+					vat "is-active"
+					tg &gt&lt/burger&gt
+	p.bloque-text Puedes añadir la clase
+		code .is-arrow-left
+		span  generando el siguiente efecto.
+	row.bloque
+		column.tablet-is-half
+			burger.is-arrow-left.is-active
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltburger
+					at class=
+					vat "is-arrow-left"
+					tg &gt&lt/burger&gt
+	p.bloque-text Puedes añadir la clase
+		code .is-arrow-right
+		span  generando el siguiente efecto.
+	row.bloque
+		column.tablet-is-half
+			burger.is-arrow-right.is-active
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltburger
+					at class=
+					vat "is-arrow-right"
+					tg &gt&lt/burger&gt
+	p.bloque-text Puedes modificar el color del icono desde 
+		strong CSS
+		span  de la siguiente forma:
+	row.bloque
+		column.tablet-is-half
+			burger#Color-burger
+		column.tablet-is-half
+			snippet
+				pre
 					tg burger span
 					at {
 					br
-					tg   bakcground-color
+					tg   background-color
 					at :
 					span red
 					at ;
@@ -47,25 +86,68 @@
 	p.bloque-text Icono de menú
 		b secundarío
 		span .
+	p.bloque-text Puedes crear el típico icono de menú
+		b secundario
+		span  generando la siguiente estructura.
 	row.bloque
 		column.tablet-is-half
 			ellipsis
-				span
 		column.tablet-is-half
 			snippet
 				pre
-					tg &ltellipsis&gt
-					br
-					tg   &ltspan&gt&lt/span&gt
-					br
-					tg &lt/ellipsis&gt
-			snippet.margin-t-1
+					tg &ltellipsis&gt&lt/ellipsis&gt
+	p.bloque-text Añadiendo la clase
+		code .is-active
+		span el icono se transforma mediante una pequeña animación.
+	row.bloque
+		column.tablet-is-half
+			ellipsis.is-active
+		column.tablet-is-half
+			snippet
 				pre
-					cm // Como cambiar el color del icono ellipsis
+					tg &ltellipsis
+					at class=
+					vat "is-active"
+					tg &gt&lt/ellipsis&gt
+	p.bloque-text Puedes añadir la clase
+		code .is-arrow-left
+		span  generando el siguiente efecto.
+	row.bloque
+		column.tablet-is-half
+			ellipsis.is-arrow-left.is-active
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltellipsis
+					at class=
+					vat "is-arrow-left"
+					tg &gt&lt/ellipsis&gt
+	p.bloque-text Puedes añadir la clase
+		code .is-arrow-right
+		span  generando el siguiente efecto.
+	row.bloque
+		column.tablet-is-half
+			ellipsis.is-arrow-right.is-active
+		column.tablet-is-half
+			snippet
+				pre
+					tg &ltellipsis
+					at class=
+					vat "is-arrow-right"
+					tg &gt&lt/ellipsis&gt
+	p.bloque-text Puedes modificar el color del icono desde 
+		strong CSS
+		span  de la siguiente forma:
+	row.bloque
+		column.tablet-is-half
+			ellipsis#Color-ellipsis
+		column.tablet-is-half
+			snippet
+				pre
 					tg ellipsis span
 					at {
 					br
-					tg   bakcground-color
+					tg   background-color
 					at :
 					span red
 					at ;
@@ -87,10 +169,10 @@
 	row.bloque
 		column.tablet-is-half
 			tag
-				span Close
+				span Close 
 				close
 			tag
-				span Close con icono
+				span Close con icono 
 				close
 					i.fa.fa-times-circle
 		column.tablet-is-half
@@ -98,7 +180,7 @@
 				pre
 					tg &lttag&gt
 					br
-					span   Close
+					span   Close 
 					br
 					tg   &ltclose&gt&lt/close&gt
 					br
@@ -106,7 +188,7 @@
 					br
 					tg &lttag&gt
 					br
-					span   Close con icono
+					span   Close con icono 
 					br
 					tg   &ltclose&gt
 					br
@@ -213,51 +295,20 @@
 					tg &gt
 					br
 					tg &lt/icon&gt
-	h4.subtitle Espaciado
-	p.bloque-text Por defecto el elemento
-		code icon
-		span añade una separacion automaticamente de su contenido.
-	row.bloque
-		column.tablet-is-half
-			p
-				icon
-					i.fa.fa-bolt
-				span Icono a la izquierda
-			p
-				span Icono a la derecha
-				icon
-					i.fa.fa-bolt
-		column.tablet-is-half
-			snippet
-				pre
-					tg &ltp&gt
-					br
-					tg   &lticon&gt
-					span ...
-					tg &lt/icon&gt
-					br
-					tg   &ltspan&gt
-					span Icono a la izquierda
-					tg &lt/span&gt
-					br
-					tg &lt/p&gt
-					br
-					tg &ltp&gt
-					br
-					tg   &ltspan&gt
-					span Icono a la izquierda
-					tg &lt/span&gt
-					br
-					tg   &lticon&gt
-					span ...
-					tg &lt/icon&gt
-					br
-					tg &lt/p&gt
-					br
 	h4.subtitle Dimensiones
-	message.margin-1.is-info
-		content
-			p El color de fondo en el icono es unicamente con fines demostrativos.
+	row
+		column.tablet-is-half.padding-1
+			message.margin-1.is-primary.is-small
+				content
+					p El color de fondo en el icono es unicamente con fines demostrativos.
+		column.tablet-is-half.padding-1
+			message.margin-1.is-info.is-small
+				content
+					p Estas dimensiones no son aplicable a los iconos personalizados
+						code burger
+						span ,
+						code ellipsis
+						span .
 	responsive.is-table.bloque
 		table.is-cell.is-block
 				thead

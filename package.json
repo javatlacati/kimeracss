@@ -1,14 +1,14 @@
 {
   "name": "framework",
   "version": "0.4.8",
-  "description": "A documentation for kimera CSS framework",
+  "description": "A documentation for Level CSS framework",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JorgeAntrax/kimeracss.git"
+    "url": "git+https://github.com/JorgeAntrax/level-css.git"
   },
   "keywords": [
     "docs",
@@ -18,9 +18,9 @@
   "author": "Leonardo Quintana",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JorgeAntrax/kimeracss/issues"
+    "url": "https://github.com/JorgeAntrax/level-css/issues"
   },
-  "homepage": "https://github.com/JorgeAntrax/kimeracss#readme",
+  "homepage": "https://github.com/JorgeAntrax/level-css#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-pug": "^4.0.1",

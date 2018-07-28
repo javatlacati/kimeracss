@@ -4,28 +4,28 @@
 		b necesitas
 		span para trabajar en tu proyecto.
 	h4.subtitle Estructura de carpetas.
-	p.bloque-text Kimera tiene un total de 45 archivos
+	p.bloque-text Level tiene un total de 45 archivos
 		code .scss
 		span .
 	snippet(value="txt").margin-v-1
 		pre
-			.is-text-info |----- kimera-master
+			.is-text-info |----- level-master
 			br
-			span |--------- kimera.scss
+			span |--------- level.scss
 			br
 			span |--------- config.scss
 			br
 			cm |--------- css
-			span |------------- kimera.css
+			span |------------- level.css
 			br
-			span |------------- kimera.min.css
+			span |------------- level.min.css
 			br
 			cm |------------- all files css
 			br
 			cm |--------- js
-			span |------------- kimera.js
+			span |------------- level.js
 			br
-			span |------------- kimera.min.js
+			span |------------- level.min.js
 			br
 			cm |--------- scss
 			cm |------------- base  (dependencias obligatorias)
@@ -42,14 +42,14 @@
 			br
 			cm |------------- modules
 			span |----------------- _all.scss
-	p.bloque-text Todos los módulos y componentes de kimera, requieren de las dependencías obligatorías.
+	p.bloque-text Todos los módulos y componentes de level, requieren de las dependencías obligatorías.
 	h4.subtitle Implementación
 	message.is-info.margin-1
 		content
 			p Es recomendable que ignores los archivos compilados de la carpeta
 			code css
 			span y el archivo
-			code kimera.scss
+			code level.scss
 			span , si vas a compilar solo lo necesario.
 	p.bloque-text
 		b 1.-
@@ -67,23 +67,23 @@
 		pre
 			cm // Archivos de importación obligatorios
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/base/<span class="is-text-info">_all.scss</span>"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/base/<span class="is-text-info">_all.scss</span>"
 			at ;
 			br
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/utilities/<span class="is-text-info">_all.scss</span>"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/utilities/<span class="is-text-info">_all.scss</span>"
 			at ;
 			cm // Archivos modulares
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/layout/<span class="is-text-info">archivo.scss</span>"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/layout/<span class="is-text-info">archivo.scss</span>"
 			at ;
 			br
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/components/<span class="is-text-info">archivo.scss</span>"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/components/<span class="is-text-info">archivo.scss</span>"
 			at ;
 			br
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/modules/<span class="is-text-info">archivo.scss</span>"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/modules/<span class="is-text-info">archivo.scss</span>"
 			at ;
 	h4.subtitle Ejemplo
 	p.bloque-text Para importar el sistema de rejilla se hace de la siguiente manera.
@@ -91,7 +91,7 @@
 		pre
 			cm // Importando el grid
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/layout/_grid.scss"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/layout/_grid.scss"
 			at ;
 	p.bloque-text Es todo, compilas y pruebas.
 	snippet.margin-v-1
@@ -132,7 +132,7 @@
 		pre
 			cm // Archivo de buttons
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/components/_buttons.scss"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/components/_buttons.scss"
 			at ;
 	p.bloque-text Al importar cualquier componente o módulo puedes hacer uso de todas sus
 		b propiedades y características.
@@ -164,20 +164,20 @@
 		pre
 			cm // Archivo de buttons
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/components/_all.scss"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/components/_all.scss"
 			at ;
 			br
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/modules/_all.scss"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/modules/_all.scss"
 			at ;
 			br
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/kimera-master/scss/layout/_all.scss"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/layout/_all.scss"
 			at ;
 	message.is-info.is-small.margin-1
 		content
 			p Dentro de cada carpeta que incluye
-				b kimera
+				b level
 				span hay un archivo con el nombre
 				code _all.scss
 				span , el cual se encarga de cargar todos los archivos de esa carpeta.
