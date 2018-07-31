@@ -141,7 +141,7 @@ color {
 
 #searchList list-item:hover {
     background-color: whitesmoke;
-    color: #22adff;
+    color: #692ABF;
 }
 
 #layout-field field {
@@ -153,7 +153,7 @@ color {
 }
 
 #suscribe {
-    background-color: #22adff;
+    background-color: #692ABF;
     color: #fff;
     padding: 4em 3rem;
 }
@@ -375,7 +375,7 @@ navbar nav-item:not(.clear):hover {
     content: '';
     display: block;
     pointer-events: none;
-    background-color: #22adff;
+    background-color: #692ABF;
     transition: all .2s ease-out;
     height: 1px;
     width: 0;
@@ -386,7 +386,7 @@ navbar nav-item:not(.clear):hover {
 }
 
 #m1 menu-item:not(.is-active):hover {
-    color: #22adff;
+    color: #692ABF;
     z-index: 1;
     opacity: 1;
 }
@@ -394,7 +394,7 @@ navbar nav-item:not(.clear):hover {
 #m1 menu-item.is-active,
 #m1 menu-item.is-active * {
     background-color: #fff;
-    color: #22adff;
+    color: #692ABF;
 }
 
 #m1 menu-item:not(.is-active):hover::before {
@@ -995,7 +995,7 @@ social.structure content footer {
 /*clases de padding*/
 
 .test-hover *:hover {
-    color: #2264C8;
+    color: #692ABF;
     opacity: 1;
 }
 
@@ -1177,7 +1177,7 @@ snippet cm {
 }
 
 snippet tg {
-    color: #2980b9;
+    color: #692ABF;
 }
 
 snippet at {

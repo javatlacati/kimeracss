@@ -324,6 +324,15 @@ let cald7 = new Calendar({
     iconPosition: 'right' // icon toggle position
 });
 
+let cald8 = new Calendar({
+    el: '#CalendarDemo8',
+    classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
+    classIconNext: 'fa fa-angle-down', // the classess for the icon next control
+    classIconInput: 'fa fa-calendar', // classes for de icon toggle calendar
+    iconPosition: 'right', // icon toggle position
+    style: 'dark'
+});
+
 let demoF = new Listbox({
     el: '#demoField',
     hasTwoIcons: false,

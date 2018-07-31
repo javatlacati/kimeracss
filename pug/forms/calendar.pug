@@ -233,6 +233,39 @@
 					br
 					vat )
 					span ;
+	h4.subtitle Soporte para el atributo value
+	p.bloque-text Ahora es posible asignar un valor por defecto añadiendo el atributo
+		code value
+		span al contenedor
+		code &ltcalendar&gt
+		span .
+	p.bloque-text El valor por defecto debe de tener el siguiente formato
+		code dd/mm/yyyy
+		span .
+	ul.bloque-text
+		li
+			code dd
+			span parámetro día con 2 digitos.
+		li
+			code mm
+			span parámetro mes con 2 digitos.
+		li
+			code yyyy
+			span parámetro año con 4 digitos.
+	row.bloque
+		column.tablet-is-half
+			calendar#CalendarDemo8(value="01/01/2000")
+		column.tablet-is-half
+			snippet.margin-b-1
+				pre
+					tg &ltcalendar
+					at id=
+					vat "CalendarDemo8"
+					at value=
+					vat "01/01/2000"
+					tg &gt&lt/calendar&gt	
+	message.is-small.is-info
+		content Por defecto si el atributo value no es especificado, el componente calendar tomará como valor la fecha del sistema.
 	row.bloque.is-separated
 		button(data-link="layout-tooltip").is-primary-invert
 			icon
