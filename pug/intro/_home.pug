@@ -12,8 +12,8 @@ row.is-fluid.wrapper#intro-header
 		div
 			snippet.monokai.not-label
 				pre.is-text-bolder
-					span.is-text-warning npm  
-					at install  
+					span.is-text-warning npm 
+					at install 
 					span.is-text-danger level-css-framework
 		row.is-center.is-left-tablet
 			div.margin-t-1
@@ -51,7 +51,7 @@ mega.is-full-center
 			icon.is-jumbo.is-text-warning
 				i.fa.fa-cubes
 			.is-text-upper.is-text-medium.is-text-bolder.padding-v-1 sistema modular
-			span Importa solo lo necesario, con nuestro increible sistema de impotación
+			span Importa solo lo necesario, con nuestro increible sistema de importación
 		column.touch-is-half.tablet-6.margin-v-1
 			icon.is-jumbo
 				i.fa.fa-angellist
@@ -108,11 +108,10 @@ row.bloque.padding-h-1.wrapper
 	column.tablet12.padding-2
 		buttons
 			button Default
-			button.is-light Light
 			button.is-black Black
 			button.is-dark Dark
-		buttons
 			button.is-primary Primary
+		buttons
 			button.is-info Info
 			button.is-success Success
 			button.is-warning Warning
@@ -260,14 +259,65 @@ row.bloque.padding-h-1.wrapper
 				img(src="https://images.pexels.com/photos/753337/pexels-photo-753337.jpeg?h=350&auto=compress&cs=tinysrgb", alt="pexels.com")
 			content
 				h4 John Smith
-				info.subtitle: h6 @JohnSmith
-				justify.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa et delectus, porro repellendus necessitatibus quaerat.
-				small
+				div.is-text-info.subtitle: h6 @JohnSmith
+				div.is-text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa et delectus, porro repellendus necessitatibus quaerat.
+				div.is-small
 					a(href="#") #level
 					a(href="#") @levelCSS<br>
-				tiny.subtitle
+				div.is-tiny.subtitle
 					i 10 • Feb • 2018 - 08:45 pm
+row-multiple.bloque
+	column.is-block
+		h3.title.is-text-center.margin-t-2 Contribuidores
+		p.is-text-center.margin-b-2 Te invitamos a colaborar en este
+			span.is-text-primary atractivo
+			span poryecto.
+	column.is-flex-column.is-center.tablet-is-half.padding-1
+		responsive.is-square-128.margin-b-2
+			img(src="https://scontent.fcjs2-1.fna.fbcdn.net/v/t1.0-9/39400756_1789263974528114_3629674383653470208_n.jpg?_nc_cat=0&oh=cdcae0de9190f5c447918500b81ac807&oe=5C0157C0" class="is-rounded is-shadow-m-b")
+		h4.is-text-primary Leonardo Quintana
+		p.is-text-center Desarrollador, diseñador web y autor del proyecto.
+		row.is-center-mobile.is-distributed-tablet.is-center-v.tablet-8.margin-t-1
+			a(href=gitLeito).button.is-small
+				icon.is-small
+					i.fa.fa-github
+				span  Seguir
+			a(href=faceLeito).button.is-small.is-info
+				icon.is-small
+					i.fa.fa-facebook
+				span  Seguir
+	column.is-flex-column.is-center.tablet-is-half.padding-1
+		responsive.is-square-128.margin-b-2
+			img(src="https://scontent.fcjs2-1.fna.fbcdn.net/v/t1.0-9/29244684_10211443219184376_4470867522693890048_n.jpg?_nc_cat=0&oh=b7832bca8a3a929b07295ca3cc86b8f2&oe=5C0E8B65" class="is-rounded is-shadow-m-b")
+		h4.is-text-primary Ruslan López Carro
+		p.is-text-center Desarrollador, diseñador web y Co fundador del proyecto.
+		row.is-center-mobile.is-distributed-tablet.is-center-v.tablet-8.margin-t-1
+			a(href=gitRuslan).button.is-small
+				icon.is-small
+					i.fa.fa-github
+				span  Seguir
+			a(href=faceRuslan).button.is-small.is-info
+				icon.is-small
+					i.fa.fa-facebook
+				span  Seguir
 row.bloque.is-center
-	button(data-link="layout-intro").is-light.is-text-primary.is-medium
-		span Comenzar  
-		icon.is-medium: i.fa.fa-arrow-right
+	button(data-link="layout-intro").is-light.is-medium
+		div.is-text-primary
+			span Comenzar  
+			icon.is-medium: i.fa.fa-arrow-right
+mega#suscribe
+	content
+		row.is-wrapper.is-flex-column.is-center
+			column
+				hgroup.is-text-center.margin-b-3
+					h1.is-text-upper.is-text-primary Level newsletter
+					p.is-text-justify.opacity-8 Te informaremos cuando la <strong>V1</strong> este disponible!
+			column.tablet-is-half
+				field
+					control.is-icon-left.is-expand
+						input(type="text" placeholder="Suscribete con tu email aqui").input
+						icon
+							i.fa.fa-envelope
+			column.tablet-4
+				field.padding-t-1
+					control: button.is-primary Suscribirme

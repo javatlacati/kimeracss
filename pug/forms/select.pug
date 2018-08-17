@@ -8,35 +8,35 @@
 		column.tablet-is-half
 			listbox#demoSelect1
 				list
-					list-item(text="Option 1" value="Option 1") Option 1
-					list-item(text="Option 2" value="Option 2") Option 2
-					list-item(text="Option 3" value="Option 3") Option 3
+					list-item(value="Option 1") Option 1
+					list-item(value="Option 2") Option 2
+					list-item(value="Option 3") Option 3
 		column.tablet-is-half
 			snippet
 				pre
 					tg &ltlistbox
-					at id=
+					at  id=
 					vat "demo"
 					tg &gt
 					br
 					tg   &ltlist&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
 					vat "Option 1"
 					tg &gt
 					span ...
 					tg &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
 					vat "Option 2"
 					tg &gt
 					span ...
 					tg &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
 					vat "Option 3"
 					tg &gt
 					span ...
@@ -54,39 +54,39 @@
 			cm &lt!-- Creamos un objeto de configuración --&gt
 			br
 			tg var
-			span obj =
-			at {
+			span obj  = 
+			at  {
 			br
-			vat   el:
+			vat   el: 
 			span(tooltip="Id del contenedor principal listbox").is-right-tooltip.is-primary '$id',
 			br
-			vat   hasTwoIcons:
+			vat   hasTwoIcons: 
 			span(tooltip="Añade espacio para un icono a la izquierda").is-right-tooltip.is-info true || false,
 			br
-			vat   rounded:
+			vat   rounded: 
 			span(tooltip="Aplica estilos redondeados al componente").is-right-tooltip true || false,
 			br
-			vat   iconToggleClass:
+			vat   iconToggleClass: 
 			span(tooltip="Conjunto de clases para icono toggle personalizado").is-right-tooltip 'fa fa-angle-down',
 			br
-			vat   iconLabelClass:
+			vat   iconLabelClass: 
 			span(tooltip="Conjunto de clases para icono label personalizado").is-right-tooltip 'fa fa-user-circle',
 			br
-			vat   name:
+			vat   name: 
 			span(tooltip="Asiogna el atributo name al elemento input").is-right-tooltip 'nameDemo',
 			br
-			vat   id:
+			vat   id: 
 			span(tooltip="asigna un id al elemento input").is-right-tooltip 'idDemo'
 			br
-			at }
+			at  }
 			span ;
 			br
 			br
 			cm &lt!-- Creamos una instancía de la clase Listbox la cual recibe como parámetro un objeto --&gt
 			br
 			tg var
-			span demo =
-			at new
+			span  demo = 
+			at  new
 			vat  Listbox
 			tg (
 			span obj
@@ -128,45 +128,45 @@
 			snippet
 				pre
 					tg &ltlistbox
-					at class=
+					at  class=
 					vat "is-dark"
-					at id=
+					at  id=
 					vat "demo"
 					tg &gt
 					span •••
 					tg &lt/listbox&gt
 					br
 					tg &ltlistbox
-					at class=
+					at  class=
 					vat "is-info"
-					at id=
+					at  id=
 					vat "demo"
 					tg &gt
 					span •••
 					tg &lt/listbox&gt
 					br
 					tg &ltlistbox
-					at class=
+					at  class=
 					vat "is-success"
-					at id=
+					at  id=
 					vat "demo"
 					tg &gt
 					span •••
 					tg &lt/listbox&gt
 					br
 					tg &ltlistbox
-					at class=
+					at  class=
 					vat "is-warning"
-					at id=
+					at  id=
 					vat "demo"
 					tg &gt
 					span •••
 					tg &lt/listbox&gt
 					br
 					tg &ltlistbox
-					at class=
+					at  class=
 					vat "is-danger"
-					at id=
+					at  id=
 					vat "demo"
 					tg &gt
 					span •••
@@ -191,7 +191,7 @@
 					cm &lt!-- Marcado HTML5  --&gt
 					br
 					tg &ltlistbox
-					at id=
+					at  id=
 					vat "demoIcons"
 					tg &gt
 					span •••
@@ -200,27 +200,27 @@
 					cm &lt!-- Configuración de iconos en js. --&gt
 					br
 					tg var
-					span obj =
-					at {
+					span obj  = 
+					at  {
 					br
-					vat   el:
+					vat   el: 
 					span '#demoIcons',
 					br
-					vat   hasTwoIcons:
+					vat   hasTwoIcons: 
 					span true,
 					br
-					vat   iconToggleClass:
+					vat   iconToggleClass: 
 					span(tooltip="Conjunto de clases para icono toggle personalizado").is-up-tooltip 'fa fa-angle-down',
 					br
-					vat   iconLabelClass:
+					vat   iconLabelClass: 
 					span(tooltip="Conjunto de clases para icono label personalizado").is-up-tooltip 'fa fa-user-circle',
 					br
-					at }
+					at  }
 					span ;
 					br
 					tg var
-					span demo =
-					at new
+					span  demo = 
+					at  new
 					vat  Listbox
 					tg (
 					span obj
@@ -236,23 +236,23 @@
 		column.tablet-is-half
 			listbox#demoA.is-dark
 				list
-					list-item(value="Facebook", text="Facebook")
+					list-item(value="Facebook" text="Facebook")
 						span Facebook
 						icon.is-text-info
 							i.fa.fa-facebook
-					list-item(value="Twitter", text="Twitter")
+					list-item(value="Twitter" text="Twitter")
 						span Twitter
 						icon.is-text-primary
 							i.fa.fa-twitter
-					list-item(value="Instagram", text="Instagram")
+					list-item(value="Instagram" text="Instagram")
 						span Instagram
 						icon.is-text-danger
 							i.fa.fa-instagram
-					list-item(value="Snapchat", text="Snapchat")
+					list-item(value="Snapchat" text="Snapchat")
 						span Snapchat
 						icon.is-text-warning
 							i.fa.fa-snapchat
-					list-item(value="Youtube", text="Youtube")
+					list-item(value="Youtube" text="Youtube")
 						span Youtube
 						icon.is-text-danger
 							i.fa.fa-youtube
@@ -260,14 +260,16 @@
 			snippet
 				pre
 					tg &ltlistbox
-					at id=
+					at  id=
 					vat "demoA"
 					tg &gt
 					br
 					tg   &ltlist&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
+					vat "Facebook"
+					at  text=
 					vat "Facebook"
 					tg &gt
 					br
@@ -282,7 +284,9 @@
 					tg     &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
+					vat "Twitter"
+					at  text=
 					vat "Twitter"
 					tg &gt
 					br
@@ -297,7 +301,9 @@
 					tg     &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
+					vat "Instagram"
+					at  text=
 					vat "Instagram"
 					tg &gt
 					br
@@ -312,7 +318,9 @@
 					tg     &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
+					vat "Snapchat"
+					at  text=
 					vat "Snapchat"
 					tg &gt
 					br
@@ -327,7 +335,9 @@
 					tg     &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
+					at  value=
+					vat "Youtube"
+					at  text=
 					vat "Youtube"
 					tg &gt
 					br
@@ -344,7 +354,7 @@
 					tg   &lt/list&gt
 					br
 					tg &lt/listbox&gt
-	h4.subtitle Atributos text y value
+	h4.subtitle Atributo value
 	p.bloque-text El atributo
 		code value
 		span te ayudará a definir cual es el valor de un elemento
@@ -352,60 +362,68 @@
 		span , atributo mediante el cual se obtiene el valor desde un lenguaje de programación de lado del servidor como lo es 
 		strong PHP 
 		span .
-	p.bloque-text.margin-t-2 El atributo
+	p.bloque-text El atributo
 		code text
-		span te ayudará a definir el texto que se va a
-		strong  mostrar 
-		span cuando das click en un elemento
-		code list-item
-		span .
+		span te permitirá personalizar el texto a mostrar en el elemento
+		strong  input
+		span , al seleccionar un item.
 	row.bloque
 		column.tablet-is-half
 			listbox#demoAtributes
 				list
-					list-item(text="Texto a mostrar 1" value="Option 1") Option 1
-					list-item(text="Texto a mostrar 2" value="Option 2") Option 2
-					list-item(text="Texto a mostrar 3" value="Option 3") Option 3
+					list-item(text="texto personalizado 1" value="Valor de opcion 1") Texto de opcion 1
+					list-item(text="texto personalizado 2" value="Valor de opcion 2") Texto de opcion 2
+					list-item(text="texto personalizado 3" value="Valor de opcion 3") Texto de opcion 3
 		column.tablet-is-half
 			snippet
 				pre
 					tg &ltlistbox
-					at id=
+					at  id=
 					vat "demoAtributes"
 					tg &gt
 					br
 					tg   &ltlist&gt
 					br
 					tg     &ltlist-item
-					at value=
-					vat "Option 1"
-					at text=
-					vat "Texto a mostrar 1"
+					at  text=
+					vat "texto personalizado 1"
+					at  value=
+					vat "Valor de opcion 1"
 					tg &gt
-					span Option 1
+					span Texto de opcion 1
 					tg &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
-					vat "Option 2"
-					at text=
-					vat "Texto a mostrar 2"
+					at  text=
+					vat "texto personalizado 2"
+					at  value=
+					vat "Valor de opcion 2"
 					tg &gt
-					span Option 2
+					span Texto de opcion 2
 					tg &lt/list-item&gt
 					br
 					tg     &ltlist-item
-					at value=
-					vat "Option 3"
-					at text=
-					vat "Texto a mostrar 3"
+					at  text=
+					vat "texto personalizado 3"
+					at  value=
+					vat "Valor de opcion 3"
 					tg &gt
-					span Option 3
+					span Texto de opcion 3
 					tg &lt/list-item&gt
 					br
 					tg   &lt/list&gt
 					br
 					tg &lt/listbox&gt
+	message.margin-v-1.is-info.is-small
+		content Si el atributo
+			code text
+			span no se especifica, el valor el texto mostrado en el elemento
+			code input
+			span será el valor del atributo
+			code value
+			span del elemento
+			code list-item
+			span seleccionado.
 	row.bloque.is-separated
 		button(data-link="layout-radio").is-primary-invert
 			icon

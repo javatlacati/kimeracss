@@ -67,15 +67,6 @@ function updateList(attr, text) {
 
 /* $sidebar visibility */
 
-if ($navMain) {
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 400) {
-            $navMain.classList.add('is-fixed')
-        } else {
-            $navMain.classList.remove('is-fixed')
-        }
-    }, false);
-}
 
 $snippet.forEach(el => {
     el.addEventListener('click', function() {
@@ -193,6 +184,7 @@ function toggleDemo(el, tag, cls1, cls2, element) {
         tag.innerHTML = cls2;
     }
 }
+
 (function(d, s, id) {
     let js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -257,8 +249,8 @@ let demoAtributes = new Listbox({
     iconToggleClass: 'fa fa-angle-down'
 });
 
-let cal2 = new Calendar({
-    el: '#calendar2', // the Id container with class calendar-picker
+let cald0 = new Calendar({
+    el: '#CalendarDemo0', // the Id container with class calendar-picker
     languaje: 'es',
     classIconPrev: 'fa fa-angle-up', // the classes for the icon previus control
     classIconNext: 'fa fa-angle-down', // the classess for the icon next control
@@ -337,4 +329,58 @@ let demoF = new Listbox({
     el: '#demoField',
     hasTwoIcons: false,
     iconToggleClass: 'fa fa-angle-down'
+});
+
+var slide = new Slider({
+    el: '#slide1',
+    controls: true,
+    autoplay: false,
+    interval: 0,
+    nextControl: 'fa fa-angle-left',
+    prevControl: 'fa fa-angle-right'
+});
+
+var slide2 = new Slider({
+    el: '#slide2',
+    controls: false,
+    autoplay: true,
+    interval: 5000,
+    nextControl: 'fa fa-angle-left',
+    prevControl: 'fa fa-angle-right'
+});
+
+var slide3 = new Slider({
+    el: '#slide3',
+    controls: true,
+    autoplay: false,
+    interval: 5000,
+    nextControl: 'fa fa-angle-left',
+    prevControl: 'fa fa-angle-right'
+});
+
+var slide4 = new Slider({
+    el: '#slide4',
+    controls: true,
+    autoplay: false,
+    interval: 5000,
+    nextControl: 'fa fa-angle-left',
+    prevControl: 'fa fa-angle-right'
+});
+
+var slide5 = new Slider({
+    el: '#slide5',
+    controls: true,
+    autoplay: false,
+    interval: 5000,
+    nextControl: 'fa fa-angle-left',
+    prevControl: 'fa fa-angle-right'
+});
+
+var slide6 = new Slider({
+    el: '#slide6',
+    controls: true,
+    autoplay: false,
+    interval: 5000,
+    nextControl: 'fa fa-angle-left',
+    prevControl: 'fa fa-angle-right'
 });

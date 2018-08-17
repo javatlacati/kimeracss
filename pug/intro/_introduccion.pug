@@ -49,7 +49,7 @@ include ../main/_variables
 		span  de html5.
 	snippet.margin-v-1
 		pre
-			tg &lt!DOCTYPE
+			tg &lt!DOCTYPE 
 			at html
 			tg &gt
 	p.bloque-text
@@ -59,8 +59,8 @@ include ../main/_variables
 		span en tus proyectos.
 	snippet.margin-v-1
 		pre
-			tg &ltmeta
-			at charset
+			tg &ltmeta 
+			at charset=
 			vat "utf-8"
 			tg &gt
 	p.bloque-text
@@ -74,9 +74,9 @@ include ../main/_variables
 		span .
 	snippet.margin-v-1
 		pre
-			tg &ltmeta
+			tg &ltmeta 
 			at name=
-			vat "viewport"
+			vat "viewport" 
 			at content=
 			vat "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
 			tg &gt
@@ -92,9 +92,9 @@ include ../main/_variables
 				tag
 					snippet.not-label
 						pre
-							tg &ltlink
+							tg &ltlink 
 							at rel=
-							vat "stylesheet"
+							vat "stylesheet" 
 							at href=
 							vat "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 							tg /&gt
@@ -104,9 +104,9 @@ include ../main/_variables
 				tag
 					snippet.not-label
 						pre
-							tg &ltlink
+							tg &ltlink 
 							at rel=
-							vat "stylesheet"
+							vat "stylesheet" 
 							at href=
 							vat "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
 							tg /&gt
@@ -116,9 +116,9 @@ include ../main/_variables
 				tag
 					snippet.not-label
 						pre
-							tg &ltlink
+							tg &ltlink 
 							at rel=
-							vat "stylesheet"
+							vat "stylesheet" 
 							at href=
 							vat "https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
 							tg /&gt
@@ -136,12 +136,12 @@ include ../main/_variables
 		code  index.html
 	snippet.margin-v-1
 		pre
-			tg &ltscript
+			tg &ltscript 
 			at src=
 			vat 'https://cdn.jsdelivr.net/npm/level-css-framework@#{version}/js/level.min.js'
 			tg &gt&lt/script&gt
 	p.bloque-text Una vez hecho esto solamente tienes que llamar en la etiqueta body, al atributo personalizado
-		code km-include
+		code @include
 		span , el cúal recibe como
 		b valor el nombre del
 		i componente o módulo
@@ -153,31 +153,31 @@ include ../main/_variables
 	snippet.margin-v-1
 		pre
 			cm // Ejemplo: incluir toda la librería
-			tg &ltbody
-			at km-include=
+			tg &ltbody 
+			at @include=
 			vat "level"
 			tg &gt
 			cm   //Contenido del la página web
 			tg &lt/body&gt
 			cm // Ejemplo: incluir el sistema de rejilla y un menu vetical
-			tg &ltbody
-			at km-include=
-			vat "grid menus"
+			tg &ltbody 
+			at @include=
+			vat "grid menu"
 			tg &gt
 			cm   //Contenido del la página web
 			tg &lt/body&gt
 			br
 			cm // Ejemplo: incluir todos los componentes y un acordeon
-			tg &ltbody
-			at km-include=
+			tg &ltbody 
+			at @include=
 			vat "components acordeon"
 			tg &gt
 			cm   //Contenido del la página web
 			tg &lt/body&gt
 			br
 			cm // Ejemplo: incluir solamente los botones, un slideshow, y los tooltip
-			tg &ltbody
-			at km-include=
+			tg &ltbody 
+			at @include=
 			vat "buttons slideshow tooltip"
 			tg &gt
 			cm   //Contenido del la página web
@@ -186,7 +186,6 @@ include ../main/_variables
 	buttons.padding-1
 		button(modal="#valores-include").is-dark-outline Ver tabla de valores
 		button(modal="#valores-include2").is-dark-outline Ver tabla de componentes
-		button(modal="#valores-include3").is-dark-outline Ver tabla de módulos
 	modal#valores-include
 		background(modal="#valores-include")
 		content.tablet-12
@@ -201,17 +200,11 @@ include ../main/_variables
 							td: code level.min.css
 							td: small.is-text-bolder level
 						tr
-							td: code components/_all.scss
-							td: small.is-text-bolder components
-						tr
 							td: code layout/_all.scss
 							td: small.is-text-bolder grid
 						tr
-							td: code modules/_all.scss
-							td: small.is-text-bolder modules
-						tr
-							td: code utilities/_all.scss
-							td: small.is-text-bolder utilities
+							td: code components/_all.scss
+							td: small.is-text-bolder components
 			center.padding-v-1.is-hidden-tablet
 				button(modal="#valores-include").is-info Salir
 	modal#valores-include2
@@ -225,100 +218,91 @@ include ../main/_variables
 							th.is-text-info Valor de atributo
 					tbody
 						tr
-							td: code components/_blockquote.scss
+							td: code components/blockquote.min.scss
 							td: small.is-text-bolder blockquote
 						tr
-							td: code components/_box.scss
+							td: code components/box.min.scss
 							td: small.is-text-bolder box
 						tr
-							td: code components/_buttons.scss
+							td: code components/buttons.min.scss
 							td: small.is-text-bolder buttons
 						tr
-							td: code components/_forms.scss
+							td: code components/forms.min.scss
 							td: small.is-text-bolder forms
 						tr
-							td: code components/_calendar.scss
+							td: code components/calendar.min.scss
 							td: small.is-text-bolder calendar
 						tr
-							td: code components/_listbox.scss
+							td: code components/listbox.min.scss
 							td: small.is-text-bolder listbox
 						tr
-							td: code components/_chip.scss
+							td: code components/chip.min.scss
 							td: small.is-text-bolder chip
 						tr
-							td: code components/_dropdown.scss
+							td: code components/dropdown.min.scss
 							td: small.is-text-bolder dropdown
 						tr
-							td: code components/_icons.scss
+							td: code components/icons.min.scss
 							td: small.is-text-bolder icons
 						tr
-							td: code components/_progress.scss
+							td: code components/progress.min.scss
 							td: small.is-text-bolder progress
 						tr
-							td: code components/_range.scss
+							td: code components/range.min.scss
 							td: small.is-text-bolder range
 						tr
-							td: code components/_tags.scss
+							td: code components/tags.min.scss
 							td: small.is-text-bolder tags
 						tr
-							td: code components/_toggle-button.scss
+							td: code components/color.min.scss
+							td: small.is-text-bolder color
+						tr
+							td: code components/toggle.min.scss
 							td: small.is-text-bolder toggle
 						tr
-							td: code components/_tooltip.scss
+							td: code components/tooltip.min.scss
 							td: small.is-text-bolder tooltip
-			center.padding-v-1.is-hidden-tablet
-				button(modal="#valores-include2").is-info Salir
-	modal#valores-include3
-		background(modal="#valores-include3")
-		content.tablet-12
-			responsive.is-table
-				table.is-boxed
-					thead
 						tr
-							th.is-text-info Nombre
-							th.is-text-info Valor de atributo
-					tbody
-						tr
-							td: code modules/_acordeon.scss
+							td: code components/acordeon.min.scss
 							td: small.is-text-bolder acordeon
 						tr
-							td: code modules/_breadcrumb.scss
+							td: code components/breadcrumb.min.scss
 							td: small.is-text-bolder breadcrumb
 						tr
-							td: code modules/_card.scss
+							td: code components/card.min.scss
 							td: small.is-text-bolder card
 						tr
-							td: code modules/_group.scss
+							td: code components/group.min.scss
 							td: small.is-text-bolder group
 						tr
-							td: code modules/_media.scss
+							td: code components/media.min.scss
 							td: small.is-text-bolder media
 						tr
-							td: code modules/_mega.scss
+							td: code components/mega.min.scss
 							td: small.is-text-bolder mega
 						tr
-							td: code modules/_menus.scss
-							td: small.is-text-bolder menus
+							td: code components/menu.min.scss
+							td: small.is-text-bolder menu
 						tr
-							td: code modules/_message.scss
+							td: code components/message.min.scss
 							td: small.is-text-bolder message
 						tr
-							td: code modules/_modal.scss
+							td: code components/modal.min.scss
 							td: small.is-text-bolder modal
 						tr
-							td: code modules/_navbar.scss
+							td: code components/navbar.min.scss
 							td: small.is-text-bolder navbar
 						tr
-							td: code modules/_notify.scss
+							td: code components/notify.min.scss
 							td: small.is-text-bolder notify
 						tr
-							td: code modules/_social.scss
+							td: code components/social.min.scss
 							td: small.is-text-bolder social
 						tr
-							td: code modules/_tables.scss
+							td: code components/tables.min.scss
 							td: small.is-text-bolder tables
 						tr
-							td: code modules/_tabs.scss
+							td: code components/_tabs.scss
 							td: small.is-text-bolder tabs
 			center.padding-v-1.is-hidden-tablet
 				button(modal="#valores-include3").is-info Salir
@@ -332,9 +316,9 @@ include ../main/_variables
 		span .
 	snippet.margin-v-1
 		pre
-			tg &ltlink
+			tg &ltlink 
 			at rel=
-			vat "stylesheet"
+			vat "stylesheet" 
 			at href=
 			vat "https://cdn.jsdelivr.net/gh/JorgeAntrax/level-css-framework@#{version}/css/level.min.css"
 			tg &gt
@@ -345,9 +329,9 @@ include ../main/_variables
 		span (recomendado).
 	snippet.margin-v-1
 		pre
-			tg &ltlink
+			tg &ltlink 
 			at rel=
-			vat "stylesheet"
+			vat "stylesheet" 
 			at href=
 			vat "https://cdn.jsdelivr.net/npm/level-css-framework@#{version}/css/level.min.css"
 			tg &gt
@@ -362,7 +346,7 @@ include ../main/_variables
 		span .
 	snippet(value="template").margin-v-2
 		pre
-			tg &lt!DOCTYPE
+			tg &lt!DOCTYPE 
 			at html
 			tg &gt
 			br
@@ -374,26 +358,26 @@ include ../main/_variables
 			span Documento
 			tg &lt/title&gt
 			br
-			tg     &ltmeta
+			tg     &ltmeta 
 			at charset=
 			vat "utf-8"
 			tg /&gt
 			br
-			tg     &ltmeta
+			tg     &ltmeta 
 			at name=
-			vat "viewport"
+			vat "viewport" 
 			at content=
 			vat "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
 			tg /&gt
 			br
 			tg   &lt/head&gt
 			br
-			tg   &ltbody
-			at km-include=
+			tg   &ltbody 
+			at @include=
 			vat "level"
 			tg &gt
 			br
-			tg     &ltmega
+			tg     &ltmega 
 			at class=
 			vat "is-light is-full-center"
 			tg &gt
@@ -402,14 +386,14 @@ include ../main/_variables
 			br
 			tg         &lthgroup&gt
 			br
-			tg           &lth1
+			tg           &lth1 
 			at class=
 			vat "is-text-danger"
 			tg &gt
 			span Felicitaciones
 			tg &lt/h1&gt
 			br
-			tg           &lth3
+			tg           &lth3 
 			at class=
 			vat "is-subtitle"
 			tg &gt
@@ -418,7 +402,7 @@ include ../main/_variables
 			br
 			tg         &lt/hgroup&gt
 			br
-			tg         &ltbutton
+			tg         &ltbutton 
 			at inactive class=
 			vat "is-success is-rounded is-large"
 			tg &gt
@@ -429,7 +413,7 @@ include ../main/_variables
 			br
 			tg     &lt/mega&gt
 			br
-			tg     &ltscript
+			tg     &ltscript 
 			at src=
 			vat "https://cdn.jsdelivr.net/npm/level-css-framework@#{version}/js/level.min.js"
 			tg &gt&lt/script&gt

@@ -46,60 +46,60 @@
 			span Define la posicion del icono toggle
 	row.bloque
 		column.tablet-is-half
-			calendar(tooltip="Haz click en el icono")#calendar2.is-right-tooltip
+			calendar(tooltip="Haz click en el icono")#CalendarDemo0.is-right-tooltip
 		column.tablet-is-half
 			snippet.margin-b-1
 				pre
 					tg &ltcalendar
-					at id=
-					vat(tooltip="Id del componente").is-right-tooltip "calendar2"
+					at  id=
+					vat(tooltip="Id del componente").is-right-tooltip "CalendarDemo0"
 					tg &gt&lt/calendar&gt
 			snippet(value="vanilla js")
 				pre
-					tg let
+					tg let 
 					span demo
-					at:span =
+					at:span  = 
 					tg new 
 					vat Calendar(
 					span {
 					br
 					tg   el
-					span :
+					span : 
 					vat(tooltip="Id del componente calendar").is-right-tooltip.is-primary '$id'
 					span ,
 					br
 					tg   language
-					span :
+					span : 
 					vat(tooltip="Asigna el idioma del componente").is-right-tooltip 'es || us'
 					span ,
 					br
 					tg   name
-					span :
+					span : 
 					vat(tooltip="Asigna el atributo name al elemento input").is-right-tooltip 'nameInput'
 					span ,
 					br
 					tg   id
-					span :
+					span : 
 					vat(tooltip="Asigna el atributo id al elemento input").is-right-tooltip 'idInput'
 					span ,
 					br
 					tg   classIconPrev
-					span :
+					span : 
 					vat(tooltip="Conjunto de clases para asiganr el icono de anterior").is-right-tooltip 'fa fa-angle-up'
 					span ,
 					br
 					tg   classIconNext
-					span :
+					span : 
 					vat(tooltip="Conjunto de clases para asignar el icono de siguiente").is-right-tooltip 'fa fa-angle-down'
 					span ,
 					br
 					tg   classIconInput
-					span :
+					span : 
 					vat(tooltip="Conjunto de clases para asignar el icono toggle").is-right-tooltip 'fa fa-calendar'
 					span ,
 					br
 					tg   iconPosition
-					span :
+					span : 
 					vat(tooltip="Indica la posición del icon toggle").is-right-tooltip 'left  || right'
 					br
 					span }
@@ -113,7 +113,7 @@
 			code name
 			span te permitirán obtener el valor del elemento input cuando lo necesites por ejemplo en php.
 	h4.subtitle Colores
-	p.bloque-text Con 5 estilos diferentes aplicables utilizando la propiedad
+	p.bloque-text Con 9 estilos diferentes aplicables utilizando la propiedad
 		code style.
 	row.bloque
 		column.tablet-is-half
@@ -125,21 +125,21 @@
 		column.tablet-is-half
 			snippet(value="vanilla js")
 				pre
-					tg let
+					tg let 
 					span demo
-					at:span =
+					at:span  = 
 					tg new 
 					vat Calendar(
 					span {
 					br
 					tg   el
-					span :
+					span : 
 					vat 'id del componente'
 					span ,
 					br
 					tg   style
-					span :
-					vat 'dark || info || success || warning || danger'
+					span : 
+					vat 'cloud || light || dark || black || primary || info || success || warning || danger'
 					br
 					span }
 					vat )
@@ -163,35 +163,35 @@
 			snippet.margin-b-1
 				pre
 					tg &ltcalendar
-					at id=
+					at  id=
 					vat "CalendarDemo6"
 					tg &gt&lt/calendar&gt
 			snippet(value="vanilla js")
 				pre
-					tg let
+					tg let 
 					span demo
-					at:span =
+					at:span  = 
 					tg new 
 					vat Calendar(
 					span {
 					br
 					tg   el
-					span :
+					span : 
 					vat '#calendardemo6'
 					span ,
 					br
 					tg   classIconPrev
-					span :
+					span : 
 					vat 'fa fa-caret-up'
 					span ,
 					br
 					tg   classIconNext
-					span :
+					span : 
 					vat 'fa fa-caret-down'
 					span ,
 					br
 					tg   classIconInput
-					span :
+					span : 
 					vat 'fa fa-angellist'
 					br
 					span }
@@ -210,25 +210,25 @@
 			snippet.margin-b-1
 				pre
 					tg &ltcalendar
-					at id=
+					at  id=
 					vat "CalendarDemo7"
 					tg &gt&lt/calendar&gt
 			snippet(value="vanilla js")
 				pre
-					tg let
+					tg let 
 					span demo
-					at:span =
+					at:span  = 
 					tg new 
 					vat Calendar(
 					span {
 					br
 					tg   el
-					span :
+					span : 
 					vat '#Calendardemo7'
 					span ,
 					br
 					tg   iconPosition
-					span :
+					span : 
 					vat 'right'
 					br
 					vat )
@@ -254,18 +254,18 @@
 			span parámetro año con 4 digitos.
 	row.bloque
 		column.tablet-is-half
-			calendar#CalendarDemo8(value="01/01/2000")
+			calendar#CalendarDemo8(default-value="01/01/2000")
 		column.tablet-is-half
 			snippet.margin-b-1
 				pre
 					tg &ltcalendar
-					at id=
+					at  id=
 					vat "CalendarDemo8"
-					at value=
+					at  default-value=
 					vat "01/01/2000"
 					tg &gt&lt/calendar&gt	
 	message.is-small.is-info
-		content Por defecto si el atributo value no es especificado, el componente calendar tomará como valor la fecha del sistema.
+		content Por defecto si el atributo default-value no es especificado, el componente calendar tomará como valor la fecha del sistema.
 	row.bloque.is-separated
 		button(data-link="layout-tooltip").is-primary-invert
 			icon

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300');
 html,
 body,
 button,
@@ -14,13 +14,13 @@ code,
 samp,
 pre {
     font-family: 'Roboto Mono', monospace;
-}
+}*/
 
 
 /*fuente*/
 
 
-/* @font-face {
+@font-face {
     font-family: 'Roboto-Light';
     src: url('../font/Roboto-Light_0.ttf') format('truetype');
 }
@@ -33,7 +33,7 @@ p,
 textarea,
 select {
     font-family: 'Roboto-Light', sans-serif;
-} */
+} 
 
 calendar {
     margin-bottom: 1rem;
@@ -68,8 +68,12 @@ color {
     margin-right: 0.25rem;
 }
 
-.is-flex {
+.is-flex, .is-flex-column {
     display: flex;
+}
+
+.is-flex-column {
+    flex-direction: column;
 }
 
 #nav-main {
@@ -77,14 +81,6 @@ color {
     box-shadow: none;
 }
 
-#nav-main.is-fixed {
-    z-index: 499;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .05);
-}
 
 .close-menu-btn {
     width: 2.5rem;
@@ -150,12 +146,6 @@ color {
 
 #demoField {
     max-width: 100px;
-}
-
-#suscribe {
-    background-color: #692ABF;
-    color: #fff;
-    padding: 4em 3rem;
 }
 
 #modal-demo-table table {
@@ -333,6 +323,10 @@ navbar nav-item:not(.clear):hover {
     align-content: center;
     justify-content: center;
     height: 100%;
+}
+
+blockquote {
+    margin-bottom: 1rem;
 }
 
 .demo-image.large {
@@ -558,10 +552,12 @@ body {
 
 
 /*general*/
-
+.title {
+    color: #692ABF;
+}
 .title,
 .subtitle {
-    padding: 2em 1rem;
+    padding: 2rem 1rem;
 }
 
 h4.subtitle {
@@ -1141,11 +1137,8 @@ snippet {
     position: relative;
     background-color: whitesmoke;
     color: #444444;
-    border-radius: 0.3125rem;
+    border-radius: 0.25rem;
     overflow: hidden;
-    /* overflow: auto;
-	padding: 1rem;
-	max-height: rem(200px); */
     height: auto;
     text-align: left;
 }
@@ -1154,21 +1147,14 @@ snippet pre {
     max-width: 100%;
     padding: 1.5rem;
     overflow: auto;
-    max-height: 15.625rem;
+    max-height: 18rem;
     height: 100%;
     transition: max-height .2s ease-out;
 }
 
 snippet pre.is-expand {
-    max-height: 100vh;
+    max-height: 500vh;
     overflow-y: hidden;
-}
-
-snippet span,
-snippet at,
-snippet vat,
-snippet tg {
-    padding: 0 0.2rem;
 }
 
 snippet cm {
@@ -1177,17 +1163,15 @@ snippet cm {
 }
 
 snippet tg {
-    color: #692ABF;
+    color: #0024FF;
 }
 
 snippet at {
-    color: #d35400;
-    padding-right: 0;
+    color: #F8064C;
 }
 
 snippet vat {
-    color: #16a085;
-    padding-left: 0;
+    color: #B500FF;
 }
 
 snippet.monokai,
@@ -1237,11 +1221,8 @@ snippet:not(.not-label)[value]::after {
     content: attr(value);
 }
 
-slideshow {
-    max-width: 600px;
-    height: 300px;
-    margin-right: auto;
-    margin-left: auto;
+box.wrapper {
+    background-color: #fff;
 }
 
 @media screen and (min-width: 300px) {
@@ -1333,6 +1314,9 @@ slideshow {
 
 @media screen and (min-width: 761px) {
     row.bloque:not(.docs) column:not(:last-child) {
+        margin-right: 1rem;
+    }
+    snippet {
         margin-right: 1rem;
     }
     #intro-header.is-fluid {

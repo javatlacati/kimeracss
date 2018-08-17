@@ -32,7 +32,7 @@
 							b visibilidad
 							span del contenedor
 							code navmenu
-							span con jquery.
+							span con javascript.
 				li
 					code navmenu
 					span menu de navegación, por defecto oculto en dispositivos
@@ -60,14 +60,14 @@
 			tg   &ltnavbrand&gt
 			br
 			tg     &ltlogo&gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/logo&gt
 			br
 			tg     &lticon
-			at class=
+			at  class=
 			vat "is-toggle-navbar"
 			tg &gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/icon&gt
 			cm     etc...
 			tg   &lt/navbrand&gt
@@ -75,19 +75,19 @@
 			tg   &ltnavmenu&gt
 			br
 			tg     &ltnav-item&gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/nav-item&gt
 			br
 			tg     &lta&gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/a&gt
 			br
 			tg     &ltbutton&gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/button&gt
 			br
 			tg     &ltdropdown&gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/dropdown&gt
 			cm     etc...
 			tg   &lt/navmenu&gt
@@ -145,7 +145,7 @@
 					tg   &ltnavbrand&gt
 					br
 					tg     &ltlogo
-					at src=
+					at  src=
 					vat "img/logo.jpg"
 					tg &gt&lt/logo&gt
 					br
@@ -153,7 +153,7 @@
 					br
 					tg &lt/navbar&gt
 	p.bloque-text Este componente utiliza un pequeño script
-		b jquery
+		b javascript
 		span que añade dinamicamente una imagén dentro del contenedor
 		code logo
 		span mediante el atributo
@@ -164,7 +164,7 @@
 			snippet
 				pre
 					tg &ltlogo
-					at src=
+					at  src=
 					vat "img/tu-logo.jpg"
 					tg &gt&lt/logo&gt
 		column.tablet-is-half
@@ -174,7 +174,7 @@
 					tg &ltlogo&gt
 					br
 					tg   &ltimg
-					at src=
+					at  src=
 					vat "img/tu-logo.jpg"
 					tg /&gt
 					br
@@ -206,32 +206,32 @@
 		column.tablet-is-half
 			navbar
 				navbrand
-					logo(src=urlimage+"logo-azul-light.png" text="<h4>Kimera</h4>")
+					logo(src=urlimage+"logo-azul-light.png" text="<h4>Level</h4>")
 		column.tablet-is-half
 			snippet.margin-b-1
 				pre
 					tg &ltlogo
-					at src=
+					at  src=
 					vat "img/tu-logo.jpg"
-					at text=
-					vat "kimera"
+					at  text=
+					vat "Level"
 					tg &gt&lt/logo&gt
 			snippet(value="css")
 				pre
 					tg logo span
-					at {
+					at  {
 					br
 					vat   font-size
-					at :
+					at  :
 					span 1.3rem
-					at ;
+					at  ;
 					br
 					vat   font-weight
-					at :
+					at  :
 					span bold
-					at ;
+					at  ;
 					br
-					at }
+					at  }
 	.bloque
 		h4.subtitle Brand toggle
 		p.bloque-text La clase
@@ -239,7 +239,7 @@
 			span te permitirá mostrar u ocultar el contenedor
 			code navmenu
 			span mediante
-			b jquery
+			b javascript
 			span .
 	row.bloque
 		column
@@ -255,19 +255,19 @@
 			tg   &ltnavbrand&gt
 			br
 			tg     &ltlogo
-			at src=
+			at  src=
 			vat "img/logo.jpg"
-			at text=
+			at  text=
 			vat "Brand logo"
 			tg &gt&lt/logo&gt
 			br
 			tg     &lticon
-			at class=
+			at  class=
 			vat "is-medium is-toggle-navbar"
 			tg &gt
 			br
 			tg       &lti
-			at class=
+			at  class=
 			vat "fa fa-bars"
 			tg &gt&lt/i&gt
 			br
@@ -323,17 +323,17 @@
 			tg   &ltnavbrand&gt
 			br
 			tg     &ltlogo
-			at src=
+			at  src=
 			vat "img/logo.jpg"
 			tg &gt&lt/logo&gt
 			br
 			tg     &lticon
-			at class=
+			at  class=
 			vat "is-medium is-toggle-navbar"
 			tg &gt
 			br
 			tg       &lti
-			at class=
+			at  class=
 			vat "fa fa-bars"
 			tg &gt&lt/i&gt
 			br
@@ -370,18 +370,18 @@
 		li: code .is-center
 	row.bloque
 		column.tablet-is-half#navbar-aling
-			navbar.margin-v-1.color-black-lighten-2
+			navbar.margin-v-1
 				navmenu.is-left
-					nav-item.clear Servicios			
-					nav-item.clear Ventas
-			navbar.color-primary-darken-2
+					nav-item.clear Left			
+					nav-item.clear Menu
+			navbar
 				navmenu.is-center
-					nav-item.clear Servicios
-					nav-item.clear Ventas
-			navbar.margin-v-1.color-primary-lighten-4
+					nav-item.clear Center
+					nav-item.clear Menu
+			navbar.margin-v-1
 				navmenu
-					nav-item.clear Servicios
-					nav-item.clear Ventas
+					nav-item.clear Right
+					nav-item.clear Menu
 		column.tablet-is-half
 			snippet
 				pre
@@ -389,10 +389,10 @@
 					tg &ltnavbar&gt
 					br
 					tg   &ltnavmenu
-					at class=
+					at  class=
 					vat "is-left"
 					tg &gt
-					span •••
+					span &lt!-- content --&gt
 					tg &lt/navmenu&gt
 					br
 					tg &ltnavbar&gt
@@ -400,10 +400,10 @@
 					tg &ltnavbar&gt
 					br
 					tg   &ltnavmenu
-					at class=
+					at  class=
 					vat "is-center"
 					tg &gt
-					span •••
+					span &lt!-- content --&gt
 					tg &lt/navmenu&gt
 					br
 					tg &ltnavbar&gt
@@ -411,7 +411,7 @@
 					tg &ltnavbar&gt
 					br
 					tg   &ltnavmenu&gt
-					span •••
+					span &lt!-- content --&gt
 					tg &lt/navmenu&gt
 					br
 					tg &ltnavbar&gt
@@ -440,17 +440,17 @@
 			tg   &ltnavbrand&gt
 			br
 			tg     &ltlogo
-			at src=
+			at  src=
 			vat "img/logo.jpg"
 			tg &gt&lt/logo&gt
 			br
 			tg     &lticon
-			at class=
+			at  class=
 			vat "is-medium is-toggle-navbar"
 			tg &gt
 			br
 			tg       &lti
-			at class=
+			at  class=
 			vat "fa fa-bars"
 			tg &gt&lt/i&gt
 			br
@@ -461,21 +461,21 @@
 			tg   &ltnavmenu&gt
 			br
 			tg     &ltfield
-			at class=
+			at  class=
 			vat "is-horizontal"
 			tg &gt
 			br
 			tg       &ltcontrol
-			at class=
+			at  class=
 			vat "is-expand"
 			tg &gt
 			br
 			tg         &ltinput
-			at type=
+			at  type=
 			vat "text"
-			at class=
+			at  class=
 			vat "input is-info is-small"
-			at placeholder=
+			at  placeholder=
 			vat "Buscar"
 			tg &gt
 			br
@@ -484,7 +484,7 @@
 			tg       &ltcontrol&gt
 			br
 			tg         &ltbutton
-			at class=
+			at  class=
 			vat "is-info is-small"
 			tg &gt
 			span Buscar
@@ -496,8 +496,8 @@
 			br
 			tg   &lt/navmenu&gt
 			br
-			tg#nav-st &lt/navbar&gt
-	h4.is-flex.is-separated.subtitle
+			tg &lt/navbar&gt
+	h4.is-flex.is-separated.subtitle#nav-st
 		span Navbar sticky
 		tag.is-success.is-rounded.is-small Nuevo!
 	p.bloque-text Ahora es posible crear un
@@ -516,10 +516,10 @@
 	snippet.margin-v-2
 		pre
 			tg &ltnavbar
-			at on-sticky=
+			at  on-sticky=
 			vat "top: 400"
 			tg &gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/navbar&gt
 	p.bloque-text Nota que el primer valor
 		strong  top 
@@ -536,15 +536,15 @@
 	snippet.margin-v-2
 		pre
 			tg &ltnavbar
-			at on-sticky=
+			at  on-sticky=
 			vat "bottom: 400"
 			tg &gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/navbar&gt
 	p.bloque-text Veamos un ejemplo en funcionamiento con un scroll de
 		code 200px
 		span .
-	row.bloque
+	row
 		column
 			navbar(on-sticky="bottom: 200")#demo-sticky.color-cloud
 				navbrand
@@ -560,10 +560,10 @@
 	snippet.margin-v-1
 		pre
 			tg &ltnavbar
-			at on-sticky=
+			at  on-sticky=
 			vat "bottom: 200"
 			tg &gt
-			span •••
+			span &lt!-- content --&gt
 			tg &lt/navbar&gt
 	h4.subtitle Navbar dropdown
 	p.bloque-text Este módulo soporta completamente el componente
@@ -579,7 +579,7 @@
 					nav-item Contacto
 					nav-item Servicios
 					dropdown.padding-h-1
-						a.is-text-info(href="#").is-toggle-dropdown
+						span.is-text-info.is-toggle-dropdown
 							span dropdown
 							icon: i.fa.fa-angle-down
 						dropmenu.is-right
@@ -593,7 +593,7 @@
 			tg   &ltnavbrand&gt
 			br
 			tg     &ltlogo
-			at text=
+			at  text=
 			vat "Brand"
 			tg &gt&lt/logo&gt
 			br
@@ -612,16 +612,16 @@
 			tg     &ltdropdown&gt
 			br
 			tg       &lta
-			at href=
+			at  href=
 			vat "#"
-			at class=
+			at  class=
 			vat "is-toggle-dropdown"
 			tg &gt
 			br
 			span         dropdown
 			br
 			tg         &lticon&gt&lti
-			at class=
+			at  class=
 			vat "fa fa-angle-down"
 			tg &lt/i&gt&lt/icon&gt
 			br

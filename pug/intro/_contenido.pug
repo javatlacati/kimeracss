@@ -163,6 +163,83 @@
 								td Añade una opacidad de
 									b 0.#{i}
 								<td class="opacity-#{i}"> Este es un texto con opacidad de 0.#{i}</td>
+	h4.subtitle Generando sombras
+	p.bloque-text Level te proporciona un conjunto de clases para añadir sombras a tus contenedores en
+		strong  4 direcciones
+		span .
+	row.bloque
+		column
+			responsive.is-table
+				table.is-cell.is-narrow
+					thead
+						tr
+							th Clase auxiliar shadow
+							th Prefijo
+							th direccion
+							th Ejemplo de clase auxiliar
+							th Descripción de clase
+					tbody.is-small
+						tr
+							td: code .is-shadow-
+							td: code.color-light xs-
+							td: code.color-light null, l, r, t, b
+							td: code.is-text-info .is-shadow-xs-b
+							td Añade una sombra extra pqueña en la parte de abajo del contenedor
+						tr
+							td: code .is-shadow-
+							td: code.color-light s-
+							td: code.color-light null, l, r, t, b
+							td: code.is-text-info .is-shadow-s-t
+							td Añade una sombra pequeña en la parte de arriba del contenedor
+						tr
+							td: code .is-shadow-
+							td: code.color-light --
+							td: code.color-light null, l, r, t, b
+							td: code.is-text-info .is-shadow-l
+							td Añade una sombra normal en la parte izquierda del contenedor
+						tr
+							td: code .is-shadow-
+							td: code.color-light m-
+							td: code.color-light null, l, r, t, b
+							td: code.is-text-info .is-shadow-m-r
+							td Añade una sombra mediana en la parte derecha del contenedor
+						tr
+							td: code .is-shadow-
+							td: code.color-light l-
+							td: code.color-light null, l, r, t, b
+							td: code.is-text-info .is-shadow-l
+							td Añade una sombra grande all contenedor
+	p.bloque-text Veamos un ejemplo para aclarar tus dudas:
+	row.bloque.is-center.is-distributed-tablet
+		column.tablet-4.padding-05.is-shadow-xs: code.is-text-info .is-shadow-xs
+		column.tablet-4.padding-05.is-shadow-s: code.is-text-info .is-shadow-s
+		column.tablet-4.padding-05.is-shadow: code.is-text-info .is-shadow
+		column.tablet-4.padding-05.is-shadow-m: code.is-text-info .is-shadow-m
+		column.tablet-4.padding-05.is-shadow-l: code.is-text-info .is-shadow-l
+	row.bloque.is-center.is-distributed-tablet
+		column.tablet-4.padding-05.is-shadow-xs-l: code.is-text-info .is-shadow-xs-l
+		column.tablet-4.padding-05.is-shadow-s-l: code.is-text-info .is-shadow-s-l
+		column.tablet-4.padding-05.is-shadow--l: code.is-text-info .is-shadow--l
+		column.tablet-4.padding-05.is-shadow-m-l: code.is-text-info .is-shadow-m-l
+		column.tablet-4.padding-05.is-shadow-l-l: code.is-text-info .is-shadow-l-l
+	row.bloque.is-center.is-distributed-tablet
+		column.tablet-4.padding-05.is-shadow-xs-r: code.is-text-info .is-shadow-xs-r
+		column.tablet-4.padding-05.is-shadow-s-r: code.is-text-info .is-shadow-s-r
+		column.tablet-4.padding-05.is-shadow--r: code.is-text-info .is-shadow--r
+		column.tablet-4.padding-05.is-shadow-m-r: code.is-text-info .is-shadow-m-r
+		column.tablet-4.padding-05.is-shadow-l-r: code.is-text-info .is-shadow-l-r
+	row.bloque.is-center.is-distributed-tablet
+		column.tablet-4.padding-05.is-shadow-xs-t: code.is-text-info .is-shadow-xs-t
+		column.tablet-4.padding-05.is-shadow-s-t: code.is-text-info .is-shadow-s-t
+		column.tablet-4.padding-05.is-shadow--t: code.is-text-info .is-shadow--t
+		column.tablet-4.padding-05.is-shadow-m-t: code.is-text-info .is-shadow-m-t
+		column.tablet-4.padding-05.is-shadow-l-t: code.is-text-info .is-shadow-l-t
+	row.bloque.is-center.is-distributed-tablet
+		column.tablet-4.padding-05.is-shadow-xs-b: code.is-text-info .is-shadow-xs-b
+		column.tablet-4.padding-05.is-shadow-s-b: code.is-text-info .is-shadow-s-b
+		column.tablet-4.padding-05.is-shadow--b: code.is-text-info .is-shadow--b
+		column.tablet-4.padding-05.is-shadow-m-b: code.is-text-info .is-shadow-m-b
+		column.tablet-4.padding-05.is-shadow-l-b: code.is-text-info .is-shadow-l-b
 	h4.subtitle Contenido centrado
 	p.bloque-text Añadiendo la clase
 		code .is-wrapper
@@ -171,10 +248,10 @@
 		span de anchura y centrado horizontal que son aplicables despues de
 		code 768px
 		span .
-	.color-primary.is-wrapper.padding-2: p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo obcaecati exercitationem error aliquam ipsum ea deleniti illum culpa. Laborum est asperiores obcaecati ullam quod delectus nisi nulla quibusdam eos modi.
+	blockquote.is-info: p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo obcaecati exercitationem error aliquam ipsum ea deleniti illum culpa. Laborum est asperiores obcaecati ullam quod delectus nisi nulla quibusdam eos modi.
 	snippet.margin-v-1
 		pre
-			tg &ltdiv
+			tg &ltdiv 
 			at class=
 			vat "is-wrapper"
 			tg &gt
@@ -188,7 +265,7 @@
 		span necesarías para centrar tu contenido.
 	snippet.margin-v-1
 		pre
-			tg &ltdiv
+			tg &ltdiv 
 			at class=
 			vat "is-full-center"
 			tg &gt

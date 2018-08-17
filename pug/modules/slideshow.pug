@@ -6,11 +6,6 @@
 		span de imágenes, basados en una
 		b estructura
 		span muy interesante.
-	message.margin-1.is-small.is-info
-		header Importante
-		content La interacción con
-			b Javascript
-			span no la incluye kimera.
 	h4.subtitle Estructura
 	ul
 		li
@@ -18,25 +13,26 @@
 			span Contenedor principal.
 			ul
 				li
-					code animate
+					code id
+					span Identificador del slideshow (requerido).
+				li
+					code animation
 					span Atributo que define el tipo de animación mediante los valores
 					code fade
-					span y
+					span ,
 					code slide
+					span y
+					code slide-vertical
 				li
-					code interval
-					span Atributo que define el intervalo de tiempo en
-					strong milisegundos
-					span .
-				li
-					code autoplay
-					span Atributo que indica la repoduccion automática.
+					code height
+					span Atributo que define la altura del slider.
 				li
 					code sliders
 					span Contenedor de imágenes
 					ul
 						li
-							code slider contenedor de la imágen.
+							code slider
+							span Item individual del slider.
 							ul
 								li
 									code src
@@ -44,89 +40,127 @@
 									strong url
 									span de la imágen
 								li
-									code alt
-									span Atributo para texto alternatvo(si no es posible cargar la imágen). 
-								li
 									code caption
 									span Atributo que define un pequeño texto a la imágen.
-				li
-					code slide-controls
-					span Contenedor para los controles del
-					code slideshow
-					span .
-					ul
-						li
-							code .next-slide
-							span Elemento para cambiar al
-							b siguiente
-							span slide (opcional).
-						li
-							code .previus-slide
-							span Elemento para cambiar al
-							b anterior
-							span slide (opcional).
-	snippet.margin-v-1
+								li
+									code slider-container
+									span Contenedor generico para contenido extra.
+	snippet.margin-v-2
 		pre
 			cm &lt!-- Definición general del módulo slideshow --&gt
-			cm &lt!-- El atributo interval solamente es aplicable en reproduccion automática, si su valor no es especificado por defecto tiene el valor de 5000 ms--&gt
 			tg &ltslideshow
-			at autoplay interval=
-			vat "3000"
-			at animate=
-			vat "fade || slide"
+			at  animation=
+			vat "fade || slide || slide-vertical"
 			tg &gt
 			cm   &l!-- Contenedor de las imágenes --&gt
 			tg   &ltsliders&gt
 			cm     &lt!-- Elemento genérico que añade la imágen al slide mediante su atributo src--&gt
 			tg     &ltslider
-			at src=
+			at  src=
 			vat "ruta de la imagen"
-			at alt=
-			vat "Texto de ayuda de imagen"
-			at caption=
+			at  caption=
 			vat "Caption de la imagen"
-			tg &gt&lt/slider&gt
+			tg &gt
+			br
+			tg       &ltslider-container&gt
+			br
+			span         &lt!-- content --&gt
+			br
+			tg       &lt/slider-container&gt
+			br
+			tg     &lt/slider&gt
 			br
 			tg   &lt/sliders&gt
-			cm   &lt!-- controles --&gt
-			tg   &lticon
-			at class=
-			vat "previus-slide"
-			tg &gt&lt/icon&gt
-			br
-			tg   &lticon
-			at class=
-			vat "next-slide"
-			tg &gt&lt/icon&gt
 			br
 			tg &lt/slideshow&gt
+	h4.subtitle Funcionalidad
+	p.bloque-text Asegurate de implementar el codigo
+	strong  javascript 
+	span necesario, veamos que tienes que hacer:
+	snippet(value="js").margin-v-1
+		pre
+			cm &lt!-- Defines una instancia de la clase Slider que recibe como parametro un objeto--&gt
+			tg let
+			span  slider =
+			at  new 
+			vat Slider
+			tg (
+			at {
+			br
+			span   el: 
+			vat "#slide1"
+			span , <span class="opacity-3"> &lt!-- Id del contenedor slideshow --&gt </span>
+			br
+			span   controls: 
+			vat true || false
+			span , <span class="opacity-3"> &lt!-- Propiedad de tipo booleana recibe true o false --&gt </span>
+			br
+			span   autoplay: 
+			vat true || false
+			span , <span class="opacity-3"> &lt!-- Propiedad de tipo booleana recibe true o false  y habilita reproducción automática--&gt </span>
+			br
+			span   interval: 
+			vat 5000
+			span , <span class="opacity-3"> &lt!-- Propiedad que recibe un valor en milisegundos, controla el intervalo de de la auto reproducción --&gt </span>
+			br
+			span   nextControl: 
+			vat "fa fa-angle-right"
+			span , <span class="opacity-3"> &lt!-- Recibe un conjunto de clases para añadir un icono al boton next --&gt </span>
+			br
+			span   prevControl: 
+			vat "fa fa-angle-left"
+			span , <span class="opacity-3"> &lt!-- Recibe un conjunto de clases para añadir un icono al boton previus --&gt </span>
+			br
+			at }
+			tg )
+			span ;
 	h4.subtitle Controles
-	p.bloque-text La etiqueta personalizada
-		code slide-controls
-		span es contenedor para los elementos interactivos del
+	p.bloque-text Puedes añadir los controles tipicos de un
 		code slideshow
-		span .
-	tabs.is-text-upper
+		span con la implementación 
+		strong javascript
+		span , como en el siguiente ejemplo:
+	tabs.is-text-upper.is-right
 		tab(data-id="#slide-rs") demo
-		tab(data-id="#slide-co") snippet
+		tab(data-id="#slide-co") html5
+		tab(data-id="#slide-js") javascript
 	tabs-content.padding-1
 		tab-content#slide-rs
-			slideshow(animate="fade")#slide1
-				sliders
-					slider(src="img/f1.jpg")
-					slider(src="img/f2.jpg")
-					slider(src="img/f3.jpg")
-					slider(src="img/f4.jpg")
-				slide-controls
-					icon.previus-slide.is-text-cloud
-						i.fa.fa-angle-left
-					icon.next-slide.is-text-cloud
-						i.fa.fa-angle-right
+			.padding-1
+				slideshow(id="slide1" class="margin-b-2" height="300" animation="fade")
+					sliders
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 1
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 2
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 3
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 4
+			message.is-success.is-small
+				header Importante
+				content El atributo
+					code height
+					span te permite definir la altura del componente
+					code slideshow
+					span .
 		tab-content#slide-co
 			snippet
 				pre
-					tg &ltslideshow 
-					at animate=
+					tg &ltslideshow
+					at  height=
+					vat "300"
+					at  id=
+					vat "slide1" 
+					at  animate=
 					vat "fade"
 					tg &gt
 					cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
@@ -134,82 +168,530 @@
 					cm     &lt!-- Presta atención al atributo src, genera un elemento img dinámico --&gt
 					-for(var i=1; i<5; i++)
 						tg     &ltslider
-						at src=
+						at  src=
 						vat "https://pexels.com/..."
-						tg &gt&lt/slider&gt
+						tg &gt
+						span.opacity-4 &lt!-- content --&gt
+						tg &lt/slider&gt
 						br
 					tg   &lt/sliders&gt
-					cm   &lt!-- Panel de interacción (opcional) --&gt
-					tg   &ltslide-controls&gt
-					br
-					tg     &lticon
-					at class=
-					vat "previus-slide"
-					tg &gt&lt/icon&gt
-					br
-					tg     &lticon
-					at class=
-					vat "next-slide"
-					tg &gt&lt/icon&gt
-					br
-					tg   &lt/slide-controls&gt
 					br
 					tg &lt/slideshow&gt
-	message.margin-1.is-info.is-small.bloque
-		header Nota:
-		content El contenedor
-			code slide-controls
-			span puede ser omitido si no se desea agregar controles al
-			code slideshow
-			span .
-	h4.subtitle Autoplay e interval
+		tab-content#slide-js
+			snippet(value="js")
+				pre
+					cm &lt!-- Defines una instancia de la clase Slider que recibe como parametro un objeto--&gt
+					tg let
+					span  slider =
+					at  new 
+					vat Slider
+					tg (
+					at {
+					br
+					span   el: 
+					vat "#slide1"
+					span ,
+					br
+					span   controls: 
+					vat true
+					span ,
+					br
+					span   nextControl: 
+					vat "fa fa-angle-right"
+					span ,
+					br
+					span   prevControl: 
+					vat "fa fa-angle-left"
+					br
+					at }
+					tg )
+					span ;
+	h4.subtitle Animaciones
 	p.bloque-text El atributo
+		code animation
+		span te permite controla la animación del componente, y recibe como valor unoa de las siguientes 3 opciones:
+	ul
+		li: code fade
+		li: code slide
+		li: code slide-vertical
+	tabs.is-text-upper.is-right
+		tab(data-id="#slide-rs3") efecto slide
+		tab(data-id="#slide-co3") html5
+		tab(data-id="#slide-js3") javascript
+	tabs-content.padding-1
+		tab-content#slide-rs3
+			.padding-1
+				slideshow(id="slide3" class="margin-b-2" height="300" animation="slide")
+					sliders
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 1
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 2
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 3
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 4
+		tab-content#slide-co3
+			snippet
+				pre
+					tg &ltslideshow
+					at  height=
+					vat "300"
+					at  id=
+					vat "slide3" 
+					at  animate=
+					vat "slide"
+					tg &gt
+					cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
+					tg   &ltsliders&gt
+					cm     &lt!-- items --&gt
+					-for(var i=1; i<5; i++)
+						tg     &ltslider
+						at  src=
+						vat "https://pexels.com/..."
+						tg &gt
+						span.opacity-4 &lt!-- content --&gt
+						tg &lt/slider&gt
+						br
+					tg   &lt/sliders&gt
+					br
+					tg &lt/slideshow&gt
+		tab-content#slide-js3
+			snippet(value="js")
+				pre
+					cm &lt!-- Defines una instancia de la clase Slider que recibe como parametro un objeto--&gt
+					tg let
+					span  slider =
+					at  new 
+					vat Slider
+					tg (
+					at {
+					br
+					span   el: 
+					vat "#slide3"
+					span ,
+					br
+					span   controls: 
+					vat false
+					span ,
+					br
+					span   nextControl: 
+					vat "fa fa-angle-right"
+					span ,
+					br
+					span   prevControl: 
+					vat "fa fa-angle-left"
+					br
+					at }
+					tg )
+					span ;
+	tabs.is-text-upper.is-right
+		tab(data-id="#slide-rs4") efecto slide vertical
+		tab(data-id="#slide-co4") html5
+		tab(data-id="#slide-js4") javascript
+	tabs-content.padding-1
+		tab-content#slide-rs4
+			.padding-1
+				slideshow(id="slide4" class="margin-b-2" height="300" animation="slide-vertical")
+					sliders
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 1
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 2
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 3
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 4
+		tab-content#slide-co4
+			snippet
+				pre
+					tg &ltslideshow
+					at  height=
+					vat "300"
+					at  id=
+					vat "slide4" 
+					at  animate=
+					vat "slide-vertical"
+					tg &gt
+					cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
+					tg   &ltsliders&gt
+					cm     &lt!-- items --&gt
+					-for(var i=1; i<5; i++)
+						tg     &ltslider
+						at  src=
+						vat "https://pexels.com/..."
+						tg &gt
+						span.opacity-4 &lt!-- content --&gt
+						tg &lt/slider&gt
+						br
+					tg   &lt/sliders&gt
+					br
+					tg &lt/slideshow&gt
+		tab-content#slide-js4
+			snippet(value="js")
+				pre
+					cm &lt!-- Defines una instancia de la clase Slider que recibe como parametro un objeto--&gt
+					tg let
+					span  slider =
+					at  new 
+					vat Slider
+					tg (
+					at {
+					br
+					span   el: 
+					vat "#slide4"
+					span ,
+					br
+					span   controls: 
+					vat false
+					span ,
+					br
+					span   nextControl: 
+					vat "fa fa-angle-right"
+					span ,
+					br
+					span   prevControl: 
+					vat "fa fa-angle-left"
+					br
+					at }
+					tg )
+					span ;
+	h4.subtitle Atributo caption
+	p.bloque-text El atributo
+		code caption
+		span te permite añadir texto a las imagenes del slider, dicho atributo se añade en los elementos
+		code &ltslider&gt
+		span .
+	tabs.is-text-upper.is-right
+		tab(data-id="#slide-rs5") demo caption
+		tab(data-id="#slide-co5") html5
+		tab(data-id="#slide-js5") javascript
+	tabs-content.padding-1
+		tab-content#slide-rs5
+			.padding-1
+				slideshow(id="slide5" class="margin-b-2" height="300" animation="fade")
+					sliders
+						slider(src=urlimage+"slide.jpeg" caption="Texto de la imagen 1")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 1
+						slider(src=urlimage+"slide.jpeg" caption="Texto de la imagen 2")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 2
+						slider(src=urlimage+"slide.jpeg" caption="Texto de la imagen 3")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 3
+						slider(src=urlimage+"slide.jpeg" caption="Texto de la imagen 4")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 4
+		tab-content#slide-co5
+			snippet
+				pre
+					tg &ltslideshow
+					at  height=
+					vat "300"
+					at  id=
+					vat "slide5" 
+					at  animate=
+					vat "fade"
+					tg &gt
+					cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
+					tg   &ltsliders&gt
+					cm     &lt!-- items --&gt
+					-for(var i=1; i<5; i++)
+						tg     &ltslider
+						at  src=
+						vat "https://pexels.com/..."
+						at  caption=
+						vat "Texto de la imagen #{i}"
+						tg &gt
+						span.opacity-4 &lt!-- content --&gt
+						tg &lt/slider&gt
+						br
+					tg   &lt/sliders&gt
+					br
+					tg &lt/slideshow&gt
+		tab-content#slide-js5
+			snippet(value="js")
+				pre
+					cm &lt!-- Defines una instancia de la clase Slider que recibe como parametro un objeto--&gt
+					tg let
+					span  slider =
+					at  new 
+					vat Slider
+					tg (
+					at {
+					br
+					span   el: 
+					vat "#slide5"
+					span ,
+					br
+					span   controls: 
+					vat false
+					span ,
+					br
+					span   nextControl: 
+					vat "fa fa-angle-right"
+					span ,
+					br
+					span   prevControl: 
+					vat "fa fa-angle-left"
+					br
+					at }
+					tg )
+					span ;
+	h4.subtitle Añade tu contenido
+	p.bloque-text Puedes añadir tu propio codigo
+		code.is-text-info html5
+		span dentro de los elemento
+		code &ltslider&gt
+		span , utilizando el elemento
+		code slider-container
+		span .
+	tabs.is-text-upper.is-right
+		tab(data-id="#slide-rs6") demo avanzado
+		tab(data-id="#slide-co6") html5
+		tab(data-id="#slide-js6") javascript
+	tabs-content.padding-1
+		tab-content#slide-rs6
+			.padding-1
+				slideshow(id="slide6" class="margin-b-2" height="300" animation="fade")
+					sliders
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								row-mobile
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 1
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 2
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								row-mobile
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 3
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 4
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								row-mobile
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 5
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 6
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								row-mobile
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 7
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+									column.is-flex-column.is-center.is-half.padding-05
+										h3.is-text-info Columna 8
+										p.is-text-justify.margin-t-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, vitae!
+		tab-content#slide-co6
+			snippet
+				pre
+					tg &ltslideshow
+					at  height=
+					vat "300"
+					at  id=
+					vat "slide6" 
+					at  animate=
+					vat "fade"
+					tg &gt
+					cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
+					tg   &ltsliders&gt
+					cm         &lt!-- Puedes añadir aqui cualquier codigo html como por ejemplo 2 columnas. --&gt
+					-for(var i=1; i<4; i++)
+						cm     &lt!-- item #{i} --&gt
+						tg     &ltslider
+						at  src=
+						vat "https://pexels.com/..."
+						tg &gt
+						br
+						tg       &ltslider-container&gt
+						br
+						tg         &ltrow-mobile&gt
+						br
+						tg           &ltcolumn
+						at  class=
+						vat "is-flex-column is-center is-half"
+						tg &gt
+						span.opacity-3 &lt!-- content --&gt
+						tg &lt/column&gt
+						br
+						tg           &ltcolumn
+						at  class=
+						vat "is-flex-column is-center is-half"
+						tg &gt
+						span.opacity-3 &lt!-- content --&gt
+						tg &lt/column&gt
+						br
+						tg         &lt/row-mobile&gt
+						br
+						tg       &lt/slider-container&gt
+						br
+						tg     &lt/slider&gt
+						br
+					tg   &lt/sliders&gt
+					br
+					tg &lt/slideshow&gt
+		tab-content#slide-js6
+			snippet(value="js")
+				pre
+					cm &lt!-- Defines una instancia de la clase Slider que recibe como parametro un objeto--&gt
+					tg let
+					span  slider =
+					at  new 
+					vat Slider
+					tg (
+					at {
+					br
+					span   el: 
+					vat "#slide6"
+					span ,
+					br
+					span   controls: 
+					vat false
+					span ,
+					br
+					span   nextControl: 
+					vat "fa fa-angle-right"
+					span ,
+					br
+					span   prevControl: 
+					vat "fa fa-angle-left"
+					br
+					at }
+					tg )
+					span ;
+	h4.subtitle Reproducción automatica
+	p.bloque-text El propiedad
 		code autoplay
-		span indica la reproducción
+		span habilita la reproducción
 		strong automática
 		span en un intervalo de tiempo definido en
 		code ms
-		span mediante el atributo
+		span mediante la propiedad
 		code interval
 		span .
-	tabs.is-text-upper
-		tab(data-id="#slide-rs") demo
-		tab(data-id="#slide-co") snippet
+	tabs.is-text-upper.is-right
+		tab(data-id="#slide-rs2") demo
+		tab(data-id="#slide-co2") html5
+		tab(data-id="#slide-js2") javascript
 	tabs-content.padding-1
-		tab-content#slide-rs
-			slideshow(animate="fade" autoplay interval="3000")
-				sliders
-					slider(src="img/f1.jpg")
-					slider(src="img/f2.jpg")
-					slider(src="img/f3.jpg")
-					slider(src="img/f4.jpg")
-		tab-content#slide-co
+		tab-content#slide-rs2
+			.padding-1
+				slideshow(id="slide2" class="margin-b-2" height="300" animation="fade")
+					sliders
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 1
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 2
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 3
+						slider(src=urlimage+"slide.jpeg")
+							slider-container
+								.is-flex.is-center
+									h3 Imagen 4
+		tab-content#slide-co2
 			snippet
 				pre
-					cm &lt!-- definicion de atributos autoplay e interval --&gt
-					tg &ltslideshow 
-					at autoplay interval=
-					vat "3000"
-					at animate=
+					tg &ltslideshow
+					at  height=
+					vat "300"
+					at  id=
+					vat "slide2" 
+					at  animate=
 					vat "fade"
 					tg &gt
+					cm   &lt!-- Contenedor de imágenes para el slideshow --&gt
 					tg   &ltsliders&gt
-					br
+					cm     &lt!-- items --&gt
 					-for(var i=1; i<5; i++)
 						tg     &ltslider
-						at src=
+						at  src=
 						vat "https://pexels.com/..."
-						tg &gt&lt/slider&gt
+						tg &gt
+						span.opacity-4 &lt!-- content --&gt
+						tg &lt/slider&gt
 						br
 					tg   &lt/sliders&gt
 					br
 					tg &lt/slideshow&gt
-			message.margin-1.is-success.is-small
-				header Importante
-				content Si el atributo
-					code interval
-					span no es definido, el valor por defecto que se asigna a la función
-					code setInterval()
-					span es de
-					strong 5000ms
-					span .
+		tab-content#slide-js2
+			snippet(value="js")
+				pre
+					cm &lt!-- Defines una instancia de la clase Slider que recibe como parametro un objeto--&gt
+					tg let
+					span  slider =
+					at  new 
+					vat Slider
+					tg (
+					at {
+					br
+					span   el: 
+					vat "#slide2"
+					span ,
+					br
+					span   controls: 
+					vat false
+					span ,
+					br
+					span.is-text-bolder   autoplay: 
+					vat true
+					span , <span class="opacity-3"> &lt!-- Propiedad de tipo booleana recibe true o false --&gt </span>
+					br
+					span.is-text-bolder   interval: 
+					vat 5000
+					span , <span class="opacity-3"> &lt!-- Propiedad que recibe un valor numerico en milisegundos --&gt </span>
+					br
+					span   nextControl: 
+					vat "fa fa-angle-right"
+					span ,
+					br
+					span   prevControl: 
+					vat "fa fa-angle-left"
+					br
+					at }
+					tg )
+					span ;
+	row.bloque.is-separated
+		button(data-link="layout-pagination").is-primary-invert
+			icon
+				i.fa.fa-arrow-left
+			span   Pagination
+		button(data-link="layout-social").is-primary-invert
+			span Social  
+			icon
+				i.fa.fa-arrow-right

@@ -1,48 +1,44 @@
 .wrapper
 	h1.title Sistema modular
-	p.bloque-text Solo importa lo que
+	p.bloque-text Importa lo que
 		b necesitas
 		span para trabajar en tu proyecto.
-	h4.subtitle Estructura de carpetas.
-	p.bloque-text Level tiene un total de 45 archivos
+	p.bloque-text Level tiene un total de 46 archivos
 		code .scss
 		span .
 	snippet(value="txt").margin-v-1
 		pre
 			.is-text-info |----- level-master
 			br
-			span |--------- level.scss
+			span |--------- level.scss <span class="opacity-3"> //Archivo scss principal</span>
 			br
-			span |--------- config.scss
+			span |--------- config.scss <span class="opacity-3"> //Archivo de configuración donde puedes renombrar clases y componentes</span>
 			br
 			cm |--------- css
-			span |------------- level.css
+			span |------------- level.css <span class="opacity-3"> //Archivo compilado css</span>
 			br
-			span |------------- level.min.css
+			span |------------- level.min.css <span class="opacity-3"> //Archivo minificado css</span>
 			br
-			cm |------------- all files css
+			cm |------------- todos los componentes compilados a css
 			br
 			cm |--------- js
-			span |------------- level.js
+			span |------------- level.js <span class="opacity-3"> //Archivo principal javascript</span>
 			br
-			span |------------- level.min.js
+			span |------------- level.min.js <span class="opacity-3"> //Archivo javascript minificado</span>
 			br
 			cm |--------- scss
 			cm |------------- base  (dependencias obligatorias)
-			span |----------------- _all.scss
-			br
-			cm |------------- utilities (dependencias obligatorias)
-			span |----------------- _all.scss
+			span |----------------- base.min.scss <span class="opacity-3"> //Archivo con estilos generales y helpers</span>
 			br
 			cm |------------- layout
-			span |----------------- _all.scss
+			span |----------------- layouts.min.scss <span class="opacity-3"> //Archivo que genera el sistema de rejilla y layouts</span>
 			br
 			cm |------------- components
-			span |----------------- _all.scss
-			br
-			cm |------------- modules
-			span |----------------- _all.scss
-	p.bloque-text Todos los módulos y componentes de level, requieren de las dependencías obligatorías.
+			span |----------------- components.min.scss <span class="opacity-3"> //Archivo que unifica todos los componentes</span>
+			cm |----------------- todos los componentes del framework
+			cm |--------- ts
+			span |------------- Ficheros <span class="is-text-bolder">typescript</span> del framework
+	message.is-info.margin-v-1: content Todos los componentes de level, requieren de las dependencías obligatorías.
 	h4.subtitle Implementación
 	message.is-info.margin-1
 		content
@@ -67,23 +63,14 @@
 		pre
 			cm // Archivos de importación obligatorios
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/base/<span class="is-text-info">_all.scss</span>"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/base/<span class="is-text-info">base.min.scss</span>"
 			at ;
-			br
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/utilities/<span class="is-text-info">_all.scss</span>"
-			at ;
-			cm // Archivos modulares
-			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/layout/<span class="is-text-info">archivo.scss</span>"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/layout/<span class="is-text-info">nombre del archivo.scss</span>"
 			at ;
 			br
 			at @import 
 			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/components/<span class="is-text-info">archivo.scss</span>"
-			at ;
-			br
-			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/modules/<span class="is-text-info">archivo.scss</span>"
 			at ;
 	h4.subtitle Ejemplo
 	p.bloque-text Para importar el sistema de rejilla se hace de la siguiente manera.
@@ -98,28 +85,28 @@
 		pre
 			tg &ltrow&gt
 			br
-			tg     &ltcolumn
+			tg     &ltcolumn 
 			at class=
 			vat "is-primary"
 			tg &gt
 			cm        column 1
 			tg     &lt/column&gt
 			br
-			tg     &ltcolumn
+			tg     &ltcolumn 
 			at class=
 			vat "is-info"
 			tg &gt
 			cm        column 2
 			tg     &lt/column&gt
 			br
-			tg     &ltcolumn
+			tg     &ltcolumn 
 			at class=
 			vat "is-success"
 			tg &gt
 			cm        column 3
 			tg     &lt/column&gt
 			br
-			tg     &ltcolumn
+			tg     &ltcolumn 
 			at class=
 			vat "is-warning"
 			tg &gt
@@ -134,53 +121,45 @@
 			at @import 
 			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/components/_buttons.scss"
 			at ;
-	p.bloque-text Al importar cualquier componente o módulo puedes hacer uso de todas sus
+	p.bloque-text Al importar cualquier componente puedes hacer uso de todas sus
 		b propiedades y características.
 	snippet.margin-v-1
 		pre
 			cm // Colores
-			tg &ltbutton
+			tg &ltbutton 
 			at class=
 			vat "is-black"
 			tg &gt
 			cm     @Content...
 			tg &lt/button&gt
 			br
-			tg &ltbutton
+			tg &ltbutton 
 			at class=
 			vat "is-dark"
 			tg &gt
 			cm     @Content...
 			tg &lt/button&gt
 			br
-			tg &ltbutton
+			tg &ltbutton 
 			at class=
 			vat "is-primary"
 			tg &gt
 			cm     @Content...
 			tg &lt/button&gt
-	p.bloque-text Importando todos los componentes o módulos.
+	p.bloque-text Importando todos los componentes.
 	snippet(value="scss").margin-v-1
 		pre
-			cm // Archivo de buttons
+			cm // Para importar todos los componentes simplemente llamas al fichero components.min.scss
 			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/components/_all.scss"
-			at ;
-			br
-			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/modules/_all.scss"
-			at ;
-			br
-			at @import 
-			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/layout/_all.scss"
+			vat "<span class="is-text-info">tu-proyecto</span>/level-master/scss/components/components.min.scss"
 			at ;
 	message.is-info.is-small.margin-1
 		content
 			p Dentro de cada carpeta que incluye
 				b level
-				span hay un archivo con el nombre
-				code _all.scss
-				span , el cual se encarga de cargar todos los archivos de esa carpeta.
+				span hay un archivo con el nombre decha carpeta y la extensión
+				code .min.scss
+				span , el cual se encarga de unificar todos los archivos de esa carpeta en un solo fichero.
 	row.bloque.is-separated
 		button(data-link="layout-contenido").is-primary-invert
 			icon

@@ -5,10 +5,10 @@ html
 		include main/_headers
 	body
 		layout#app-main.is-block
-			button.close-menu-btn.floating.is-primary.is-rounded.is-large
+			button(is-icon).close-menu-btn.floating.is-primary.is-rounded.is-large
 				icon.is-large: i.fa.fa-angle-right
 			#home
-			navbar#nav-main
+			navbar(on-sticky="top: 300")#nav-main
 				include main/_navbar
 			sidebar#menu-principal
 				include main/_menu
@@ -103,8 +103,8 @@ html
 					include modules/notify
 				.menu_content#layout-pagination
 					include modules/pagination
-				//.menu_content#layout-slide
-					//include modules/slideshow
+				.menu_content#layout-slide
+					include modules/slideshow
 				.menu_content#layout-social
 					include modules/social
 				.menu_content#layout-table
